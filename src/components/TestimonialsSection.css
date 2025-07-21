@@ -1,0 +1,225 @@
+
+
+.testimonials-section {
+  padding: 4rem 0;
+  background-color: var(--blue);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: #ff6b6b;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: #f4f4f4;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #eeeeee;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.star {
+  width: 24px;
+  height: 24px;
+  color: #facc15;
+  fill: currentColor;
+}
+
+.testimonial-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #1d3557;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-inner {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1d3557;
+}
+
+.relationship {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.location {
+  font-size: 0.875rem;
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-button {
+  background: none;
+  border: 1px solid #ced4da;
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #1d3557;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a5a5a5;
+  transition: all 0.3s;
+  border-radius: 15px;
+}
+
+.dot.active {
+  width: 24px;
+  background-color: #00b4d8;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-box {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.stars.small {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.star-small {
+  width: 16px;
+  height: 16px;
+  color: #facc15;
+  fill: currentColor;
+}
+
+.snippet {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.author-mini {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar-mini {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-inner-mini {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+}
+
+.name-mini {
+  font-weight: 600;
+  color: #1d3557;
+  font-size: 0.875rem;
+}
+
+.location-mini {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+/* Utility background color classes (fallbacks if not using Tailwind) */
+.bg-primary { background-color: #00b4d8; }
+.bg-secondary { background-color: #ff6b6b; }
+.bg-accent { background-color: #8338ec; }

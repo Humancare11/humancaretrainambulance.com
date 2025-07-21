@@ -1,0 +1,37 @@
+/* Base styles and CSS Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+/* About, Values, Mission, etc. section styles remain here */
+/* You can keep or modify them based on your pages */
+
+
+
+
+
+
+
+Base styles and CSS Variables
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  
+  --blue: #1D3557;
+ 
+  --red: #E63946;
+  
+}

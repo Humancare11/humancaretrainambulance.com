@@ -1,0 +1,203 @@
+.about-section {
+  padding: 4rem 1rem;
+  background-color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-content .section-header {
+  margin-bottom: 1.5rem;
+  
+}
+.section-header-about {
+  text-align: left !important;
+}
+.section-subtitle{
+  color: #ff6b6b !important;
+  font-weight: 600!important;
+  font-size: 1.3rem !important;
+  text-align: left !important;
+}
+
+.feature-title {
+  color: #1d3557;
+  text-align: left !important;
+}
+.section-title-d {
+  color: #1d3557;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-description-d {
+  color: #3d3d3d;
+  font-size: 17px!important;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  text-align: center;
+  padding: 1rem;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
+.heart-icon {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.experience-icon {
+  background-color: rgba(100, 100, 255, 0.1);
+}
+
+.reliability-icon {
+  background-color: rgba(0, 128, 255, 0.1);
+}
+.feature-icon svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+}
+
+.feature-title {
+  font-weight: 600;
+  color: #1c3faa;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.about-illustration .illustration-box {
+  background: linear-gradient(to bottom right, #F1FAEE, #f3f4f6);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: #6c63ff;
+  border-radius: 50%;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+.pulse-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 9999px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: #ef4444;
+  animation: beat 1.5s infinite;
+}
+
+.family-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.family-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
+.family-circle.one {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 128, 255, 0.2);
+}
+
+.family-circle.two {
+  width: 56px;
+  height: 56px;
+  background: rgba(100, 100, 255, 0.2);
+}
+
+.family-circle.three {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.caring-message {
+  font-size: 0.875rem;
+  color: #1c3faa;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

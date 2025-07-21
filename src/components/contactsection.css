@@ -1,0 +1,256 @@
+/* Main container for the entire section */
+.contact-section-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+  justify-content: center; /* Center content when wrapped */
+  gap: 60px; /* Space between the two columns */
+  max-width: 1200px; /* Max width of your content */
+  margin: 60px auto; /* Center the container with some top/bottom margin */
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #ffffff; /* White background for the section */
+  border-radius: 15px; /* Rounded corners for the section */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Left Column: Text and Contact Info */
+.contact-info-column {
+  flex: 1;
+  min-width: 350px; /* Minimum width for this column */
+  padding-right: 20px; /* Space between text and form if not wrapping */
+}
+
+.contact-title {
+  font-size: 2.8em;
+  color: #212121;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.highlight-text {
+  color: #dc3545; /* Red color for "Experts" */
+}
+
+.contact-description {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-details p {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details p span[role="img"] {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.company-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.call-now-button,
+.whatsapp-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+}
+
+.call-now-button {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+
+.call-now-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+.whatsapp-button {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.whatsapp-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Right Column: Contact Form */
+.contact-form-column {
+  flex: 1;
+  min-width: 400px; /* Minimum width for the form column */
+  background-color: #f8f9fa; /* Light background for the form area */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #343a40;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #6c757d;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.form-select {
+  appearance: none; /* Remove default select arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px; /* Make space for custom arrow */
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.send-enquiry-button {
+  background-color: #dc3545; /* Red */
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+  width: 100%; /* Make button full width */
+}
+
+.send-enquiry-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contact-section-container {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 30px; /* Reduce gap when stacked */
+    padding: 30px;
+  }
+
+  .contact-info-column,
+  .contact-form-column {
+    min-width: unset; /* Remove min-width */
+    width: 100%; /* Take full width */
+    padding-right: 0; /* Remove extra padding */
+  }
+
+  .contact-form-column {
+    padding: 25px; /* Adjust padding for stacked form */
+  }
+
+  .contact-title {
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  .contact-description,
+  .contact-details,
+  .company-name {
+    text-align: center;
+  }
+
+  .contact-details p {
+    justify-content: center; /* Center icons and text */
+  }
+
+  .action-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center stacked buttons */
+    gap: 10px;
+  }
+
+  .call-now-button,
+  .whatsapp-button {
+    width: 80%; /* Make buttons wider when stacked */
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .contact-title {
+    font-size: 2em;
+  }
+
+  .contact-info-column,
+  .contact-form-column {
+    padding: 20px;
+  }
+
+  .call-now-button,
+  .whatsapp-button {
+    width: 100%; /* Full width buttons on very small screens */
+    font-size: 0.95em;
+    padding: 10px 20px;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea,
+  .send-enquiry-button {
+    font-size: 0.95em;
+    padding: 10px 12px;
+  }
+}
