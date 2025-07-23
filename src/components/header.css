@@ -1,14 +1,11 @@
-/* :root {
+:root {
   --background: #F1FAEE;
-  
   --primary: #1D3557;
   --secondary: #E63946;
-
- 
-} */
+  --red: #E63946;
+}
 
 .header {
-  /* background-color: rgba(255, 255, 255, 0.95); */
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -34,54 +31,12 @@
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
-  color: inherit;
 }
 
-.logo-icon {
-  background-color: var(--red);
-  border-radius: 50%;
-  padding: 0.5rem;
-  animation: heart-beat 2s ease-in-out infinite;
-}
-
-.logo-inner {
-  width: 2rem;
-  height: 2rem;
-  background-color: #ffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-dot {
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--red);
-  border-radius: 50%;
-  position: relative;
-}
-
-.logo-pulse {
-  position: absolute;
-  inset: 0;
-  background-color: var(--red);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-.logo-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-
-.logo-subtitle {
-  font-size: 0.75rem;
-  color: var(--red);
-  display: none;
+.logo-image {
+  height: 3rem;
+  object-fit: contain;
 }
 
 .desktop-nav {
@@ -108,8 +63,8 @@
 }
 
 .cta-button {
-  background-color: var(--red)!important;
-  color: #ffff!important;
+  background-color: var(--red) !important;
+  color: #fff !important;
   border: none;
   border-radius: 2rem;
   padding: 1rem 1.5rem;
@@ -176,7 +131,7 @@
 
 .mobile-cta-button {
   background-color: var(--red);
-  color: #ffff!important;
+  color: #fff !important;
   border: none;
   border-radius: 2rem;
   padding: 0.75rem;
@@ -200,16 +155,6 @@
   height: 1rem;
 }
 
-@keyframes heart-beat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
 @keyframes pulse-emergency {
   0%, 100% { 
     box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
@@ -220,10 +165,6 @@
 }
 
 @media (min-width: 768px) {
-  .logo-subtitle {
-    display: block;
-  }
-
   .desktop-nav {
     display: flex;
   }

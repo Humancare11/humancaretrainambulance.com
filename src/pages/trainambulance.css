@@ -1,0 +1,424 @@
+
+
+.about-section-pg {
+  padding: 60px 20px;
+  background-color: var(--blue);
+}
+.ab-title {
+    color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+ 
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px;
+}
+
+.about-left h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about-left .blue {
+  color: #1e90ff;
+}
+
+.about-left .red {
+  color: #f44336;
+}
+
+.about-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+.about-btn {
+  padding: 12px 25px;
+  background-color: #f44336;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #d32f2f;
+}
+
+.about-right {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-right img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.train-section {
+  background-color: var(--blue);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.train-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.train-subtitle {
+  font-size: 1.1rem;
+  color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.train-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.train-left-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.train-icon {
+  background-color: #0b3c5d;
+  color: #ffffff;
+  font-size: 32px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.train-left-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.train-left-card p {
+  color: #4a7b9d;
+  font-size: 0.95rem;
+}
+
+.train-right-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.train-stat-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.train-stat-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.train-stat-card p {
+  font-size: 0.9rem;
+  color: #4a7b9d;
+}
+
+.red {
+  color: #d94c4c;
+}
+
+.green {
+  color: #25a78d;
+}
+
+.blue {
+  color: #0b3c5d;
+}
+
+ /* ========================2nd========================== */
+.how-it-works {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.how-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.how-subtitle {
+  font-size: 1.05rem;
+  color: #4a7b9d;
+  margin-bottom: 40px;
+}
+
+.how-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.how-step {
+  max-width: 300px;
+}
+
+.how-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: #fdebec;
+  color: #d94c4c;
+}
+
+.green {
+  background-color: #e4f7f3;
+  color: #25a78d;
+}
+
+.blue {
+  color: #0b3c5d;
+}
+
+.how-step h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.how-step p {
+  font-size: 0.95rem;
+  color: #4a7b9d;
+  line-height: 1.5;
+}
+/* ================================3rd=========================?/ */
+
+.equipment-section {
+  background-color: #f3fdf6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.equipment-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.equipment-subtitle {
+  font-size: 1.05rem;
+  color: #4a7b9d;
+  margin-bottom: 40px;
+}
+
+.equipment-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  gap: 25px;
+    grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.equipment-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.equipment-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.red {
+  background-color: #fdebec;
+  color: #d94c4c;
+}
+
+.green {
+  background-color: #e4f7f3;
+  color: #25a78d;
+}
+
+.blue {
+  color: #0b3c5d;
+}
+
+.equipment-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.equipment-card p {
+  font-size: 0.95rem;
+  color: #4a7b9d;
+  line-height: 1.5;
+}
+/* =========================4th================================ */
+.testimonials-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9fdf7;
+}
+
+.testimonials-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.testimonials-subtitle {
+  font-size: 1rem;
+  color: #4a7b9d;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #eafaf0;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.stars {
+  font-size: 18px;
+  color: #f6c944;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  color: #0b3c5d;
+  margin-bottom: 25px;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 4px solid #25a78d;
+  border-radius: 50%;
+}
+
+.person-info strong {
+  display: block;
+  color: #0b3c5d;
+  font-size: 1rem;
+}
+
+.person-info p {
+  font-size: 0.875rem;
+  color: #4a7b9d;
+  margin: 2px 0 0 0;
+}
+
+
+.train-image-train{
+  width: 100%;
+  max-width: 410px;
+  border-radius: 20px;
+    text-align: right;
+  
+}
+.outer-train-ab-image{
+  text-align: center;
+}
+.train-about{
+  padding: 50px 0;
+}

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home'; 
   import About from './pages/About';
+  import Trainambulance from './pages/Trainambulance'; // Assuming you have a Trainambulance page
 // import Service from './pages/Service'; // Assuming you have a Service page
 // import Why from './pages/Why';
 // // import Testimonial from './pages/Testimonials'; // Assuming you have a Testimonial page
@@ -15,6 +16,8 @@ import WhyChooseUs from './components/WhyChooseUs'; // Assuming you have this co
 import TestimonialsSection from './components/TestimonialsSection'; // Assuming you have this component
 import ContactSection from './components/ContactSection'; 
 import Footer from './components/Footer'; 
+import Contact from './pages/Contact';
+import Testimonial from './pages/Testimonial'; // Assuming you have a Testimonials page
 // import HumanCarePreloader from './components/HumanCarePreloader'; // Assuming you have this component
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
      <Route path="/WhyChooseUs" element={<WhyChooseUs />} />
          <Route path="/TestimonialsSection" element={<TestimonialsSection />} />
           <Route path="/ContactSection" element={<ContactSection />} />
+          <Route path="/Trainambulance" element={<Trainambulance />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/Testimonial" element={<Testimonial />} />
            {/* { {/*<Route path="/ContactSection" element={<ContactSection />} />  } */}
 {/* <Route path="/Service" element={<Service />} /> */}
         {/* <Route path="/Why" element={<Why />} />  */}

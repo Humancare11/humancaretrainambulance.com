@@ -19,10 +19,10 @@ const HeroSection = () => {
           {/* Content */}
           <div className="hero-content">
             <h1 className="hero-title">
-              <span className="satish text-primary">Fast & Safe </span>
+              <span className="satish">Fast & Safe </span>
               <span className="text-accent">Train</span><br />
               <span className="text-accent">Ambulance </span>
-              <span className="satish text-primary">Services</span>
+              <span className="satish">Services</span>
             </h1>
 
             <p className="hero-subtext">

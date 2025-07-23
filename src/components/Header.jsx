@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
-
+import logo from '../assets/logo.webp'; // Adjust the path to your logo image
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -13,18 +13,12 @@ const Header = () => {
       <div className="header-container">
         <div className="header-content">
           <Link to="/" className="logo-link">
-
-            <div className="logo-icon">
-              <div className="logo-inner">
-                <div className="logo-dot">
-                  <div className="logo-pulse"></div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h1 className="logo-title">Humancare</h1>
-              <p className="logo-subtitle">Train Services</p>
-            </div>
+            {/* Simple image logo (replace src path with your actual logo file) */}
+            <img
+              src={logo}
+              alt="Humancare Logo"
+              className="logo-image"
+            />
           </Link>
 
           <nav className="desktop-nav">
@@ -34,35 +28,27 @@ const Header = () => {
             >
               Home
             </Link>
-
-
             <Link 
               to="/about" 
               className={`nav-link ${isActive('/about') ? 'nav-link-active' : ''}`}
             >
               About
             </Link>
-
-
             <Link 
-              to="/Service" 
-              className={`nav-link ${isActive('/Service') ? 'nav-link-active' : ''}`}
+              to="/trainambulance" 
+              className={`nav-link ${isActive('/Trainambulance') ? 'nav-link-active' : ''}`}
             >
               Train Ambulance
             </Link>
-
-
             <Link 
               to="/Why" 
               className={`nav-link ${isActive('/Why') ? 'nav-link-active' : ''}`}
             >
               Why Choose Us
             </Link>
-
-
             <Link 
-              to="/Testimonials" 
-              className={`nav-link ${isActive('/Testimonials') ? 'nav-link-active' : ''}`}
+              to="/Testimonial" 
+              className={`nav-link ${isActive('/Testimonial') ? 'nav-link-active' : ''}`}
             >
               Testimonials
             </Link>
