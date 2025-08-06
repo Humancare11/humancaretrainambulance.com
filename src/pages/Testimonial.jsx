@@ -2,6 +2,30 @@ import React from 'react'
 import abImage from '../assets/heroimg.png'; // Adjust the path to your testimonial image
 import './testimonial.css'; // Assuming you have a CSS file for styling
 import TestimonialsSection from '../components/TestimonialsSection';
+import VideoPlayer from '../components/VideoPlayer';
+
+const metrics = [
+  {
+    value: "100+",
+    label: "HOSPITAL PARTNERS",
+    color: "red"
+  },
+  {
+    value: "50+",
+    label: "CITIES COVERED",
+    color: "green"
+  },
+  {
+    value: "1500+",
+    label: "LIVES TOUCHED",
+    color: "blue"
+  },
+  {
+    value: "5",
+    label: "YEARS OF EXCELLENCE",
+    color: "red"
+  },
+];
  const videos = [
     {
       id: 'v1',
@@ -50,9 +74,30 @@ function Testimonial() {
                 </div>
               </div>
             </section>
+
+            <section className="metrics-section">
+    <div className="metrics-row">
+      {metrics.map((metric, idx) => (
+        <div className="metric-box" key={idx}>
+          <span className={`metric-value ${metric.color}`}>{metric.value}</span>
+          <div className="metric-label">{metric.label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  
 <TestimonialsSection/>
 
+<section className="video-sec">
+  <h2 className="main-heading">Video Testimonials</h2>
+      <p className="sub-heading">
+        Partnered with leading hospitals and medical institutions across India
+      </p>
+
+
 <div className="video-grid">
+
       {videos.map((video) => (
         <div className="video-card" key={video.id}>
           <div className="video-wrapper">
@@ -69,7 +114,7 @@ function Testimonial() {
         </div>
       ))}
     </div>
-
+</section>
 <section className="trusted-section">
       <h2 className="main-heading">Trusted By Healthcare Network</h2>
       <p className="sub-heading">
@@ -102,7 +147,9 @@ function Testimonial() {
         </div>
       </div>
     </section>
-
+<section>
+  <VideoPlayer />
+</section>
 
     </div>
   )

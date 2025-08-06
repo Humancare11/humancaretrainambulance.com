@@ -1,6 +1,7 @@
 import React from 'react'
 import tImage from '../assets/heroimg.png'; // Adjust the path to your train ambulance image
 import './trainambulance.css'; // Assuming you have a CSS file for styling
+import ContactSection from '../components/ContactSection';
 function Trainambulance() {
 
   const testimonials = [
@@ -90,8 +91,8 @@ function Trainambulance() {
               </div>
             </div>
             <div className="col-md-6">
-              <h2 className="title">Why Choose Our Train Ambulance Service?</h2>
-              <p className="description">
+              <h2 className="title-train-ambulance">Why Choose Our Train Ambulance Service?</h2>
+              <p className="description-train-ambulance">
                 Our train ambulance service is designed for long-distance medical transfers when air transport is not feasible. We provide a safe, comfortable, and medically equipped environment for patients requiring critical care during transit.  Our train ambulance service is designed for long-distance medical transfers when air transport is not feasible. We provide a safe, comfortable, and medically equipped environment for patients requiring critical care during transit.  Our train ambulance service is designed for long-distance medical transfers when air transport is not feasible. <br />Our train ambulance service is designed for long-distance medical transfers when air transport is not feasible. We provide a safe, comfortable, and medically equipped environment for patients requiring critical care during transit.
               </p>
 
@@ -210,6 +211,9 @@ function Trainambulance() {
             </div>
           ))}
         </div>
+      </section>
+      <section>
+<ContactSection />
       </section>
 
     </div>

@@ -181,3 +181,81 @@
   color: #377084;
   line-height: 1.6;
 }
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .about-left {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .about-left h1 {
+    font-size: 32px;
+  }
+
+  .about-left p {
+    font-size: 16px;
+  }
+
+  .about-btn {
+    font-size: 15px;
+  }
+
+  .about-right img {
+    max-width: 300px;
+  }
+
+  .mission-features {
+    justify-content: center;
+  }
+
+  .feature-card-ab {
+    width: 45%;
+  }
+
+  .values-list {
+    justify-content: center;
+  }
+
+  .value-card {
+    width: 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-left h1 {
+    font-size: 26px;
+  }
+
+  .about-left p {
+    font-size: 15px;
+  }
+
+  .about-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .about-right img {
+    width: 90%;
+  }
+
+  .feature-card-ab,
+  .value-card {
+    width: 100%;
+  }
+
+  .value-card h3 {
+    font-size: 1rem;
+  }
+
+  .value-card p {
+    font-size: 0.95rem;
+  }
+}

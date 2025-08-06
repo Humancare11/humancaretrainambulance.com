@@ -5,7 +5,7 @@
   background-color: var(--blue);
 }
 .ab-title {
-    color: #ffffff;
+    color: #000000;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1;
@@ -73,7 +73,21 @@
   border-radius: 20px;
 }
 
+.title-train-ambulance{
+  color: #000000;
+    font-size: 2.2rem;
+  font-weight: bold;
+  
+  margin-bottom: 15px;
+}
 
+.description-train-ambulance {
+  color: #000000;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
 
 
 
@@ -219,6 +233,7 @@
 }
 
 .how-icon {
+  background-color: #ff9292;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -231,17 +246,18 @@
 }
 
 .red {
-  background-color: #fdebec;
-  color: #d94c4c;
+  background-color: #fdebec!important;
+  color: var(--red);
 }
 
 .green {
-  background-color: #e4f7f3;
-  color: #25a78d;
+  background-color: #fdebec!important;
+   color: var(--red)!important;
 }
 
 .blue {
-  color: #0b3c5d;
+    background-color: #fdebec!important;
+   color: var(--red)!important;
 }
 
 .how-step h3 {
@@ -343,13 +359,13 @@
 .testimonials-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #0b3c5d;
+  color: #eeeeee;
   margin-bottom: 10px;
 }
 
 .testimonials-subtitle {
   font-size: 1rem;
-  color: #4a7b9d;
+  color: #f0f0f0;
   margin-bottom: 40px;
 }
 

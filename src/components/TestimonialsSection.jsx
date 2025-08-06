@@ -44,7 +44,6 @@ const TestimonialsSection = () => {
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
@@ -68,7 +67,6 @@ const TestimonialsSection = () => {
             Read how MediTrain has touched lives and brought families together during their most challenging times.
           </p>
         </div>
-
         <div className="testimonial-card">
           <div className="stars">
             {[...Array(currentData.rating)].map((_, i) => (
@@ -106,7 +104,6 @@ const TestimonialsSection = () => {
             </button>
           </div>
         </div>
-
         <div className="testimonial-grid">
           {testimonials.slice(0, 3).map((testimonial, index) => (
             <div key={index} className="testimonial-box">

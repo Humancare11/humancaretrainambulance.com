@@ -35,9 +35,8 @@
   text-align: left !important;
 }
 
-.feature-title {
-  color: #1d3557;
-  text-align: left !important;
+.feature-title-ab-sec {
+  text-align: center !important;
 }
 .section-title-d {
   color: #1d3557;
@@ -200,4 +199,19 @@
   50% {
     transform: translateY(-8px);
   }
+}
+
+
+.about-image-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }

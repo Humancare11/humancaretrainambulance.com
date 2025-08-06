@@ -18,11 +18,12 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer'; 
 import Contact from './pages/Contact';
 import Testimonial from './pages/Testimonial'; // Assuming you have a Testimonials page
-// import HumanCarePreloader from './components/HumanCarePreloader'; // Assuming you have this component
+import HumanCarePreloader from './components/HumanCarePreloader'; // Assuming you have this component
+import VideoPlayer from './components/VideoPlayer';
 function App() {
   return (
     <Router>
-      {/* <HumanCarePreloader /> */}
+      <HumanCarePreloader />
       <Header />
       <Routes>
       <Route path="/" element={<Home />} />
@@ -35,6 +36,7 @@ function App() {
           <Route path="/Trainambulance" element={<Trainambulance />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Testimonial" element={<Testimonial />} />
+        <Route path="/VideoPlayer" element={<VideoPlayer />} />
            {/* { {/*<Route path="/ContactSection" element={<ContactSection />} />  } */}
 {/* <Route path="/Service" element={<Service />} /> */}
         {/* <Route path="/Why" element={<Why />} />  */}

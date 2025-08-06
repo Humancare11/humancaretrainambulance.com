@@ -1,7 +1,6 @@
 :root {
   --background: #F1FAEE;
-  --primary: #1D3557;
-  --secondary: #E63946;
+  --blue: #1D3557;
   --red: #E63946;
 }
 
@@ -47,19 +46,20 @@
 
 .nav-link {
   text-decoration: none;
-  color: var(--primary);
-  font-weight: 500;
+  color: var(--blue)!important;
+  font-weight: 500!important;
+  font-size: 17px!important;
   transition: color 0.2s ease;
   position: relative;
 }
 
 .nav-link:hover {
-  color: var(--red);
+  color: var(--red)!important;
 }
 
 .nav-link-active {
-  color: var(--red);
-  border-bottom: 2px solid var(--red);
+  color: var(--red)!important;
+  border-bottom: 2px solid var(--red)!important;
 }
 
 .cta-button {
@@ -177,3 +177,81 @@
     display: none;
   }
 }
+
+
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+}
+
+/* .modal-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+} */
+ .modal-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1100px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+  /* Remove scroll */
+  max-height: none;
+  overflow: visible;
+}
+
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+} 
+
+.close-button {
+  position: absolute;
+  top: 40px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  z-index: 10000;
+  transition: color 0.2s ease;
+  color: #ff0000;
+}
+
