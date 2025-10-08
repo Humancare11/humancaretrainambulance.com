@@ -20,6 +20,10 @@ import Contact from './pages/Contact';
 import Testimonial from './pages/Testimonial'; // Assuming you have a Testimonials page
 import HumanCarePreloader from './components/HumanCarePreloader'; // Assuming you have this component
 import VideoPlayer from './components/VideoPlayer';
+import Herobanner from './components/Herobanner'; // Assuming you have this component
+import TermsAndConditions from './pages/TermsAndConditions'; // Assuming you have a Terms and Conditions page
+import Privacypolicy from './pages/Privacypolicy'; // Assuming you have a Privacy Policy page
+import NotFound from './pages/NotFound';
 function App() {
   return (
     <Router>
@@ -37,6 +41,11 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/Testimonial" element={<Testimonial />} />
         <Route path="/VideoPlayer" element={<VideoPlayer />} />
+        <Route path="/Herobanner" element={<Herobanner />} />
+        <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+        <Route path="/Privacypolicy" element={<Privacypolicy />} />
+        <Route path="*" element={<NotFound />} />
+        {/* Uncomment the line below if you have a Service page */}
            {/* { {/*<Route path="/ContactSection" element={<ContactSection />} />  } */}
 {/* <Route path="/Service" element={<Service />} /> */}
         {/* <Route path="/Why" element={<Why />} />  */}

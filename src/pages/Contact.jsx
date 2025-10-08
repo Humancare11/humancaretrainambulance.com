@@ -1,28 +1,19 @@
 import React from 'react'
-import abImage from '../assets/heroimg.png'; // Adjust the path to your contact image
+import abImage from '../assets/contact.png'; // Adjust the path to your contact image
 import './contact.css'; // Assuming you have a CSS file for styling
 import ContactSection from '../components/ContactSection';  
+import Herobanner from '../components/Herobanner';
 function Contact() {
   return (
-    <div>
-
-          <section className="about-section-pg">
-              <div className="about-container">
-                <div className="about-left">
-                  <h1>
-                    <span className="ab-tital">Contact Us</span>{' '}
-                 
-                  </h1>
-                  <p>
-                   With years of experience in emergency medical transport, we provide specialized train ambulance services equipped
-                  </p>
-                  <a href="#" className="about-btn">Know More</a>
-                </div>
-                <div className="about-right">
-                  <img src={abImage} alt="Train Ambulance" />
-                </div>
-              </div>
-            </section>
+    <>
+    <Herobanner
+        image= {abImage}
+         heading="Contact Us – 24/7 Train Ambulance Services in India | Human Care Worldwide"
+      paragraph="Need urgent train ambulance support? Contact Human Care Worldwide for safe, quick, and affordable patient transfer by rail across India. Available 24/7 with medical team, documentation, and end-to-end coordination."
+      buttonText="Know More"
+      buttonLink="/about"
+      />
+   
 <ContactSection/>
  <section className="contact-section">
       <div className="container">
@@ -42,7 +33,7 @@ function Contact() {
         </div>
       </div>
     </section>
-    </div>
+    </>
   )
 }
 

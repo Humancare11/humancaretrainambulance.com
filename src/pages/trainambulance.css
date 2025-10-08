@@ -74,7 +74,7 @@
 }
 
 .title-train-ambulance{
-  color: #000000;
+  color: var(--blue);
     font-size: 2.2rem;
   font-weight: bold;
   
@@ -89,6 +89,14 @@
   line-height: 1.6;
 }
 
+.casestudyhead{
+  color: var(--blue);
+  text-align: center;
+}
+.quote {
+    text-align: center;
+
+}
 
 
 
@@ -169,6 +177,11 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .train-right-cards {
+    
+  }
+}
 
 .train-stat-card {
   background-color: #ffffff;
@@ -189,7 +202,7 @@
   color: #4a7b9d;
 }
 
-.red {
+.redd {
   color: #d94c4c;
 }
 
@@ -200,7 +213,11 @@
 .blue {
   color: #0b3c5d;
 }
-
+@media (max-width: 768px) {
+  .train-right-cards  {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+}
  /* ========================2nd========================== */
 .how-it-works {
   background-color: #fff;
@@ -302,6 +319,11 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .equipment-grid  {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
 
 .equipment-card {
   background-color: #ffffff;
@@ -360,7 +382,7 @@
   font-size: 2rem;
   font-weight: bold;
   color: #eeeeee;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .testimonials-subtitle {
@@ -371,7 +393,7 @@
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
   gap: 25px;
   max-width: 1200px;
   margin: 0 auto;

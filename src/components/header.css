@@ -4,7 +4,7 @@
   --red: #E63946;
 }
 
-.header {
+/* .header {
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -12,7 +12,28 @@
   top: 0;
   z-index: 50;
   border-bottom: 1px solid #E9ECEF;
+} */
+/* Sticky Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8px);
+
 }
+
+/* Ensure page content doesn't hide behind header */
+
+
+/* Optional smooth transition effect */
+.header-container {
+  transition: all 0.3s ease-in-out;
+}
+
 
 .header-container {
   max-width: 1200px;
@@ -223,6 +244,11 @@
   overflow: visible;
 }
 
+.divider{
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+ padding-top: 40px!important;
+  
+}
 
 .close-button {
   position: absolute;

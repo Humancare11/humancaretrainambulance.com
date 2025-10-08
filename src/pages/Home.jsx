@@ -1,103 +1,160 @@
 import React from 'react';
 import './home.css';
- import AboutSection from "../components/AboutSection";  
+import AboutSection from "../components/AboutSection";  
 import TrainAmbulanceSection from '../components/TrainAmbulanceSection';  
 import WhyChooseUs from '../components/WhyChooseUs';
 import TestimonialsSection from '../components/TestimonialsSection';  
 import ContactSection from '../components/ContactSection';  
-import heroImage from '../assets/heroimg.png';
-
-
-
+import heroImage from '../assets/10.png';
+import { Helmet } from "react-helmet";
 
 const HeroSection = () => {
   return (
-    <div>
-    <section id="home" className="hero-section">
-      <div className="hero-container">
-        <div className="hero-grid">
-          {/* Content */}
-          <div className="hero-content">
-            <h1 className="hero-title">
-              <span className="satish">Fast & Safe </span>
-              <span className="text-accent">Train</span><br />
-              <span className="text-accent">Ambulance </span>
-              <span className="satish">Services</span>
-            </h1>
+   <>
+   <Helmet>
+  <title>Train Ambulance Service in India | Rail Ambulance - Humancare Train Ambulance</title>
+  <meta
+    name="description"
+    content="Get reliable and affordable train ambulance service across India with Humancare Train Ambulance. Expert rail ambulance services with 24/7 emergency medical care."
+  />
+  <meta
+    name="keywords"
+    content="train ambulance service, rail ambulance service, railway ambulance service, Humancare Train Ambulance"
+  />
 
-            <p className="hero-subtext">
-              Caring for your loved ones during emergencies with reliable medical transport
-            </p>
+  {/* Open Graph */}
+  <meta property="og:title" content="Train Ambulance Service in India | Rail Ambulance - Humancare" />
+  <meta
+    property="og:description"
+    content="Fast & affordable train ambulance service in India. Human Care provides expert rail ambulance services with onboard medical staff."
+  />
+  <meta property="og:image" content={`https://humancaretrainambulance.com${heroImage}`} />
+  <meta property="og:url" content="https://humancaretrainambulance.com" />
+  <meta property="og:type" content="website" />
 
-            <div className="hero-buttons">
-              <button className="btn-accent">
-                <svg className="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 
-                    11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 
-                    1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 
-                    3 14.284 3 6V5z" />
-                </svg>
-                Request Ambulance
-              </button>
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Train Ambulance Service in India | Rail Ambulance - Human Care" />
+  <meta name="twitter:description" content="24/7 train ambulance & rail ambulance service in India with Human Care." />
+  <meta name="twitter:image" content={`https://humancaretrainambulance.com${heroImage}`} />
 
-              <button className="btn-outline">
-                Learn More
-                <svg className="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+  {/* ✅ Schema Markup */}
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Humancare Train Ambulance",
+        "alternateName": "Humancare Rail Ambulance",
+        "url": "https://humancaretrainambulance.com",
+        "logo": "https://humancaretrainambulance.com/logo.png",
+        "image": "https://humancaretrainambulance.com${heroImage}",
+        "description": "Humancare provides fast & affordable train ambulance service and rail ambulance service in India with onboard ICU setup & expert doctors.",
+        "telephone": "+919833997373",
+        "priceRange":"$$",
+        "openingHours": "Mo-Su 00:00-23:59",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.facebook.com/",
+          "https://www.instagram.com/",
+          "https://twitter.com/"
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "serviceType": [
+          "Train Ambulance Service",
+          "Rail Ambulance Service",
+          "Railway Ambulance"
+        ]
+      }
+    `}
+  </script>
 
-            <div className="hero-trust">
-              <div className="trust-item">
-                <svg className="trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 
-                    2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 
-                    0 003 9c0 5.591 3.824 10.29 9 
-                    11.622 5.176-1.332 9-6.03 
-                    9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <span className='ban-text'>24/7 Available</span>
+  {/* Optional: WebSite schema for sitemap/navigation */}
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Humancare Train Ambulance",
+        "url": "https://humancaretrainambulance.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://humancaretrainambulance.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "sitemap": [
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Home",
+            "url": "https://humancaretrainambulance.com/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "About",
+            "url": "https://humancaretrainambulance.com/about"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Services",
+            "url": "https://humancaretrainambulance.com/services"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Contact",
+            "url": "https://humancaretrainambulance.com/contact"
+          }
+        ]
+      }
+    `}
+  </script>
+</Helmet>
+
+        {/* ✅ Your Existing Page Content */}
+        <section id="home" className="hero-section">
+          <div className="hero-container">
+            <div className="hero-grid">
+              {/* Content */}
+              <div className="hero-content">
+                <h1 className="hero-title">
+                  <span className="satish">Fast & affordable </span>
+                  <span className="text-accent">Train Ambulance</span><br />
+                  <span className="satish">Service</span>
+                </h1>
+                <p className="hero-subtext">
+                  Expert medical care doesn’t stop at hospital doors; it continues on tracks with us with reliable train ambulance services.
+                </p>
+                <div className="hero-buttons">
+                  <a href="tel:+919833997373" className="btn-link-wrapper">
+                    <button className="btn-accent">Request Ambulance</button>
+                  </a>
+                  <a href="/Trainambulance" className="btn-link-wrapper" style={{ textDecoration: 'none' }}>
+                    <button className="btn-outline">Learn More</button>
+                  </a>
+                </div>
               </div>
-              <div className="trust-item">
-                <svg className="trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 
-                    6.364L12 20.364l7.682-7.682a4.5 4.5 
-                    0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 
-                    4.5 0 00-6.364 0z" />
-                </svg>
-                <span className='ban-text'>Expert Care</span>
+
+              {/* Train Image */}
+              <div className="hero-image-wrapper">
+                <div className="hero-card">
+                  <img src={heroImage} alt="Train Ambulance" className="hero-train-image" />
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* Medical Train Illustration */}
-          <div className="hero-image-wrapper">
-            <div className="hero-card">
-       <img
-  src={heroImage}
-  alt="Train Ambulance"
-  className="hero-train-image"
-/>
-
-            </div>
-          </div>
-        </div>
-      </div>
- 
-
-    </section>
-    <AboutSection/>
-<TrainAmbulanceSection/>
-      <WhyChooseUs/>
-    <TestimonialsSection/>
-      <ContactSection/> 
-    
-</div>
-  
+        <AboutSection />
+        <TrainAmbulanceSection />
+        <WhyChooseUs />
+        <TestimonialsSection />
+        <ContactSection />
+      </>
   );
 };
 

@@ -7,36 +7,33 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      location: "Mumbai to Delhi",
+      name: " Ritika Sinha",
+      location: "Patna",
       avatar: "bg-secondary",
       rating: 5,
-      text: "During my mother's critical condition, MediTrain provided exceptional care. The medical team was professional and compassionate. They treated my mother like their own family member. The train ambulance was well-equipped and gave us peace of mind during the journey.",
-      relationship: "Son"
+      text: "We couldn’t afford an air ambulance, and Humancare’s train service was a lifesaver. The entire journey from Patna to Delhi was smooth, and the medical team was attentive throughout. My father was stable and well-cared for.",
+      
     },
     {
-      name: "Sunita Patel",
-      location: "Bangalore to Kolkata",
+      name: "Arvind Mehra",
+      location: "Mumbai",
       avatar: "bg-primary",
       rating: 5,
-      text: "I was scared about transferring my husband over such a long distance, but MediTrain made it seamless. The doctor and nurses were constantly monitoring him, and they kept us informed every step of the way. Truly grateful for their service.",
-      relationship: "Wife"
+      text: "I was nervous about shifting my post-surgery mother from Lucknow to Mumbai by train, but the ICU setup onboard was impressive. The doctor and nurse handled everything so professionally, it felt like a moving hospital!",
     },
     {
-      name: "Dr. Amit Verma",
-      location: "Chennai to Hyderabad",
+      name: "Shalini Iyer",
+      location: "Chennai ",
       avatar: "bg-accent",
       rating: 5,
-      text: "As a physician myself, I was impressed by the medical standards maintained by MediTrain. The equipment was state-of-the-art, and the medical protocols were followed meticulously. They provided excellent care for my elderly father.",
-      relationship: "Doctor & Son"
+      text: "Thank you, Humancare, for helping us bring our child from Hyderabad to Chennai safely. The pediatric team was kind, and the incubator setup gave us complete peace of mind.",
     },
     {
-      name: "Meera Reddy",
-      location: "Pune to Ahmedabad",
+      name: "Suresh",
+      location: "Nagpur",
       avatar: "bg-secondary",
       rating: 5,
-      text: "The team went above and beyond to ensure my daughter was comfortable during the transfer. They explained everything clearly and were so patient with all our questions. The journey was smooth and safe. Highly recommended!",
-      relationship: "Mother"
+      text: "We had to transfer my uncle from Kolkata to Nagpur. The team managed all the logistics, and the journey was perfectly coordinated. I travelled along, and the staff took care of both of us with patience and care.",
     }
   ];
 
@@ -62,9 +59,10 @@ const TestimonialsSection = () => {
       <div className="container">
         <div className="header1">
           <span className="subtitle">What Families Say</span>
-          <h2 className="title">Stories of Hope and Healing</h2>
+          <h2 className="title">Stories of Compassionate Care and Safe Transfers
+</h2>
           <p className="description">
-            Read how MediTrain has touched lives and brought families together during their most challenging times.
+           Hear directly from families and patients who experienced the comfort, safety, and professionalism of our train ambulance services. From long-distance medical transfers to critical patient repatriation, our clients trust us to deliver expert care with empathy. 
           </p>
         </div>
         <div className="testimonial-card">

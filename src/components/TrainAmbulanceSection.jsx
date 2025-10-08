@@ -1,14 +1,15 @@
 import React from 'react';
 import './TrainAmbulanceSection.css';
-import trainimg from '../assets/heroimg.png'; 
+import trainimg from '../assets/trainimg.png';
 
 
 const TrainAmbulanceSection = () => (
   <section className="train-ambulance-wrapper">
     <div className="header-block">
-      <h2 className="main-title">India's Trusted Train Ambulance Provider</h2>
+      <h2 className="main-title">India’s Trusted Train Ambulance Provider
+      </h2>
       <p className="main-desc">
-        When air ambulance isn't feasible and road transport is too risky, our specially equipped train ambulances provide the perfect solution for long-distance medical transfers.
+        Whether it’s shifting patients from rural areas to metro hospitals or transporting them across state lines for specialized care, we bring hospital-grade care on wheels.
       </p>
     </div>
 
@@ -17,15 +18,17 @@ const TrainAmbulanceSection = () => (
       <div className="content-left">
         <div className="icon-title-row">
           {/* <span className="icon-icu">&#128657;</span> */}
-          <span className="feature-title">Mobile ICU on Rails</span>
+          <span className="feature-title">Our Train Ambulance Services
+          </span>
         </div>
         <p className="section-desc">
-          Our train ambulances are fully equipped mobile intensive care units that ensure continuous medical monitoring and care during long-distance transfers. With advanced life support systems and experienced medical staff, we bring hospital-level care directly to your journey.
+          We provide comprehensive train ambulance solutions tailored for various patient needs — from intensive care transfers to pediatric support and inter-state repatriation. Our services ensure medical-grade care and comfort throughout the journey.
         </p>
         <ul className="features-list">
           <li>
             <span className="feat-icon feat-green"></span>
-            <strong className="feat-title">Advanced Life Support</strong>
+            <strong className="feat-title"> ICU Train Ambulance
+</strong>
             <span className="feat-desc">Ventilators, monitors, and emergency medications</span>
           </li>
           <li>
@@ -44,11 +47,12 @@ const TrainAmbulanceSection = () => (
             <span className="feat-desc">Secure and stable transportation</span>
           </li>
         </ul>
-        <button className="book-btn">Book Train Ambulance</button>
+        <a href="/Contact" className="btn-link-wrapper" style={{ textDecoration: 'none' }}>
+        <button className="book-btn">Book Train Ambulance</button></a>
       </div>
       <div className="content-right">
         <div className="medical-box">
-              <img
+          <img
             src={trainimg}
             alt="Train Ambulance"
             className="trainimg"

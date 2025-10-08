@@ -1,0 +1,21 @@
+/* Banner.css */
+.about-section-pg {
+  padding: 60px 20px;
+  background-color: var(--blue);
+}
+
+.about-head {
+  color: var(--red);
+}
+
+.img-fluid {
+  width: 70%;
+  height: auto !important;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    width: 100%;
+  }
+}
