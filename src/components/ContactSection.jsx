@@ -19,7 +19,7 @@ const ContactSection = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://humancaretrainambulance.com/contact.php', {
+      const res = await fetch('https://humancaretrainambulance.com/Contact.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -52,8 +52,7 @@ const ContactSection = () => {
           Talk With <span className="highlight-text">Experts</span>
         </h2>
         <p className="contact-description">
-          We provide a full range of emergency and medical services designed to meet all your healthcare needs with professional excellence.
-        </p>
+Contact Humancare Train Ambulance for quick response, medical readiness, and trusted rail ambulance service — because every journey deserves expert care.        </p>
         <div className="contact-details">
           <p>Phone: <a href="tel:+919833997373">+919833997373</a></p>
           <p>Email: <a href="mailto:ops@humancareworldwide.com">ops@humancareworldwide.com</a></p>

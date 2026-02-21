@@ -1,16 +1,16 @@
 import React from 'react';
 import './TrainAmbulanceSection.css';
-import trainimg from '../assets/trainimg.png';
+import trainimg from '../assets/trainimg.webp';
 
 
 const TrainAmbulanceSection = () => (
   <section className="train-ambulance-wrapper">
     <div className="header-block">
       <h2 className="main-title">India’s Trusted Train Ambulance Provider
+
       </h2>
       <p className="main-desc">
-        Whether it’s shifting patients from rural areas to metro hospitals or transporting them across state lines for specialized care, we bring hospital-grade care on wheels.
-      </p>
+Whether transferring patients from rural regions to advanced metro hospitals or coordinating long-distance medical movement across states, we deliver hospital-grade care throughout the journey. With ICU-level medical setup, trained doctors and nurses, and seamless coordination, patients receive safe, reliable, and continuous medical support from departure to destination.      </p>
     </div>
 
 

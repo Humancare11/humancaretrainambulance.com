@@ -62,8 +62,7 @@ const TestimonialsSection = () => {
           <h2 className="title">Stories of Compassionate Care and Safe Transfers
 </h2>
           <p className="description">
-           Hear directly from families and patients who experienced the comfort, safety, and professionalism of our train ambulance services. From long-distance medical transfers to critical patient repatriation, our clients trust us to deliver expert care with empathy. 
-          </p>
+Hear directly from families and patients who experienced the comfort, safety, and professionalism of our train ambulance service in India and rail ambulance service. From long-distance medical transfers to critical patient repatriation, families trust our indian train ambulance solutions for safe, well-coordinated journeys delivered with expert medical care and genuine compassion.          </p>
         </div>
         <div className="testimonial-card">
           <div className="stars">

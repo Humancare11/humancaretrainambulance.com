@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
 </h2>
 <div className="container">
       <p className="section-desc">
-        Train ambulances offer a more affordable alternative to air ambulances for stable, long-distance transfers. Each journey is managed by experienced doctors, nurses, and paramedics to ensure safe, continuous care.
+        Our train ambulance service offers a cost-effective solution for long-distance medical transfers compared to air transport. We maintain full transparency around train ambulance cost in India, train ambulance charges, and rail ambulance cost, helping families understand the cost of train ambulance in India before confirming the transfer. Each train ambulance journey is managed by trained medical professionals with ICU-grade equipment, ensuring safe, reliable care with clearly explained train ambulance service cost and no hidden train ambulance price surprises.
       </p>
 </div>
       <div className="features-container">
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
             <img src="https://img.icons8.com/external-microdots-premium-microdot-graphic/64/external-icu-medical-healthcare-vol1-microdots-premium-microdot-graphic.png" alt="team" />
           </div>
           <h4>On-Board ICU Setup</h4>
-          <p>Our train ambulances come with ventilators, monitors, suction machines, and all critical care equipment.</p>
+          <p> Our ICU train ambulance is equipped with ventilators, cardiac monitors, suction machines, oxygen support, and all essential critical-care equipment to ensure continuous medical monitoring during the train ambulance journey.</p>
         </div>
 
         <div className="feature-box-1">
@@ -34,7 +34,8 @@ const WhyChooseUs = () => {
             <img src="https://img.icons8.com/ios-filled/50/1E88E5/shield.png" alt="support" />
           </div>
           <h4>Pan-India Network</h4>
-          <p>We coordinate with major railway zones and hospital partners across India to streamline timely transfers.
+          <p>  Our train ambulance service in India operates through a strong rail ambulance India network, coordinating with major railway zones and hospitals to enable timely and well-planned medical transfers across states.
+
 </p>
         </div>
 
@@ -42,16 +43,19 @@ const WhyChooseUs = () => {
           <div className="feature-icon bg-red">
             <img src="https://img.icons8.com/ios-filled/50/F44336/clock.png" alt="24/7" />
           </div>
-          <h4>Comfortable Journey</h4>
-          <p>Our team ensures the patient and their family experience a smooth and stable journey with continuous care.</p>
+          <h4>Comfortable Journey – 24/7 Care</h4>
+          <p> Every train ambulance service is managed to provide a smooth, stable, and comfortable experience for patients and accompanying family members, with uninterrupted medical attention throughout the transfer.
+</p>
         </div>
 
         <div className="feature-box-1">
           <div className="feature-icon bg-lightgreen">
             <img src="https://img.icons8.com/ios-filled/50/4CAF50/phone.png" alt="connectivity" />
           </div>
-          <h4>24/7 Coordination</h4>
-          <p>From paperwork to boarding and discharge, our case managers manage every aspect with precision and compassion.</p>
+          <h4>24/7 Coordination & Support</h4>
+          <p>
+ From documentation and approvals to boarding and final hospital handover, our team manages the complete train ambulance booking process with precision, ensuring reliable rail ambulance service support at every step
+</p>
         </div>
       </div>
 

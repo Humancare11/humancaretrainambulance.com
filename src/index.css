@@ -1,19 +1,68 @@
-/* Base styles and CSS Variables */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
+/* 👇 Use system fonts for instant paint — faster FCP */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 🧠 Prevent layout shift due to images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 
-/* About, Values, Mission, etc. section styles remain here */
-/* You can keep or modify them based on your pages */
 
+/* 🎨 Preload visible section faster (hero, header etc.) */
+section,
+header {
+  contain: layout paint;
+}
+
+/* ⚡ Optimize transitions and animations */
+:root {
+  --transition-speed: 0.3s;
+}
+
+a,
+button {
+  transition: all var(--transition-speed) ease;
+  cursor: pointer;
+}
+
+/* 💡 Placeholder style for lazy-loaded images */
+img[loading="lazy"] {
+  filter: blur(5px);
+  transition: filter 0.4s ease;
+}
+img[loading="lazy"]:not([src=""]) {
+  filter: blur(0);
+}
+
+/* ✅ Default container layout (optional) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ✨ Optional small helper */
+.hidden {
+  display: none !important;
+}
 
 
 

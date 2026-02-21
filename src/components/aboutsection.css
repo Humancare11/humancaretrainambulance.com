@@ -215,3 +215,88 @@
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
+
+
+
+.about-features-section {
+  padding: 70px 0;
+  background: #f8fbff;
+}
+
+.about-features-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.feature-card-new {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease-in-out;
+}
+
+.feature-card-new:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon-new {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.feature-icon-new svg {
+  width: 32px;
+  height: 32px;
+  fill: #0c3c78;
+}
+
+.experience-bg {
+  background: rgba(124, 166, 255, 0.25);
+}
+
+.heart-bg {
+  background: rgba(255, 137, 137, 0.25);
+}
+
+.reliability-bg {
+  background: rgba(129, 212, 250, 0.25);
+}
+
+.feature-card-new h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a2c4e;
+  margin-bottom: 14px;
+}
+
+.feature-card-new p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #4b4b4b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-features-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-features-container {
+    grid-template-columns: 1fr;
+  }
+}
