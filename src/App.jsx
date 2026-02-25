@@ -8,8 +8,8 @@ import AboutSection from './components/AboutSection';
 import TrainAmbulanceSection from './components/TrainAmbulanceSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import TestimonialsSection from './components/TestimonialsSection';
-import ContactSection from './components/ContactSection'; 
-import Footer from './components/Footer'; 
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Testimonial from './pages/Testimonial';
 import VideoPlayer from './components/VideoPlayer';
@@ -20,7 +20,7 @@ import NotFound from './pages/NotFound';
 import PaymentPage from './pages/PaymentPage';
 import Success from './pages/Success';
 import Failure from './pages/Failure';
-
+import LandingPage from './pages/LandingPage';
 
 import BlogCard from "./blogs/BlogCard";
 import Blog1 from "./blogs/Blog1";
@@ -48,7 +48,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Header />TrainAmbulanceCities 
+      <Header />TrainAmbulanceCities
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -69,11 +69,11 @@ function App() {
         <Route path="/Success" element={<Success />} />
         <Route path="/failure" element={<Failure />} />
         <Route path="*" element={<NotFound />} />
-        
-   <Route path="/blogs"element={<BlogCard/>}/>
-  <Route path="/blog1" element={<Blog1 />} />
-    <Route path="/blog2" element={<Blog2 />} />
-  <Route path="/blog3" element={<Blog3 />} />
+        <Route path="/train-ambulance-services" element={<LandingPage />} />
+        <Route path="/blogs" element={<BlogCard />} />
+        <Route path="/blog1" element={<Blog1 />} />
+        <Route path="/blog2" element={<Blog2 />} />
+        <Route path="/blog3" element={<Blog3 />} />
 
       </Routes>
       <Footer />

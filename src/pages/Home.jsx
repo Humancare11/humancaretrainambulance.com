@@ -12,7 +12,6 @@ import heroImage from '../assets/10.webp';
 import trainAmbulance from "../assets/10.webp";
 import RailAmbulance from "../assets/Rail Ambulance.webp";
 import Railcost from "../assets/Train Ambulance cost In India.png";
-import TrainAmbulanceCities from "../components/TrainAmbulanceCities";
 
 
 import { Helmet } from "react-helmet";
@@ -526,7 +525,6 @@ Recognized as one of the best train ambulance services in India, we operate thro
 
       </div>
     </section>
-    <TrainAmbulanceCities />
       <ContactSection />
 
       
