@@ -21,6 +21,7 @@ import PaymentPage from './pages/PaymentPage';
 import Success from './pages/Success';
 import Failure from './pages/Failure';
 import LandingPage from './pages/LandingPage';
+import Core from './pages/Core';
 
 import BlogCard from "./blogs/BlogCard";
 import Blog1 from "./blogs/Blog1";
@@ -70,6 +71,14 @@ function App() {
         <Route path="/failure" element={<Failure />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/train-ambulance-services" element={<LandingPage />} />
+<Route path="/train-ambulance" element={<Core />} />
+
+
+
+
+
+
+
         <Route path="/blogs" element={<BlogCard />} />
         <Route path="/blog1" element={<Blog1 />} />
         <Route path="/blog2" element={<Blog2 />} />

@@ -299,7 +299,107 @@
     margin-top: 20px;
     text-align: center;
   }
+/* ------------------------------------------
+   MOBILE RESPONSIVE FIXES
+-------------------------------------------*/
 
+/* For tablets */
+@media (max-width: 992px) {
+
+  /* Banner */
+  .lp-banner-section {
+    height: auto;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .lp-banner-section h1 {
+    font-size: 34px;
+  }
+
+  .lp-banner-section p {
+    font-size: 16px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Emergency */
+  .lp-emergency-container-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .lp-emergency-heading img {
+    margin: 0 auto;
+    height: 220px;
+  }
+
+  .lp-emergency-content {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .lp-checklist li {
+    text-align: left;
+    margin-left: 20px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 576px) {
+
+  /* Banner */
+  .lp-banner-section {
+    padding: 60px 20px;
+  }
+
+  .lp-banner-section h1 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .lp-banner-section h1 span {
+    font-size: 26px;
+  }
+
+  .lp-banner-section p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .cta-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Emergency */
+  .lp-emergency-heading h2 {
+    font-size: 26px;
+  }
+
+  .lp-emergency-heading img {
+    height: 170px;
+  }
+
+  .lp-emergency-content p {
+    font-size: 15px;
+  }
+
+  .lp-checklist li {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .lp-checklist li::before {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+  }
+}
   .feature-card {
     background: #ffffff;
     padding: 30px 25px;
@@ -535,7 +635,7 @@
   .cost-subtitle {
     font-size: 16px;
     color: #6b7c93;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto 50px auto;
     line-height: 1.6;
   }
@@ -558,8 +658,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 520px;
+    /* justify-content: space-between; */
   }
 
   .cost-card:hover {
@@ -641,10 +740,10 @@
     color: #fff;
   }
 
-  .container {
+  /* .container {
     max-width: 1200px;
     margin: auto;
-  }
+  } */
 
   .why-title {
     font-size: 36px;
@@ -655,10 +754,22 @@
     color: #e11d2e;
   }
 
-  .why-subtitle {
-    margin: 10px 0 60px;
-    color: #cbd5e1;
+
+  /* .why-conte{
+     max-width: 100%;
+
+  } */
+  .why-conte p{
+     max-width: 800px;
+     text-align: center;
+
   }
+  .why-subtitle {
+  max-width: 800px;
+  margin: 10px auto 60px;
+  text-align: center;
+  color: #cbd5e1;
+}
 
   /* WHY GRID */
   .why-grid {

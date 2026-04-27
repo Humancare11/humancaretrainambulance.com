@@ -1,7 +1,7 @@
 import React from 'react'
 import "./LandingPage.css";
 import TrainICU from "../assets/trainsec.png";
-import TrainEmergency from "../assets/Rail Ambulance.webp";
+import TrainEmergency from "../assets/Rail-Ambulance.webp";
 import { useState } from "react";
 // import { Helmet } from "react-helmet-async";
 import {
@@ -439,15 +439,16 @@ function LandingPage() {
 
       {/* section 7: why choose us */}
       <section className="why-section">
-        <div className="container">
-
-          <h2 className="why-title">
-            Why Choose <span>Humancare Train Ambulance Service</span>
-          </h2>
-          <p className="why-subtitle">
-            Humancare is one of the most dependable providers of Train ambulance service and Rail ambulance service in India, delivering safe and medically supervised patient transport.
-          </p>
-
+        <div>
+          {/* <div className="container"> */}
+          <div className="why-conte">
+            <h2 className="why-title">
+              Why Choose <span>Humancare Train Ambulance Service</span>
+            </h2>
+            <p className="why-subtitle">
+              Humancare is one of the most dependable providers of Train ambulance service and Rail ambulance service in India, delivering safe and medically supervised patient transport.
+            </p>
+          </div>
           {/* WHY GRID */}
           <div className="why-grid">
 
@@ -500,35 +501,35 @@ function LandingPage() {
             </div>
 
           </div>
+        </div>
+        {/* REVIEWS SECTION */}
+        <div className="review-wrapper">
 
-          {/* REVIEWS SECTION */}
-          <div className="review-wrapper">
+          <div className="review-card">
+            <div className="stars">★★★★★</div>
+            <p>
+              We booked the train ambulance services in a rush. The team responded very quickly. And thanks to the efforts of Doctor Baig and Nurse Anjali, we were able to shift the patient without much problem. Their tireless efforts day and night helped in keeping a check on the patient's health. They have been a great help overall. If I had the option of giving 6 stars, I would've. Excellent service from these two.
+            </p>
+            <h4>Kay Sharma</h4>
+          </div>
 
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                We booked the train ambulance services in a rush. The team responded very quickly. And thanks to the efforts of Doctor Baig and Nurse Anjali, we were able to shift the patient without much problem. Their tireless efforts day and night helped in keeping a check on the patient's health. They have been a great help overall. If I had the option of giving 6 stars, I would've. Excellent service from these two.
-              </p>
-              <h4>Kay Sharma</h4>
-            </div>
+          <div className="review-card">
+            <div className="stars">★★★★★</div>
+            <p>
+              One of our employee who was sick was shifted from Kakinada to his home town near Amritsar upon his request. We utilized the services of Human care train ambulance services and their services were good and professional with Doctor and paramedic accompanying the patient. We are extremely satisfied by the service provided by Humancare train Ambulance Service
+            </p>
+            <h4>Arun Kumar Donekal</h4>
+          </div>
 
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                One of our employee who was sick was shifted from Kakinada to his home town near Amritsar upon his request. We utilized the services of Human care train ambulance services and their services were good and professional with Doctor and paramedic accompanying the patient. We are extremely satisfied by the service provided by Humancare train Ambulance Service
-              </p>
-              <h4>Arun Kumar Donekal</h4>
-            </div>
-
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                I’m really thankful to Humancare World Wide for their excellent train ambulance service from Patna to Ahmedabad. The entire process was smooth the doctors coordinated everything perfectly, all the paperwork was handled on time, and the patient reached safely. Their professionalism and quick response truly made a difference the patient is now out of danger. Highly appreciate their support and dedication.
-              </p>
-              <h4> Dev Borade  </h4>
-            </div>
+          <div className="review-card">
+            <div className="stars">★★★★★</div>
+            <p>
+              I’m really thankful to Humancare World Wide for their excellent train ambulance service from Patna to Ahmedabad. The entire process was smooth the doctors coordinated everything perfectly, all the paperwork was handled on time, and the patient reached safely. Their professionalism and quick response truly made a difference the patient is now out of danger. Highly appreciate their support and dedication.
+            </p>
+            <h4> Dev Borade  </h4>
           </div>
         </div>
+        {/* </div> */}
       </section>
       {/* section 8: FAQ*/}
       <section className="faq-section">
@@ -595,7 +596,7 @@ function LandingPage() {
 
 
 
-    <TrainAmbulanceCities />
+      <TrainAmbulanceCities />
       <ContactSection />
 
 
