@@ -660,7 +660,7 @@ margin: 0 auto;
 }
 
 .booking-title {
-  text-align: left;
+  /* text-align: left; */
   font-size: 32px;
   font-weight: 700;
   color: #0a2c4e;
@@ -678,29 +678,32 @@ margin: 0 auto;
 .call-box {
   display: flex;
   align-items: center;
-  gap: 18px;
+  justify-content: center;
+  gap: 12px;
   background: #fff;
   border-left: 5px solid red;
-  padding: 18px 20px;
+  padding: 12px 15px;
   border-radius: 10px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-  margin: 35px 0;
+  margin: 35px auto;
+  max-width: 500px;
 }
 
 .call-icon {
-  font-size: 30px;
+  font-size: 24px;
   color: red;
 }
 
 .call-box h3 {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
   color: #0a2c4e;
+  text-align: center;
 }
 
 .call-box p {
   margin: 4px 0 0;
-  font-size: 15px;
+  font-size: 13px;
   color: #444;
 }
 

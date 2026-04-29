@@ -20,15 +20,18 @@ import NotFound from './pages/NotFound';
 import PaymentPage from './pages/PaymentPage';
 import Success from './pages/Success';
 import Failure from './pages/Failure';
-import LandingPage from './pages/LandingPage';
-import Core from './pages/Core';
+
+import LandingPage from './ads/LandingPage';
+import Core from './ads/Core';
+import Cost from './ads/Cost';
+import Location from './ads/Location';
+
 
 import BlogCard from "./blogs/BlogCard";
 import Blog1 from "./blogs/Blog1";
 import Blog2 from "./blogs/Blog2";
-
 import Blog3 from "./blogs/Blog3";
-
+import Blog4 from "./blogs/Blog4";
 
 
 // ✅ ScrollToTop Component
@@ -70,19 +73,20 @@ function App() {
         <Route path="/Success" element={<Success />} />
         <Route path="/failure" element={<Failure />} />
         <Route path="*" element={<NotFound />} />
+
+        {/* ----------------Ads--------------- */}
         <Route path="/train-ambulance-services" element={<LandingPage />} />
-<Route path="/train-ambulance" element={<Core />} />
+        <Route path="/rail-ambulance-services" element={<Core />} />
+        <Route path="/train-ambulance-cost" element={<Cost />} />
+        <Route path="/pan-india" element={<Location />} />
 
 
-
-
-
-
-
+        {/* -----------blogs-------------------- */}
         <Route path="/blogs" element={<BlogCard />} />
         <Route path="/blog1" element={<Blog1 />} />
         <Route path="/blog2" element={<Blog2 />} />
         <Route path="/blog3" element={<Blog3 />} />
+        <Route path="/blog4" element={<Blog4 />} />
 
       </Routes>
       <Footer />
