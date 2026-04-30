@@ -1,9 +1,4 @@
-/* Global Reset */
-/* body {
-  margin: 0;
-  font-family: "Georgia", serif;
-  background: #f6f8fb;
-} */
+
 
 /* SECTION 1 HERO SECTION */
 .core-hero {
@@ -300,7 +295,7 @@
 }
 
 .urgent-strip p {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   font-size: 20px;
   color: white;
 }
