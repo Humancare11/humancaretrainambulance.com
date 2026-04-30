@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import bannerImg from "../assets/Train Ambulance Services.webp";
+import blog4 from "../assets/Train Ambulance Services.webp";
 import "./Blog1.css";
 
 const Blog4 = () => {
@@ -26,7 +26,7 @@ const Blog4 = () => {
 
             {/* ===== Blog Banner Section ===== */}
             <section className="blog-banner-d">
-                <img src={bannerImg} alt="Train Ambulance Service" className="banner-img" />
+                <img src={blog4} alt="Train Ambulance Service" className="banner-img" />
                 <div className="banner-overlay"></div>
                 <div className="banner-text">
                     <h1>Inside a Train Ambulance: How ICU Care Travels Across India on Rails</h1>
@@ -42,105 +42,141 @@ const Blog4 = () => {
                         That’s where train ambulance services in India come in. They offer a more accessible and cost-effective way to move patients safely — without compromising on medical care.
                     </p>
 
-                    <h2>🏥 Understanding Rail Ambulance and Its Importance</h2>
+                    <h2>🧠 What Is a Train Ambulance?</h2>
                     <p>
-                        A rail ambulance or train ambulance is a specially designed medical coach equipped with ICU facilities,
-                        oxygen supply, monitors, and ventilators to ensure complete medical care during travel. It is one of the
-                        safest and most cost-effective modes of patient transportation in India.
+                        A train ambulance is not just a regular train journey. It’s a specially arranged medical setup inside a train coach where a patient travels under constant supervision.
+
                     </p>
                     <p>
-                        Unlike road ambulances that face traffic issues or air ambulances that are expensive, a railway ambulance
-                        service offers a perfect balance between comfort, safety, and affordability. Humancare has optimized this
-                        service with medical-grade equipment, trained paramedics, and real-time monitoring throughout the journey.
+
+                        Think of it as a moving ICU on rails — equipped with essential medical devices and supported by trained professionals throughout the journey.
+                        <br />
                     </p>
 
-                    <h2>🚑 Why Choose Humancare Train Ambulance Service</h2>
+                    <h2>⚙️ How ICU Care Is Managed During the Journey </h2>
                     <p>
-                        Humancare provides end-to-end support — from train ambulance booking to patient handover at the destination
-                        hospital. Here’s why it stands out:
+                        One of the biggest concerns families have is: Will the patient be safe during travel?<br /> <br />
+                        A properly managed train ambulance service ensures ICU-level care, including:
                     </p>
 
                     <ul>
                         <li>
-                            <strong>Comprehensive Medical Facilities:</strong> Each rail ambulance service by Humancare is designed
-                            like a mini ICU. It includes ventilators, cardiac monitors, oxygen cylinders, infusion pumps, and emergency
-                            medicines to handle any medical situation on the go.
+                            <strong>Continuous monitoring of vital signs</strong>
                         </li>
                         <li>
-                            <strong>Expert Medical Team:</strong> Humancare ensures that every train ambulance is accompanied by
-                            qualified doctors, nurses, and paramedics who monitor the patient’s condition 24/7. Their team is trained
-                            for in-transit emergency handling and long-distance patient care.
+                            <strong>Oxygen support and ventilator (if required)</strong>
                         </li>
                         <li>
-                            <strong>Affordable Train Ambulance Cost:</strong> The train ambulance cost and rail ambulance charges
-                            offered by Humancare are far lower compared to air ambulances while maintaining high-quality care. Patients
-                            get transparent quotes with no hidden train ambulance price or extra booking fees.
+                            <strong>Emergency medicines and critical care equipment</strong>
                         </li>
                         <li>
-                            <strong>Pan-India Connectivity:</strong> Through partnerships with IRCTC train ambulance and Indian railway
-                            ambulance service, Humancare operates nationwide — covering cities like Delhi, Mumbai, Chennai, Kolkata,
-                            Bengaluru, and Hyderabad. This ensures smooth patient transfers across state borders.
-                        </li>
-                        <li>
-                            <strong>24/7 Booking and Support:</strong> Humancare’s helpline and online train ambulance booking system
-                            work round the clock. The team coordinates with railway authorities to arrange ambulance express trains or
-                            medical berths depending on urgency.
+                            <strong>Experienced doctors or paramedics onboard</strong>
                         </li>
                     </ul>
-
-                    <h2>💰 Humancare’s Transparent Train Ambulance Price Structure</h2>
                     <p>
-                        Transparency is a key reason behind Humancare’s reputation. The rail ambulance cost depends on factors like
-                        distance, coach type (AC/Non-AC), and medical requirements. Unlike many others, Humancare shares the train
-                        ambulance charges upfront, so families can make informed decisions.
-                    </p>
-                    <p>
-                        Patients with long-distance transfer needs — such as post-surgery care, chronic illness, or referrals — often
-                        choose Humancare for its fair pricing and professional service.
+                        The focus is simple — keep the patient stable from start to finish.
                     </p>
 
-                    <h2>🌍 IRCTC & Indian Railway Ambulance Collaboration</h2>
+                    <h2>📋 Planning Before the Transfer</h2>
                     <p>
-                        Humancare collaborates closely with IRCTC train ambulance and Indian Railway ambulance service to ensure
-                        quick arrangements for medical coaches and berths. This coordination allows Humancare to offer faster
-                        responses even during emergencies or heavy train schedules.
+                        Behind every smooth transfer, there’s careful planning.
                     </p>
                     <p>
-                        Even when delays occur — such as when a train blocks ambulance during road transit to the station — Humancare’s
-                        coordination team ensures continuous patient care without interruption.
+                        Before the journey begins, the medical team:
                     </p>
-
-                    <h2>🚉 Humancare’s Commitment to Safety and Comfort</h2>
-                    <p>
-                        From pre-departure to arrival, Humancare prioritizes patient comfort and safety. Every railway ambulance is
-                        sanitized, climate-controlled, and equipped with backup medical supplies. The rail ambulance service staff
-                        ensures continuous communication with the patient’s family and destination hospital.
-                    </p>
-                    <p>
-                        Whether it’s an emergency transfer or a planned medical relocation, Humancare makes sure the journey is
-                        smooth, monitored, and safe.
-                    </p>
-
-                    <h2>🏆 Why Humancare Leads the Rail Ambulance Sector</h2>
                     <ul>
-                        <li>Nationwide service through ambulance express train and railway ambulance service</li>
-                        <li>Experienced doctors and medical attendants onboard</li>
-                        <li>Affordable train ambulance cost and transparent pricing</li>
-                        <li>Fast and easy train ambulance booking process</li>
-                        <li>Collaboration with IRCTC train ambulance network</li>
-                        <li>24x7 emergency support and patient tracking</li>
+                        <li>
+                            <strong>Evaluates the patient’s condition</strong>
+                        </li>
+                        <li>
+                            <strong>Chooses the safest and fastest train route</strong>
+                        </li>
+                        <li>
+                            <strong>Prepares all necessary ICU equipment</strong>
+                        </li>
+                        <li>
+                            <strong>Coordinates with hospitals and attendants</strong>
+                        </li>
                     </ul>
+                    <p>Families are also guided step-by-step, so there’s no confusion during such a critical time.
+                    </p>
 
-                    <h2>🩺 Final Thoughts</h2>
+                    <h2>💸 Why Many Families Prefer Train Ambulance Services</h2>
                     <p>
-                        Humancare’s dedication to patient well-being, combined with its advanced technology and experienced staff,
-                        makes it the most dependable choice for train ambulance services in India. Whether you need a rail ambulance,
-                        railway ambulance, or ambulance express train, Humancare ensures timely, safe, and cost-effective medical
-                        transfers with compassion and professionalism.
+                        Compared to air ambulances, train ambulance in India is often a more practical option.
                     </p>
                     <p>
-                        When it comes to train ambulance booking, rail ambulance cost, or cross-state patient travel, Humancare is
-                        not just a service — it’s a lifeline on rails.
+                        Here’s why many families choose it:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>More affordable than air transport</strong>
+                        </li>
+                        <li>
+                            <strong>Better space for patient comfort</strong>
+                        </li>
+                        <li>
+                            <strong>Easier travel for family members</strong>
+                        </li>
+                        <li>
+                            <strong>Wide connectivity across cities</strong>
+                        </li>
+                    </ul>
+                    <p>
+                        For non-emergency long-distance transfers, this balance of cost and care makes a big difference.
+
+                    </p>
+
+                    <h2>🧾 Understanding Availability and Booking</h2>
+                    <p>
+                        Many people think Indian Railways directly offers medical transport — but that’s not the case.
+                    </p>
+                    <p>
+                        Specialized providers handle everything, including:
+                    </p>
+                    <ul>
+                        <li>Medical setup inside the train</li>
+                        <li>Doctor and paramedic arrangement</li>
+                        <li>Ticket and travel coordination</li>
+                    </ul>
+
+
+                    <h2>🏥 End-to-End Patient Transfer Support</h2>
+                    <p>
+                        A train ambulance journey is rarely just about the train.
+                    </p>
+                    <p>
+                        It usually includes complete door-to-door medical transport, such as:
+                    </p>
+                    <ul>
+                        <li>Pickup from the current hospital via road ambulance</li>
+                        <li>ICU care during train travel</li>
+                        <li>Transfer to the destination hospital</li>
+                        <li>This ensures continuity of treatment without risking the patient’s condition.
+                        </li>
+                    </ul>
+
+                    <h2>⭐ How to Choose the Right Train Ambulance Service</h2>
+                    <p>
+                        Not all services are the same — and in medical situations, the right choice matters.
+                    </p>
+                    <p>
+                        Before booking, check:
+                    </p>
+                    <ul>
+                        <li>Experience of the medical team</li>
+                        <li>Availability of ICU equipment</li>
+                        <li>Speed of response</li>
+                        <li>Clear and transparent communication </li>
+                    </ul>
+                    <p>A reliable provider can make the entire process smoother and safer.</p>
+
+                    <h2>🔚 Conclusion</h2>
+                    <p>
+                        Train ambulance services in India are becoming an essential solution for long-distance patient transfers. They combine affordability, accessibility, and proper ICU care — making them a practical choice for many families.
+                    </p>
+                    <p>
+                        Understanding how it works helps you make better, informed decisions when it matters the most.
                     </p>
                 </div>
             </section>

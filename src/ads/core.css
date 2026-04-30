@@ -316,7 +316,7 @@
 }
 
 .core-emergency-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -358,12 +358,18 @@
 
 /* CARD */
 .card {
-  background: #f1f1f1;
-  border-radius: 20px;
-  padding: 30px 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 300px;
+  height: 320px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* CENTER ICON */
@@ -410,6 +416,10 @@
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
+  .core-emergency-container{
+    padding: 40px 20px;
+
+  }
   .core-emergency h2 {
     font-size: 24px;
   }
@@ -420,15 +430,19 @@
 }
 @media (max-width: 992px) {
   .core-emergency-card-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
   }
 }
 
 @media (max-width: 600px) {
   .core-emergency-card-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 }
+
+
+
+
 
 /* ----------SERVICES-------- */
 .core-services-section {

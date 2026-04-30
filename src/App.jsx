@@ -21,12 +21,13 @@ import PaymentPage from './pages/PaymentPage';
 import Success from './pages/Success';
 import Failure from './pages/Failure';
 
+// ADS
 import LandingPage from './ads/LandingPage';
 import Core from './ads/Core';
 import Cost from './ads/Cost';
 import Location from './ads/Location';
 
-
+// blogs
 import BlogCard from "./blogs/BlogCard";
 import Blog1 from "./blogs/Blog1";
 import Blog2 from "./blogs/Blog2";
