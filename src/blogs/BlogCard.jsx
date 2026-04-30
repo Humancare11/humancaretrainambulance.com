@@ -4,6 +4,8 @@ import { Calendar, ArrowRight } from "lucide-react";
 import blog1 from "../assets/blog1.jpeg";
 import blog2 from "../assets/blog2.jpeg";
 import blog3 from "../assets/blog3.jpeg";
+import blog4 from "../assets/Train Ambulance Services.webp";
+
 
 
 import "./Blogs.css";
@@ -36,6 +38,15 @@ function Blog() {
       image: blog3,
       date: "2025-11-06",
       link: "/blog3",
+    },
+    {
+      id: 4,
+      title: "Inside a Train Ambulance: How ICU Care Travels Across India on Rails",
+      excerpt:
+        "A train ambulance is not just a regular train journey. It’s a specially arranged medical setup inside a train coach where a patient travels under constant supervision.",
+      image: blog4 ,
+      date: "2026-01-12",
+      link: "/blog4",
     },
   ];
 
