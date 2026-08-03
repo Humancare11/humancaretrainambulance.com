@@ -34,7 +34,7 @@ import Blog1 from "./blogs/Blog1";
 import Blog2 from "./blogs/Blog2";
 import Blog3 from "./blogs/Blog3";
 import Blog4 from "./blogs/Blog4";
-
+import Blog5 from "./blogs/Blog5";
 
 // ✅ ScrollToTop Component
 function ScrollToTop() {
@@ -86,10 +86,11 @@ function App() {
 
         {/* -----------blogs------------------- */}
         <Route path="/blogs" element={<BlogCard />} />
-        <Route path="/blog1" element={<Blog1 />} />
-        <Route path="/blog2" element={<Blog2 />} />
-        <Route path="/blog3" element={<Blog3 />} />
-        <Route path="/blog4" element={<Blog4 />} />
+        <Route path="/what-makes-humancare-the-best-rail-ambulance-service-in-india" element={<Blog1 />} />
+        <Route path="/train-ambulance-charges-vs-air-ambulance-cost" element={<Blog2 />} />
+        <Route path="/irctc-train-ambulance-booking-guide" element={<Blog3 />} />
+        <Route path="/inside-a-train-ambulance" element={<Blog4 />} />
+        <Route path="/train-ambulance-service-in-varanasi" element={<Blog5 />} />
 
       </Routes>
       <Footer />

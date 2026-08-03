@@ -34,7 +34,11 @@
 
 import React, { useState, useRef } from "react";
 import "./TrainAmbulanceVaranasi.css";
-import trainsec from '../assets/trainsec.png';
+import train1 from '../assets/TAM-Varanasi/rail-ambulance-service-in-varanasi.webp';
+import train2 from '../assets/TAM-Varanasi/train-ambulance-service-in-varanasi.webp';
+import HeroBanner from '../assets/TAM-Varanasi/ICU-equipped-train-ambulance.webp';
+import train4 from '../assets/TAM-Varanasi/cost-of-rail-ambulance-in-varanasi.webp';
+
 
 /* =========================================================================
    CONTACT CONSTANTS (single source of truth — replace before launch)
@@ -519,7 +523,7 @@ function TrainAmbulanceVaranasiPage() {
                 </div>
                 <div className="kl-hero-visual">
                   <div className="kl-img-slot">
-                    <img src={trainsec} alt="ICU-equipped train ambulance coach interior with ventilator and monitor, Varanasi" loading="eager" width="640" height="480" />
+                    <img src={HeroBanner} alt="ICU-equipped train ambulance coach interior with ventilator and monitor, Varanasi" loading="eager" width="640" height="480" />
                   </div>
                   {/* <div className="kl-hero-float-card">
                     <span className="kl-dot" aria-hidden="true"></span>
@@ -567,7 +571,7 @@ function TrainAmbulanceVaranasiPage() {
                 </div>
                 <div className="kl-split-visual">
                   <div className="kl-img-slot" style={{ minHeight: "360px" }}>
-                    <img src={trainsec} alt="Medical transport team with patient stretcher at Varanasi railway station" loading="lazy" width="600" height="440" />
+                    <img src={train1} alt="Medical transport team with patient stretcher at Varanasi railway station" loading="lazy" width="600" height="440" />
                   </div>
                 </div>
               </div>
@@ -600,7 +604,7 @@ function TrainAmbulanceVaranasiPage() {
               <div className="kl-split kl-reverse">
                 <div className="kl-split-visual">
                   <div className="kl-img-slot" style={{ minHeight: "380px" }}>
-                    <img src={trainsec} alt="ICU equipment used in train ambulance including ventilator, monitor and oxygen cylinders" loading="lazy" width="600" height="460" />
+                    <img src={train4} alt="ICU equipment used in train ambulance including ventilator, monitor and oxygen cylinders" loading="lazy" width="600" height="460" />
                   </div>
                 </div>
                 <div>
@@ -743,7 +747,7 @@ function TrainAmbulanceVaranasiPage() {
                 </div>
                 <div className="kl-split-visual">
                   <div className="kl-img-slot" style={{ minHeight: "340px" }}>
-                    <img src={trainsec} alt="Coordinator preparing a train ambulance cost estimate for a patient transfer from Varanasi" loading="lazy" width="600" height="440" />
+                    <img src={train2} alt="Coordinator preparing a train ambulance cost estimate for a patient transfer from Varanasi" loading="lazy" width="600" height="440" />
                   </div>
                   <div className="kl-card kl-mt-24" style={{ textAlign: "center" }}>
                     <h4>Want an exact number?</h4>
@@ -822,7 +826,7 @@ function TrainAmbulanceVaranasiPage() {
           </section>
 
           {/* ============ CONTACT / FORM ============ */}
-          
+
 
           {/* ============ RESOURCES ============ */}
           {/* <section className="kl-section" id="resources">
