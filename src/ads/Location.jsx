@@ -152,7 +152,7 @@ function Location() {
             Whether you need assistance in Mumbai, Delhi, Ranchi, Kolkata, Chennai, or Guwahati, our team arranges everything quickly with full coordination.<br />
             Our rail ambulance service is ideal for long-distance transfers, ensuring safe and monitored movement between cities. <br />
             We handle complete booking and IRCTC coordination so you can focus on your patient.<br />
- </p>
+          </p>
         </div>
 
 
@@ -173,7 +173,7 @@ function Location() {
             <Clock />
             <div>
               <h4>  Quick Response </h4>
-              <p>Arrangement within 30–60 minutes </p>
+              <p>Details shared within 30–60 minutes </p>
 
             </div>
           </div>
@@ -224,7 +224,7 @@ function Location() {
         <h3>Need Urgent Train Ambulance?</h3>
         <p>
           <strong>
-            Available within 30–60 minutes
+            Details shared within 30–60 minutes
           </strong>
         </p>
         {/* CTA Buttons */}
@@ -474,7 +474,7 @@ function Location() {
           </div>
         </div>
       </section>
-      
+
       <TrainAmbulanceCities />
       <ContactSection />
 

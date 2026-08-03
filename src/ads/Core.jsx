@@ -50,47 +50,47 @@ function Core() {
   //   },
   // ];
 
-  
-const data = [
-  {
-    icon: <FileText />,
-    title: "ICU Train Ambulance Service",
-    points: [
-      "Fully equipped train ambulance with ICU setup, oxygen & monitors",
-      "Doctor & paramedic support during complete journey",
-      "Safe long-distance patient transfer via rail ambulance",
-    ],
-  },
-  {
-    icon: <Clock />,
-    title: "Train Ambulance Booking Support",
-    points: [
-      "Fully equipped train ambulance with ICU setup, oxygen & monitors",
-      "Doctor & paramedic support during complete journey",
-      "Safe long-distance patient transfer via rail ambulance",
-    ],
-  },
-  {
-    icon: <CreditCard />,
-    title: "Bed-to-Bed Patient Transfer",
-    points: [
-      "Pickup from hospital/home and drop at destination hospital",
-      "Continuous care throughout train ambulance service",
-      "Smooth coordination between hospitals and transport",
-    ],
-  },
-  {
-    icon: <AlertCircle />,
-    title: "Pan India Rail Ambulance Service",
-    points: [
-      "Available across major cities in India",
-      "Reliable rail ambulance service for intercity transfer",
-      "Trusted as one of the best train ambulance services in India",
-    ],
-  },
-];
+
+  const data = [
+    {
+      icon: <FileText />,
+      title: "ICU Train Ambulance Service",
+      points: [
+        "Fully equipped train ambulance with ICU setup, oxygen & monitors",
+        "Doctor & paramedic support during complete journey",
+        "Safe long-distance patient transfer via rail ambulance",
+      ],
+    },
+    {
+      icon: <Clock />,
+      title: "Train Ambulance Booking Support",
+      points: [
+        "Fully equipped train ambulance with ICU setup, oxygen & monitors",
+        "Doctor & paramedic support during complete journey",
+        "Safe long-distance patient transfer via rail ambulance",
+      ],
+    },
+    {
+      icon: <CreditCard />,
+      title: "Bed-to-Bed Patient Transfer",
+      points: [
+        "Pickup from hospital/home and drop at destination hospital",
+        "Continuous care throughout train ambulance service",
+        "Smooth coordination between hospitals and transport",
+      ],
+    },
+    {
+      icon: <AlertCircle />,
+      title: "Pan India Rail Ambulance Service",
+      points: [
+        "Available across major cities in India",
+        "Reliable rail ambulance service for intercity transfer",
+        "Trusted as one of the best train ambulance services in India",
+      ],
+    },
+  ];
   // Features
-  
+
   const features = [
     {
       title: " 30-Minute Response for Train Ambulance",
@@ -156,14 +156,14 @@ const data = [
   ];
 
   // 
-  
+
   const stats = [
     { number: "1000+", label: "Train Ambulance Transfers Completed" },
     { number: "10+", label: "Years of Experience" },
     { number: "24/7", label: "Emergency Train Ambulance Support" },
     { number: "100%", label: "Safe & Monitored Transfer" },
   ];
-//  testimonial
+  //  testimonial
   const testimonials = [
     {
       text: "We booked the train ambulance services in a rush. The team responded very quickly. And thanks to the efforts of Doctor Baig and Nurse Anjali, we were able to shift the patient without much problem. Their tireless efforts day and night helped in keeping a check on the patient's health. They have been a great help overall. If I had the option of giving 6 stars, I would've. Excellent service from these two.",
@@ -219,7 +219,7 @@ const data = [
             <Clock />
             <div>
               <h4>  Quick Response </h4>
-              <p>Train ambulance arrangement within 30–60 minutes </p>
+              <p>Train ambulance Details shared within 30–60 minutes </p>
 
             </div>
           </div>
@@ -270,7 +270,7 @@ const data = [
         <h3>Need Urgent Train Ambulance?</h3>
         <p>
           <strong>
-            Train Ambulance within 30–60 minutes | Fast Rail Ambulance Booking with ICU Setup Available
+            Train Ambulance Details shared within 30–60 minutes | Fast Rail Ambulance Booking with ICU Setup Available
           </strong>
         </p>
         {/* CTA Buttons */}
@@ -285,10 +285,10 @@ const data = [
         </div>
       </div>
 
- {/* -------------------- Emergency--------------*/}
+      {/* -------------------- Emergency--------------*/}
       <section className="core-emergency">
-      <div className="core-emergency-container">
-        <span className="emergency-tag"> 24/7 Emergency Service  </span>
+        <div className="core-emergency-container">
+          <span className="emergency-tag"> 24/7 Emergency Service  </span>
           <h2>
             During an emergency, the last thing you need is more stress.
           </h2>
@@ -296,23 +296,23 @@ const data = [
             Transporting a loved one involves complex logistics and paperwork. We
             take that burden off your shoulders entirely.
           </p>
-        <div className="core-emergency-card-grid">
-          {data.map((item, index) => (
-            <div className="card" key={index}>
-              <div className="icon-box">{item.icon}</div>
+          <div className="core-emergency-card-grid">
+            {data.map((item, index) => (
+              <div className="card" key={index}>
+                <div className="icon-box">{item.icon}</div>
 
-              <h3>{item.title}</h3>
+                <h3>{item.title}</h3>
 
-              <ul>
-                {item.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                <ul>
+                  {item.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* section 4 SERVICES*/}
       <section className="core-services-section">
@@ -328,60 +328,60 @@ const data = [
 
           </p>
 
-            <div className="core-services-grid">
+          <div className="core-services-grid">
 
-              {/* Card 1 */}
-              <div className="core-service-card">
-                <div className="core-services-icon-box">
-                  <Train size={32} />
-                </div>
-                <h3>ICU Train Ambulance Service</h3>
-                <ul>
-                  <li>• Fully equipped train ambulance with ICU setup, oxygen & monitors </li>
-                  <li>• Doctor & paramedic support during complete journey</li>
-                  <li>• Safe long-distance patient transfer via rail ambulance</li>
-                  {/* <li>Assistance with Dead Body Transport by Air Cost</li> */}
-                </ul>
+            {/* Card 1 */}
+            <div className="core-service-card">
+              <div className="core-services-icon-box">
+                <Train size={32} />
               </div>
+              <h3>ICU Train Ambulance Service</h3>
+              <ul>
+                <li>• Fully equipped train ambulance with ICU setup, oxygen & monitors </li>
+                <li>• Doctor & paramedic support during complete journey</li>
+                <li>• Safe long-distance patient transfer via rail ambulance</li>
+                {/* <li>Assistance with Dead Body Transport by Air Cost</li> */}
+              </ul>
+            </div>
 
-              {/* Card 2 */}
-              <div className="core-service-card">
-                <div className="core-services-icon-box">
-                  <Ambulance size={32} />
-                </div>
-                <h3> Train Ambulance Booking Support</h3>
-                <ul>
-                  <li>• Fully equipped train ambulance with ICU setup, oxygen & monitors</li>
-                  <li>• Doctor & paramedic support during complete journey</li>
-                  <li>• Safe long-distance patient transfer via rail ambulance</li>
-                </ul>
+            {/* Card 2 */}
+            <div className="core-service-card">
+              <div className="core-services-icon-box">
+                <Ambulance size={32} />
               </div>
+              <h3> Train Ambulance Booking Support</h3>
+              <ul>
+                <li>• Fully equipped train ambulance with ICU setup, oxygen & monitors</li>
+                <li>• Doctor & paramedic support during complete journey</li>
+                <li>• Safe long-distance patient transfer via rail ambulance</li>
+              </ul>
+            </div>
 
-              {/* Card 3 */}
-              <div className="core-service-card">
-                <div className="core-services-icon-box">
-                  <Home size={32} />
-                </div>
-                <h3> Bed-to-Bed Patient Transfer </h3>
-                <ul>
-                  <li>• Pickup from hospital/home and drop at destination hospital </li>
-                  <li> • Continuous care throughout train ambulance service</li>
-                  <li>• Smooth coordination between hospitals and transport</li>
-                </ul>
+            {/* Card 3 */}
+            <div className="core-service-card">
+              <div className="core-services-icon-box">
+                <Home size={32} />
               </div>
+              <h3> Bed-to-Bed Patient Transfer </h3>
+              <ul>
+                <li>• Pickup from hospital/home and drop at destination hospital </li>
+                <li> • Continuous care throughout train ambulance service</li>
+                <li>• Smooth coordination between hospitals and transport</li>
+              </ul>
+            </div>
 
-              {/* Card 4 */}
-              <div className="core-service-card">
-                <div className="core-services-icon-box">
-                  <Map size={32} />
-                </div>
-                <h3> Pan India Rail Ambulance Service</h3>
-                <ul>
-                  <li>• Available across major cities in India</li>
-                  <li>• Reliable rail ambulance service for intercity transfer</li>
-                  <li> • Trusted as one of the best train ambulance services in India </li>
-                </ul>
+            {/* Card 4 */}
+            <div className="core-service-card">
+              <div className="core-services-icon-box">
+                <Map size={32} />
               </div>
+              <h3> Pan India Rail Ambulance Service</h3>
+              <ul>
+                <li>• Available across major cities in India</li>
+                <li>• Reliable rail ambulance service for intercity transfer</li>
+                <li> • Trusted as one of the best train ambulance services in India </li>
+              </ul>
+            </div>
 
 
           </div>
@@ -440,7 +440,7 @@ const data = [
           </div>
         </div>
       </section>
-      
+
       {/* ------------- Stats & testimonals ------------------- */}
       <section className="core-stats-section">
         <div className="core-container">
@@ -489,7 +489,7 @@ const data = [
           </h2>
 
           <p className="core-pricing-subtitle">
-           Every patient transfer is different. We provide a clear and transparent train ambulance cost estimate within minutes of your call.
+            Every patient transfer is different. We provide a clear and transparent train ambulance cost estimate within minutes of your call.
           </p>
 
           <div className="core-pricing-card">
@@ -509,19 +509,19 @@ const data = [
             </div>
 
             <p className="core-pricing-cta">
-             Call Now to Get Exact Train Ambulance Cost in Minutes
+              Call Now to Get Exact Train Ambulance Cost in Minutes
             </p>
 
             <button className="core-pricing-btn" onClick={() => window.location.href = 'tel:+919833997373'}>
               <Phone size={18} /> Get Cost in 10 Minutes
             </button>
-            
+
           </div>
         </div>
       </section>
       <TrainAmbulanceCities />
       <ContactSection />
-      
+
     </>
   )
 }

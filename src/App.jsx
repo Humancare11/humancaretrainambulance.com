@@ -20,6 +20,7 @@ import NotFound from './pages/NotFound';
 import PaymentPage from './pages/PaymentPage';
 import Success from './pages/Success';
 import Failure from './pages/Failure';
+import Train_ambulance_varanari from './pages/Train_ambulance_varanari';
 
 // ADS
 import LandingPage from './ads/LandingPage';
@@ -74,6 +75,7 @@ function App() {
         <Route path="/Success" element={<Success />} />
         <Route path="/failure" element={<Failure />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/train-ambulance-varanasi" element={<Train_ambulance_varanari />} />
 
         {/* ----------------Ads--------------- */}
         <Route path="/train-ambulance-services" element={<LandingPage />} />
