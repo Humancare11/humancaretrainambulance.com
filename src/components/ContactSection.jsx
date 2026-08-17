@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import './ContactSection.css';
+import React, { useState } from "react";
+import "./ContactSection.css";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    number: '',
-    service: '',
-    message: ''
+    name: "",
+    email: "",
+    number: "",
+    service: "",
+    message: "",
   });
-  const [status, setStatus] = useState({ type: '', message: '' });
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,28 +19,37 @@ const ContactSection = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://humancaretrainambulance.com/Contact.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+      const res = await fetch(
+        "https://humancaretrainambulance.com/Contact.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        },
+      );
 
       const result = await res.json();
 
-      if (result.status === 'success') {
-        setStatus({ type: 'success', message: result.message || 'Message sent successfully!' });
+      if (result.status === "success") {
+        setStatus({
+          type: "success",
+          message: result.message || "Message sent successfully!",
+        });
         setFormData({
-          name: '',
-          email: '',
-          number: '',
-          service: '',
-          message: ''
+          name: "",
+          email: "",
+          number: "",
+          service: "",
+          message: "",
         });
       } else {
-        setStatus({ type: 'error', message: result.message || 'Something went wrong.' });
+        setStatus({
+          type: "error",
+          message: result.message || "Something went wrong.",
+        });
       }
     } catch (error) {
-      setStatus({ type: 'error', message: 'Network error. Please try again.' });
+      setStatus({ type: "error", message: "Network error. Please try again." });
     }
   };
 
@@ -52,15 +61,34 @@ const ContactSection = () => {
           Talk With <span className="highlight-text">Experts</span>
         </h2>
         <p className="contact-description">
-Contact Humancare Train Ambulance for quick response, medical readiness, and trusted rail ambulance service — because every journey deserves expert care.        </p>
+          Contact Humancare Train Ambulance for quick response, medical
+          readiness, and trusted rail ambulance service — because every journey
+          deserves expert care.{" "}
+        </p>
         <div className="contact-details">
-          <p>Phone: <a href="tel:+919833997373">+919833997373</a></p>
-          <p>Email: <a href="mailto:ops@humancareworldwide.com">ops@humancareworldwide.com</a></p>
+          <p>
+            Phone: <a href="tel:+919833997373">+919833997373</a>
+          </p>
+          <p>
+            Email:{" "}
+            <a href="mailto:ops@humancareworldwide.com">
+              ops@humancareworldwide.com
+            </a>
+          </p>
         </div>
         <p className="company-name">Humancare Medical Services</p>
         <div className="action-buttons">
-          <a href="tel:+919833997373" className="call-now-button">Call Now</a>
-          <a href="https://wa.me/919833997373" target="_blank" rel="noopener noreferrer" className="whatsapp-button">WhatsApp Us</a>
+          <a href="tel:+919833997373" className="call-now-button">
+            Call Now
+          </a>
+          <a
+            href="https://wa.me/919833997373"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-button"
+          >
+            WhatsApp Us
+          </a>
         </div>
       </div>
 
@@ -68,7 +96,7 @@ Contact Humancare Train Ambulance for quick response, medical readiness, and tru
       <div className="contact-form-column">
         <form className="contact-form" onSubmit={handleSubmit}>
           {status.message && (
-            <p style={{ color: status.type === 'success' ? 'green' : 'red' }}>
+            <p style={{ color: status.type === "success" ? "green" : "red" }}>
               {status.message}
             </p>
           )}
@@ -103,14 +131,14 @@ Contact Humancare Train Ambulance for quick response, medical readiness, and tru
           /> */}
 
           <input
-  type="text"
-  name="number"
-  value={formData.number}
-  onChange={handleChange}
-  placeholder="Number"
-  className="form-input"
-  required
-/>
+            type="text"
+            name="number"
+            value={formData.number}
+            onChange={handleChange}
+            placeholder="Number"
+            className="form-input"
+            required
+          />
 
           <select
             name="service"
@@ -120,6 +148,7 @@ Contact Humancare Train Ambulance for quick response, medical readiness, and tru
             required
           >
             <option value="">--Please choose an option--</option>
+            <option value="train-ambulance">Train Ambulance</option>
             <option value="emergency">Emergency Medical Services</option>
             <option value="air-ambulance">Air Ambulance</option>
             <option value="medical-evacuation">Medical Evacuation</option>

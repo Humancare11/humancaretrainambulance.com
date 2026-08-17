@@ -7,7 +7,9 @@
 .about-head {
   color: var(--red);
 }
-
+.about-section-pg p {
+  color: #ffffff;
+}
 .img-fluid {
   width: 70%;
   height: auto !important;

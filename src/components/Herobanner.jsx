@@ -1,5 +1,5 @@
-import React from 'react';
-import './HeroBanner.css'; // Make sure to import your CSS if it's in a separate file
+import React from "react";
+import "./HeroBanner.css"; // Make sure to import your CSS if it's in a separate file
 
 const HeroBanner = ({ image, heading, paragraph, buttonText, buttonLink }) => {
   return (
@@ -14,7 +14,7 @@ const HeroBanner = ({ image, heading, paragraph, buttonText, buttonLink }) => {
             />
             <p className="mb-4">{paragraph}</p>
             {buttonText && (
-              <a href={buttonLink || '#'} className="btn btn-danger px-4 py-2">
+              <a href={buttonLink || "#"} className="btn btn-danger px-4 py-2">
                 {buttonText}
               </a>
             )}
