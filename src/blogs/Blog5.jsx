@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import bannerImg from "../assets/Train-Ambulance-Service-in-Varanasi.png";
+import bannerImg from "../assets/Blogs/train-ambulance-service-in-varanasi.webp";
 import "./Blog1.css";
 
 /* ── FAQ accordion data ──────────────────────────────────────── */

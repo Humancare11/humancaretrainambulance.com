@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Calendar, ArrowRight } from "lucide-react";
-import blog1 from "../assets/blog1.jpeg";
-import blog2 from "../assets/blog2.jpeg";
-import blog3 from "../assets/blog3.jpeg";
-import blog4 from "../assets/Train Ambulance Services.webp";
-import blog5 from "../assets/Train-Ambulance-Service-in-Varanasi.png";
+import blog1 from "../assets/Blogs/what-makes-humancare-the-best-rail-ambulance-service-in-india.webp";
+import blog2 from "../assets/Blogs/train-ambulance-charges-vs-air-ambulance-cost.webp";
+import blog3 from "../assets/Blogs/irctc-train-ambulance-booking-guide.webp";
+import blog4 from "../assets/Blogs/inside-a-train-ambulance-services.webp";
+import blog5 from "../assets/Blogs/train-ambulance-service-in-varanasi.webp";
+import blog6 from "../assets/Blogs/humancare-train-ambulance-from-kolkata-to-vellore.webp";
 
 import "./Blogs.css";
 
@@ -59,6 +60,16 @@ function Blog() {
       image: blog5,
       date: "2026-08-03",
       link: "/train-ambulance-service-in-varanasi",
+    },
+    {
+      id: 6,
+      title:
+        "Train Ambulance from Kolkata to Vellore: Cost, Booking Process & ICU Patient Transfer",
+      excerpt:
+        "Travelling by train from Kolkata to Vellore in a medical ambu-train is done for transporting critically/To be exact ill patients over this long distance with continuous medical assistance. ",
+      image: blog6,
+      date: "2026-08-25",
+      link: "/train-ambulance-from-kolkata-to-vellore",
     },
   ];
 

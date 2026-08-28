@@ -1,32 +1,42 @@
-import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-const Home = lazy(() => import('./pages/Home'));
-import About from './pages/About';
-import Trainambulance from './pages/Trainambulance';
-import AboutSection from './components/AboutSection';
-import TrainAmbulanceSection from './components/TrainAmbulanceSection';
-import WhyChooseUs from './components/WhyChooseUs';
-import TestimonialsSection from './components/TestimonialsSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import Contact from './pages/Contact';
-import Testimonial from './pages/Testimonial';
-import VideoPlayer from './components/VideoPlayer';
-import Herobanner from './components/Herobanner';
-import TermsAndConditions from './pages/TermsAndConditions';
-import Privacypolicy from './pages/Privacypolicy';
-import NotFound from './pages/NotFound';
-import PaymentPage from './pages/PaymentPage';
-import Success from './pages/Success';
-import Failure from './pages/Failure';
-import Train_ambulance_varanari from './pages/Train_ambulance_varanari';
+import React, { useEffect, Suspense, lazy } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Header from "./components/Header";
+const Home = lazy(() => import("./pages/Home"));
+import About from "./pages/About";
+import Trainambulance from "./pages/Trainambulance";
+import AboutSection from "./components/AboutSection";
+import TrainAmbulanceSection from "./components/TrainAmbulanceSection";
+import WhyChooseUs from "./components/WhyChooseUs";
+import TestimonialsSection from "./components/TestimonialsSection";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
+import Testimonial from "./pages/Testimonial";
+import VideoPlayer from "./components/VideoPlayer";
+import Herobanner from "./components/Herobanner";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import Privacypolicy from "./pages/Privacypolicy";
+import NotFound from "./pages/NotFound";
+import PaymentPage from "./pages/PaymentPage";
+import Success from "./pages/Success";
+import Failure from "./pages/Failure";
 
+// City Pages
+import Train_ambulance_varanari from "./pages/City-Pages/Train_ambulance_varanari";
+import TrainAmbulanceServiceMumbai from "./pages/City-Pages/TrainAmbulanceServiceMumbai";
+import TrainAmbulanceKolkata from "./pages/City-Pages/TrainAmbulanceKolkata";
+import Chennai from "./pages/City-Pages/Chennai";
+import Delhi from "./pages/City-Pages/Delhi";
 // ADS
-import LandingPage from './ads/LandingPage';
-import Core from './ads/Core';
-import Cost from './ads/Cost';
-import Location from './ads/Location';
+import LandingPage from "./ads/LandingPage";
+import Core from "./ads/Core";
+import Cost from "./ads/Cost";
+import Location from "./ads/Location";
 
 // blogs
 import BlogCard from "./blogs/BlogCard";
@@ -35,7 +45,7 @@ import Blog2 from "./blogs/Blog2";
 import Blog3 from "./blogs/Blog3";
 import Blog4 from "./blogs/Blog4";
 import Blog5 from "./blogs/Blog5";
-
+import KolkataToVellore from "./blogs/KolkatatoVellore";
 // ✅ ScrollToTop Component
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,7 +53,7 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // optional for smooth scrolling
+      behavior: "smooth", // optional for smooth scrolling
     });
   }, [pathname]);
 
@@ -54,13 +64,17 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Header />TrainAmbulanceCities
+      <Header />
+      TrainAmbulanceCities
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/AboutSection" element={<AboutSection />} />
 
-        <Route path="/TrainAmbulanceSection" element={<TrainAmbulanceSection />} />
+        <Route
+          path="/TrainAmbulanceSection"
+          element={<TrainAmbulanceSection />}
+        />
         <Route path="/WhyChooseUs" element={<WhyChooseUs />} />
         <Route path="/TestimonialsSection" element={<TestimonialsSection />} />
         <Route path="/ContactSection" element={<ContactSection />} />
@@ -75,23 +89,54 @@ function App() {
         <Route path="/Success" element={<Success />} />
         <Route path="/failure" element={<Failure />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/train-ambulance-varanasi" element={<Train_ambulance_varanari />} />
+        {/* City Pages */}
+        <Route
+          path="/train-ambulance-services-in-varanasi"
+          element={<Train_ambulance_varanari />}
+        />
 
+        <Route
+          path="/train-ambulance-services-in-mumbai"
+          element={<TrainAmbulanceServiceMumbai />}
+        />
+        <Route
+          path="/train-ambulance-services-in-kolkata"
+          element={<TrainAmbulanceKolkata />}
+        />
+        <Route
+          path="/train-ambulance-services-in-chennai"
+          element={<Chennai />}
+        />
+        <Route path="/train-ambulance-services-in-delhi" element={<Delhi />} />
         {/* ----------------Ads--------------- */}
         <Route path="/train-ambulance-services" element={<LandingPage />} />
         <Route path="/rail-ambulance-services" element={<Core />} />
         <Route path="/train-ambulance-cost" element={<Cost />} />
         <Route path="/pan-india" element={<Location />} />
 
-
         {/* -----------blogs------------------- */}
         <Route path="/blogs" element={<BlogCard />} />
-        <Route path="/what-makes-humancare-the-best-rail-ambulance-service-in-india" element={<Blog1 />} />
-        <Route path="/train-ambulance-charges-vs-air-ambulance-cost" element={<Blog2 />} />
-        <Route path="/irctc-train-ambulance-booking-guide" element={<Blog3 />} />
+        <Route
+          path="/what-makes-humancare-the-best-rail-ambulance-service-in-india"
+          element={<Blog1 />}
+        />
+        <Route
+          path="/train-ambulance-charges-vs-air-ambulance-cost"
+          element={<Blog2 />}
+        />
+        <Route
+          path="/irctc-train-ambulance-booking-guide"
+          element={<Blog3 />}
+        />
         <Route path="/inside-a-train-ambulance" element={<Blog4 />} />
-        <Route path="/train-ambulance-service-in-varanasi" element={<Blog5 />} />
-
+        <Route
+          path="/train-ambulance-service-in-varanasi"
+          element={<Blog5 />}
+        />
+        <Route
+          path="/train-ambulance-from-kolkata-to-vellore"
+          element={<KolkataToVellore />}
+        />
       </Routes>
       <Footer />
     </Router>
