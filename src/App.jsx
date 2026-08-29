@@ -32,6 +32,7 @@ import TrainAmbulanceServiceMumbai from "./pages/City-Pages/TrainAmbulanceServic
 import TrainAmbulanceKolkata from "./pages/City-Pages/TrainAmbulanceKolkata";
 import Chennai from "./pages/City-Pages/Chennai";
 import Delhi from "./pages/City-Pages/Delhi";
+import Bengaluru from "./pages/City-Pages/Bengaluru";
 // ADS
 import LandingPage from "./ads/LandingPage";
 import Core from "./ads/Core";
@@ -108,6 +109,10 @@ function App() {
           element={<Chennai />}
         />
         <Route path="/train-ambulance-services-in-delhi" element={<Delhi />} />
+        <Route
+          path="/train-ambulance-services-in-bengaluru"
+          element={<Bengaluru />}
+        />
         {/* ----------------Ads--------------- */}
         <Route path="/train-ambulance-services" element={<LandingPage />} />
         <Route path="/rail-ambulance-services" element={<Core />} />
