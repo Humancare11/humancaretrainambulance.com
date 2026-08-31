@@ -17,8 +17,7 @@ const Blog1 = () => {
       <section className="blog-banner-d">
         <img
           src={bannerImg}
-          alt="
-What Makes Humancare the Best Rail Ambulance Service in India"
+          alt="What Makes Humancare the Best Rail Ambulance Service in India"
           className="banner-img"
         />
         <div className="banner-overlay"></div>

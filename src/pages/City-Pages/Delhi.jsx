@@ -8,10 +8,10 @@
 
 import React, { useState } from "react";
 import "./TrainAmbulanceVaranasi.css";
-import train1 from "../../assets/City/TAM-Varanasi/rail-ambulance-service-in-varanasi.webp";
-import train2 from "../../assets/City/TAM-Varanasi/train-ambulance-service-in-varanasi.webp";
-import HeroBanner from "../../assets/City/TAM-Varanasi/ICU-equipped-train-ambulance.webp";
-import train4 from "../../assets/City/TAM-Varanasi/cost-of-rail-ambulance-in-varanasi.webp";
+import train1 from "../../assets/City/Delhi/medical-transport-team-with-patient-stretcher-at-delhi-railway-station.webp";
+import train2 from "../../assets/City/Delhi/train-ambulance-cost-estimate.webp";
+import HeroBanner from "../../assets/City/Delhi/train-ambulance-service-in-delhi.jpg";
+import train4 from "../../assets/City/Delhi/icu-equipt-train-ambulance.webp";
 
 /* =========================================================================
    CONTACT CONSTANTS
@@ -809,10 +809,22 @@ function Delhi() {
                     ))}
                   </div>
                   <h1>
-                    Train Ambulance in Delhi — Safe Long-Distance Patient Transportation
+                    Train Ambulance in Delhi — Safe Long-Distance Patient
+                    Transportation
                   </h1>
                   <p className="kl-hero-sub">
-                    Humancare train ambulance in Delhi can help families get medically equipped rail travel for patients who want to travel from Delhi to another city for specialized treatment, continuous care, or safe return home. We can arrange a medical train ambulance with a medically escorted train from Delhi, equipped with oxygen, monitoring, and handling facilities based on the patient's condition. We provide our train ambulance services with road ambulances for the journey road before and after railway trip so, that our train ambulance service at Delhi offers a convenient mode of transferring patients who cannot do the railway journey by themselves due to some medical condition.
+                    Humancare train ambulance in Delhi can help families get
+                    medically equipped rail travel for patients who want to
+                    travel from Delhi to another city for specialized treatment,
+                    continuous care, or safe return home. We can arrange a
+                    medical train ambulance with a medically escorted train from
+                    Delhi, equipped with oxygen, monitoring, and handling
+                    facilities based on the patient's condition. We provide our
+                    train ambulance services with road ambulances for the
+                    journey road before and after railway trip so, that our
+                    train ambulance service at Delhi offers a convenient mode of
+                    transferring patients who cannot do the railway journey by
+                    themselves due to some medical condition.
                   </p>
                   <div className="kl-hero-cta-row">
                     <a
@@ -854,16 +866,36 @@ function Delhi() {
                 <div>
                   <span className="kl-eyebrow">ABOUT THE SERVICE</span>
                   <h2>
-                    What is a Train Ambulance Service in Delhi, and Who Needs It?
+                    What is a Train Ambulance Service in Delhi, and Who Needs
+                    It?
                   </h2>
                   <p>
-                    Delhi ranks as a significant healthcare hub in India with a great number of patients coming from all over the country to get specialist treatment surgeries rehab, and follow-ups. If these patients have to carry on their treatment in one other city a normal train journey may fail to provide the medical attention they might need.
+                    Delhi ranks as a significant healthcare hub in India with a
+                    great number of patients coming from all over the country to
+                    get specialist treatment surgeries rehab, and follow-ups. If
+                    these patients have to carry on their treatment in one other
+                    city a normal train journey may fail to provide the medical
+                    attention they might need.
                   </p>
                   <p>
-                    A patient on the road for medical treatment by rail will be given a chance for a train ambulance service in Delhi. A patient in a wheelchair or with special needs tends to require a stretcher or a suitable bed, oxygen support, vital-sign monitoring, medical devices and a qualified healthcare professional. The journey is managed by Humancare from the hospital or house in Delhi, through the railway trip and then on to the hospital that is going to receive the patient.
+                    A patient on the road for medical treatment by rail will be
+                    given a chance for a train ambulance service in Delhi. A
+                    patient in a wheelchair or with special needs tends to
+                    require a stretcher or a suitable bed, oxygen support,
+                    vital-sign monitoring, medical devices and a qualified
+                    healthcare professional. The journey is managed by Humancare
+                    from the hospital or house in Delhi, through the railway
+                    trip and then on to the hospital that is going to receive
+                    the patient.
                   </p>
                   <p>
-                    Rail ambulances from Delhi are good for those who are capable of handling the longer trip but cannot be left alone without some form of medical care. Those patients may also be traveling from Delhi to places like Vellore Kolkata Mumbai, Chennai Hyderabad Ranchi, Patna or various hospital centres in India. The team of doctors and the medical gear to be used is decided based on one's health condition.
+                    Rail ambulances from Delhi are good for those who are
+                    capable of handling the longer trip but cannot be left alone
+                    without some form of medical care. Those patients may also
+                    be traveling from Delhi to places like Vellore Kolkata
+                    Mumbai, Chennai Hyderabad Ranchi, Patna or various hospital
+                    centres in India. The team of doctors and the medical gear
+                    to be used is decided based on one's health condition.
                   </p>
                   <ul className="kl-check-list kl-mt-16">
                     {ABOUT_POINTS.map((t) => (
@@ -894,10 +926,16 @@ function Delhi() {
               <div className="kl-section-head kl-center">
                 <span className="kl-eyebrow">WHY FAMILIES CHOOSE US</span>
                 <h2>
-                  Our Train Ambulance Team Makes Long-Distance Transfers Easier for Families
+                  Our Train Ambulance Team Makes Long-Distance Transfers Easier
+                  for Families
                 </h2>
                 <p>
-                  Arranging medical transport from Delhi is very challenging in particular when the medical condition of a patient takes round-the-clock supervision during a prolonged trip by train. We ensure a seamless transition from medical services to travel and ground transfers such that the patient's family are almost entirely free from the burden of other arrangements.
+                  Arranging medical transport from Delhi is very challenging in
+                  particular when the medical condition of a patient takes
+                  round-the-clock supervision during a prolonged trip by train.
+                  We ensure a seamless transition from medical services to
+                  travel and ground transfers such that the patient's family are
+                  almost entirely free from the burden of other arrangements.
                 </p>
               </div>
               <div className="kl-grid kl-grid-3">
@@ -925,7 +963,13 @@ function Delhi() {
                     Medical Equipment for Train Ambulance Transfers from Delhi
                   </h2>
                   <p>
-                    The key to arranging long-distance transport of patients is to have both the adequate medical equipment and well-trained support personnel. Humancare sets up the equipment inside a train ambulance from Delhi in the way that suits the medical condition of the patient, to ensure that continuous monitoring, respiratory support, and emergency care will be provided during the journey to the destination city.
+                    The key to arranging long-distance transport of patients is
+                    to have both the adequate medical equipment and well-trained
+                    support personnel. Humancare sets up the equipment inside a
+                    train ambulance from Delhi in the way that suits the medical
+                    condition of the patient, to ensure that continuous
+                    monitoring, respiratory support, and emergency care will be
+                    provided during the journey to the destination city.
                   </p>
                 </div>
                 <div className="kl-split-visual">
@@ -960,11 +1004,16 @@ function Delhi() {
             <div className="kl-container">
               <div className="kl-section-head kl-center">
                 <span className="kl-eyebrow">WHO TRAVELS WITH THE PATIENT</span>
-                <h2>
-                  Medical Professionals Who Travel With the Patient
-                </h2>
+                <h2>Medical Professionals Who Travel With the Patient</h2>
                 <p>
-                  A patient who needs medical care can be transferred by train ambulance that will go a long distance from Delhi. Plus medical equipment, this train ambulance also necessitates the presence of competent staff who know how to use the equipment and who can respond to a patient's everchanging condition. The patient's condition, the destination, and the level of medical care needed are the reasons per which the medical team is selected and arranged before the trip begins.
+                  A patient who needs medical care can be transferred by train
+                  ambulance that will go a long distance from Delhi. Plus
+                  medical equipment, this train ambulance also necessitates the
+                  presence of competent staff who know how to use the equipment
+                  and who can respond to a patient's everchanging condition. The
+                  patient's condition, the destination, and the level of medical
+                  care needed are the reasons per which the medical team is
+                  selected and arranged before the trip begins.
                 </p>
               </div>
               <div className="kl-grid kl-grid-4">
@@ -984,11 +1033,12 @@ function Delhi() {
             <div className="kl-container">
               <div className="kl-section-head">
                 <span className="kl-eyebrow">WHO WE TRANSFER</span>
-                <h2>
-                  Conditions of the Patients We Transfer Regularly
-                </h2>
+                <h2>Conditions of the Patients We Transfer Regularly</h2>
                 <p>
-                  Our medical team reviews the patient's health status before arranging a train ambulance from Delhi, allowing the level of medical support and onboard equipment to be planned around the transfer. Common patient categories include:
+                  Our medical team reviews the patient's health status before
+                  arranging a train ambulance from Delhi, allowing the level of
+                  medical support and onboard equipment to be planned around the
+                  transfer. Common patient categories include:
                 </p>
               </div>
               <div className="kl-tag-grid">
@@ -1000,7 +1050,12 @@ function Delhi() {
                 ))}
               </div>
               <p className="kl-mt-24">
-                For situations not listed on our page, reach out to our coordination team via medical details. We would go over the case with the treating physician to decide if a train ambulance service is a fit for the situation, otherwise we may recommend a different method of medical transportation which would be safer for the patient.
+                For situations not listed on our page, reach out to our
+                coordination team via medical details. We would go over the case
+                with the treating physician to decide if a train ambulance
+                service is a fit for the situation, otherwise we may recommend a
+                different method of medical transportation which would be safer
+                for the patient.
               </p>
             </div>
           </section>
@@ -1012,7 +1067,10 @@ function Delhi() {
                 <span className="kl-eyebrow">WHERE WE TRAVEL</span>
                 <h2>Train Ambulance Routes from Delhi</h2>
                 <p>
-                  Below are some of the commonly requested Train ambulance routes from Delhi. Travel time, train availability and medical arrangements can vary according to the destination, railway schedule and patient's condition.
+                  Below are some of the commonly requested Train ambulance
+                  routes from Delhi. Travel time, train availability and medical
+                  arrangements can vary according to the destination, railway
+                  schedule and patient's condition.
                 </p>
               </div>
               <div className="kl-route-rail">
@@ -1033,11 +1091,12 @@ function Delhi() {
             <div className="kl-container">
               <div className="kl-section-head kl-center">
                 <span className="kl-eyebrow">HOW IT WORKS</span>
-                <h2>
-                  Book a Train Ambulance from Delhi in 4 Simple Steps
-                </h2>
+                <h2>Book a Train Ambulance from Delhi in 4 Simple Steps</h2>
                 <p>
-                  We make the Train ambulance booking process straightforward, helping families arrange medical transportation from Delhi without unnecessary complications during a stressful situation.
+                  We make the Train ambulance booking process straightforward,
+                  helping families arrange medical transportation from Delhi
+                  without unnecessary complications during a stressful
+                  situation.
                 </p>
               </div>
               <div className="kl-step-list">
@@ -1059,7 +1118,16 @@ function Delhi() {
                   <span className="kl-eyebrow">UNDERSTANDING COST</span>
                   <h2>What Affects Train Ambulance Pricing from Delhi?</h2>
                   <p>
-                    The pricing of train ambulances in Delhi depends mainly on patient's condition, length of journey and type of travelling arrangement. Several elements including berth/coach category, accompanying medical staff, medical equipment onboard, availability train seat/berth and additional road ambulance requirements will determine the final quotation. These are all assessed and cross-verified by our team in the process of booking the train ambulance in Delhi, and we will then present the family with a transparent cost break up.
+                    The pricing of train ambulances in Delhi depends mainly on
+                    patient's condition, length of journey and type of
+                    travelling arrangement. Several elements including
+                    berth/coach category, accompanying medical staff, medical
+                    equipment onboard, availability train seat/berth and
+                    additional road ambulance requirements will determine the
+                    final quotation. These are all assessed and cross-verified
+                    by our team in the process of booking the train ambulance in
+                    Delhi, and we will then present the family with a
+                    transparent cost break up.
                   </p>
                   <div className="kl-mt-24">
                     {FACTORS.map(([num, title, text]) => (
@@ -1146,7 +1214,9 @@ function Delhi() {
                 <span className="kl-eyebrow">LOCAL COVERAGE</span>
                 <h2>Service Areas Around Delhi</h2>
                 <p>
-                  Beyond Delhi city, our road ambulance network can coordinate patient pickup and drop-off across Delhi NCR and nearby areas before and after a train ambulance from Delhi, including:
+                  Beyond Delhi city, our road ambulance network can coordinate
+                  patient pickup and drop-off across Delhi NCR and nearby areas
+                  before and after a train ambulance from Delhi, including:
                 </p>
               </div>
               <div className="kl-area-chip-wrap">
@@ -1168,7 +1238,11 @@ function Delhi() {
                   Train Ambulance Service in Delhi — Frequently Asked Questions
                 </h2>
                 <p>
-                  Answers to common questions families ask about arranging a train ambulance in Delhi, medical support, booking, routes and patient transportation by rail. These FAQs are also structured to support clear answers for search engines and AI-generated results.
+                  Answers to common questions families ask about arranging a
+                  train ambulance in Delhi, medical support, booking, routes and
+                  patient transportation by rail. These FAQs are also structured
+                  to support clear answers for search engines and AI-generated
+                  results.
                 </p>
               </div>
               <div className="kl-faq-list" id="faqList">
@@ -1211,11 +1285,11 @@ function Delhi() {
                 className="kl-mt-16"
                 style={{ maxWidth: "64ch", marginInline: "auto" }}
               >
-                When a patient needs to travel to another city for treatment, you
-                should not have to manage the medical transfer alone. Humancare
-                helps arrange medically supported train ambulance service in
-                Delhi, with suitable medical staff, equipment, railway
-                coordination, and patient transfer support based on the
+                When a patient needs to travel to another city for treatment,
+                you should not have to manage the medical transfer alone.
+                Humancare helps arrange medically supported train ambulance
+                service in Delhi, with suitable medical staff, equipment,
+                railway coordination, and patient transfer support based on the
                 patient’s needs.
               </p>
               <p

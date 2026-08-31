@@ -8,10 +8,10 @@
 
 import React, { useState } from "react";
 import "./TrainAmbulanceVaranasi.css";
-import train1 from "../../assets/City/TAM-Varanasi/rail-ambulance-service-in-varanasi.webp";
+import train1 from "../../assets/City/Chennai/medical-team-with-patient-stretcher-at-chennai-railway-station.webp";
 import train2 from "../../assets/City/TAM-Varanasi/train-ambulance-service-in-varanasi.webp";
-import HeroBanner from "../../assets/City/TAM-Varanasi/ICU-equipped-train-ambulance.webp";
-import train4 from "../../assets/City/TAM-Varanasi/cost-of-rail-ambulance-in-varanasi.webp";
+import HeroBanner from "../../assets/City/Chennai/train-ambulance-service-in-chennai.webp";
+import train4 from "../../assets/City/Chennai/icu-equipt-train-ambulance-service-in-chennai.webp";
 
 /* =========================================================================
    CONTACT CONSTANTS
@@ -823,10 +823,22 @@ function Chennai() {
                     ))}
                   </div>
                   <h1>
-                    Chennai Train Ambulance for Long-Distance Patient Transfers — Medical Care Throughout the Journey
+                    Chennai Train Ambulance for Long-Distance Patient Transfers
+                    — Medical Care Throughout the Journey
                   </h1>
                   <p className="kl-hero-sub">
-                    If travelling to another city for specialised intervention, the patient may require additional assistance beyond that of standard train travel. Humancare helps organise an ambulance train in Chennai where patients can travel by rail under medical supervision, assisted vehicle movement, or clinical assistance. The Chennai train ambulance can be operated with a doctor or nurse, an oxygen monitor for various parameters, stretcher support, and other medical facilities required on a train according to the nature of the case. We seek to help reschedule the travel plan in Chennai and co-ordinate transfer arrangements in the destination city to facilitate a safe and comfortable journey.
+                    If travelling to another city for specialised intervention,
+                    the patient may require additional assistance beyond that of
+                    standard train travel. Humancare helps organise an ambulance
+                    train in Chennai where patients can travel by rail under
+                    medical supervision, assisted vehicle movement, or clinical
+                    assistance. The Chennai train ambulance can be operated with
+                    a doctor or nurse, an oxygen monitor for various parameters,
+                    stretcher support, and other medical facilities required on
+                    a train according to the nature of the case. We seek to help
+                    reschedule the travel plan in Chennai and co-ordinate
+                    transfer arrangements in the destination city to facilitate
+                    a safe and comfortable journey.
                   </p>
                   <div className="kl-hero-cta-row">
                     <a
@@ -868,16 +880,46 @@ function Chennai() {
                 <div>
                   <span className="kl-eyebrow">ABOUT THE SERVICE</span>
                   <h2>
-                    Why Choose a Train Ambulance from Chennai for Long-Distance Medical Travel?
+                    Why Choose a Train Ambulance from Chennai for Long-Distance
+                    Medical Travel?
                   </h2>
                   <p>
-                    Chennai is not only one of the major cities in South India, but also one of the leading destinations for seeking medical care in the region because patients, particularly from the Tamil Nadu state and the states adjacent to Tamil Nadu, need to travel there for specialized procedures, cancer care, cardiac treatment, rehabilitation, and other medically advanced services. After a treatment, some patients may want to continue their aftercare in the new city or return home while still under a doctor's care. In these cases, getting a train ambulance from Chennai may be a better option if you need help during a trip in a conventional railway coach.
+                    Chennai is not only one of the major cities in South India,
+                    but also one of the leading destinations for seeking medical
+                    care in the region because patients, particularly from the
+                    Tamil Nadu state and the states adjacent to Tamil Nadu, need
+                    to travel there for specialized procedures, cancer care,
+                    cardiac treatment, rehabilitation, and other medically
+                    advanced services. After a treatment, some patients may want
+                    to continue their aftercare in the new city or return home
+                    while still under a doctor's care. In these cases, getting a
+                    train ambulance from Chennai may be a better option if you
+                    need help during a trip in a conventional railway coach.
                   </p>
                   <p>
-                    The use of a train ambulance service changes regular railway travel into a medically monitored patient-transfer situation. Given the illness or the patient's situation, the train ambulance will consist of providing oxygen support, a stretcher or a suitable berth, vital sign monitor, medical escort, and other necessary apparatus. Humancare plans and coordinates the entire journey for a patient to travel from the Chennai hospital or home all the way to the destination hospital and have appropriate medical care available for the patient in transfer mode at all points in time during the journey.
+                    The use of a train ambulance service changes regular railway
+                    travel into a medically monitored patient-transfer
+                    situation. Given the illness or the patient's situation, the
+                    train ambulance will consist of providing oxygen support, a
+                    stretcher or a suitable berth, vital sign monitor, medical
+                    escort, and other necessary apparatus. Humancare plans and
+                    coordinates the entire journey for a patient to travel from
+                    the Chennai hospital or home all the way to the destination
+                    hospital and have appropriate medical care available for the
+                    patient in transfer mode at all points in time during the
+                    journey.
                   </p>
                   <p>
-                    It is different to plan a rail ambulance than to plan a normal passenger journey as one has to consider the patient's medical necessities in choosing the facilities. For example, a stable patient or one who has been appropriately assessed for travel can be thought of transporting to cities like Bengaluru, Hyderabad, Kolkata, Delhi, Mumbai, Vellore or other destinations for treatment. The medical team and equipment are decided based on the health condition of the patient rather than making it a fixed routine for each ambulance transfer.
+                    It is different to plan a rail ambulance than to plan a
+                    normal passenger journey as one has to consider the
+                    patient's medical necessities in choosing the facilities.
+                    For example, a stable patient or one who has been
+                    appropriately assessed for travel can be thought of
+                    transporting to cities like Bengaluru, Hyderabad, Kolkata,
+                    Delhi, Mumbai, Vellore or other destinations for treatment.
+                    The medical team and equipment are decided based on the
+                    health condition of the patient rather than making it a
+                    fixed routine for each ambulance transfer.
                   </p>
                   <ul className="kl-check-list kl-mt-16">
                     {ABOUT_POINTS.map((t) => (
@@ -911,7 +953,11 @@ function Chennai() {
                   Reliable Medical Coordination for Every Chennai Rail Transfer
                 </h2>
                 <p>
-                  Moving a patient over a long distance involves more than arranging a railway ticket. Our team coordinates the medical support, railway journey, and ground transportation so families can focus on the patient's care instead of managing multiple arrangements themselves.
+                  Moving a patient over a long distance involves more than
+                  arranging a railway ticket. Our team coordinates the medical
+                  support, railway journey, and ground transportation so
+                  families can focus on the patient's care instead of managing
+                  multiple arrangements themselves.
                 </p>
               </div>
               <div className="kl-grid kl-grid-3">
@@ -936,10 +982,15 @@ function Chennai() {
                 <div>
                   <span className="kl-eyebrow">INSIDE THE COACH</span>
                   <h2>
-                    Medical Equipment Supporting Patients During Chennai Rail Transfers
+                    Medical Equipment Supporting Patients During Chennai Rail
+                    Transfers
                   </h2>
                   <p>
-                    A train ambulance in Chennai is arranged with medical equipment according to the patient's condition and level of care required. The onboard setup helps the accompanying team provide continuous observation and essential support during a long-distance journey.
+                    A train ambulance in Chennai is arranged with medical
+                    equipment according to the patient's condition and level of
+                    care required. The onboard setup helps the accompanying team
+                    provide continuous observation and essential support during
+                    a long-distance journey.
                   </p>
                 </div>
                 <div className="kl-split-visual">
@@ -975,10 +1026,15 @@ function Chennai() {
               <div className="kl-section-head kl-center">
                 <span className="kl-eyebrow">WHO TRAVELS WITH THE PATIENT</span>
                 <h2>
-                  Medical Professionals Supporting the Patient During the Journey
+                  Medical Professionals Supporting the Patient During the
+                  Journey
                 </h2>
                 <p>
-                  A train ambulance service involves more than arranging rail travel. The people accompanying the patient are selected according to the level of medical assistance required, with coordination between the patient's current care team and our transfer staff before departure.
+                  A train ambulance service involves more than arranging rail
+                  travel. The people accompanying the patient are selected
+                  according to the level of medical assistance required, with
+                  coordination between the patient's current care team and our
+                  transfer staff before departure.
                 </p>
               </div>
               <div className="kl-grid kl-grid-4">
@@ -998,11 +1054,12 @@ function Chennai() {
             <div className="kl-container">
               <div className="kl-section-head">
                 <span className="kl-eyebrow">WHO WE TRANSFER</span>
-                <h2>
-                  Patient Conditions We Support Through Train Ambulance
-                </h2>
+                <h2>Patient Conditions We Support Through Train Ambulance</h2>
                 <p>
-                  Before arranging a train ambulance in Chennai, our team reviews the patient's current condition and the level of care required during travel. The medical escort and onboard setup are planned accordingly. Common transfers include:
+                  Before arranging a train ambulance in Chennai, our team
+                  reviews the patient's current condition and the level of care
+                  required during travel. The medical escort and onboard setup
+                  are planned accordingly. Common transfers include:
                 </p>
               </div>
               <div className="kl-tag-grid">
@@ -1014,7 +1071,11 @@ function Chennai() {
                 ))}
               </div>
               <p className="kl-mt-24">
-                If the patient's condition is not listed above, contact our team with the relevant medical details. We can review the case and determine whether a train ambulance service in Chennai is appropriate or whether another mode of medical transportation would be safer.
+                If the patient's condition is not listed above, contact our team
+                with the relevant medical details. We can review the case and
+                determine whether a train ambulance service in Chennai is
+                appropriate or whether another mode of medical transportation
+                would be safer.
               </p>
             </div>
           </section>
@@ -1026,7 +1087,10 @@ function Chennai() {
                 <span className="kl-eyebrow">WHERE WE TRAVEL</span>
                 <h2>Popular Train Ambulance Routes from Chennai</h2>
                 <p>
-                  We arrange train ambulance transfers from Chennai to major cities across India, with the route, railway availability, medical team and onboard care planned according to the patient's condition. Commonly requested routes include:
+                  We arrange train ambulance transfers from Chennai to major
+                  cities across India, with the route, railway availability,
+                  medical team and onboard care planned according to the
+                  patient's condition. Commonly requested routes include:
                 </p>
               </div>
               <div className="kl-route-rail">
@@ -1040,7 +1104,9 @@ function Chennai() {
                 ))}
               </div>
               <p className="kl-mt-24 kl-text-center">
-                Need a different destination? Our train ambulance service in Chennai can be coordinated for other cities based on railway connectivity, patient condition and medical requirements.
+                Need a different destination? Our train ambulance service in
+                Chennai can be coordinated for other cities based on railway
+                connectivity, patient condition and medical requirements.
               </p>
             </div>
           </section>
@@ -1054,7 +1120,10 @@ function Chennai() {
                   How to Book a Train Ambulance from Chennai in 4 Simple Steps
                 </h2>
                 <p>
-                  We keep the train ambulance booking process straightforward, so families can arrange medically supported rail transportation without dealing with multiple service providers.
+                  We keep the train ambulance booking process straightforward,
+                  so families can arrange medically supported rail
+                  transportation without dealing with multiple service
+                  providers.
                 </p>
               </div>
               <div className="kl-step-list">
@@ -1076,7 +1145,11 @@ function Chennai() {
                   <span className="kl-eyebrow">UNDERSTANDING COST</span>
                   <h2>What Determines Train Ambulance Cost in Chennai?</h2>
                   <p>
-                    The train ambulance cost in Chennai varies from one patient transfer to another because the required medical care, journey length and railway arrangements can differ. The final train ambulance price is calculated after reviewing the patient's condition, destination and services required.
+                    The train ambulance cost in Chennai varies from one patient
+                    transfer to another because the required medical care,
+                    journey length and railway arrangements can differ. The
+                    final train ambulance price is calculated after reviewing
+                    the patient's condition, destination and services required.
                   </p>
                   <div className="kl-mt-24">
                     {FACTORS.map(([num, title, text]) => (
@@ -1090,7 +1163,10 @@ function Chennai() {
                     ))}
                   </div>
                   <p className="kl-mt-16">
-                    Train ambulance charges are quoted after assessing the complete transfer requirement. Contact our team for a patient-specific estimate rather than relying on a fixed price.
+                    Train ambulance charges are quoted after assessing the
+                    complete transfer requirement. Contact our team for a
+                    patient-specific estimate rather than relying on a fixed
+                    price.
                   </p>
                 </div>
                 <div className="kl-split-visual">
@@ -1166,7 +1242,12 @@ function Chennai() {
                 <span className="kl-eyebrow">LOCAL COVERAGE</span>
                 <h2>Train Ambulance Service Areas Across Chennai</h2>
                 <p>
-                  Our train ambulance service in Chennai supports patient transfers from hospitals, residences, and care facilities across Chennai and nearby areas. Road ambulance coordination can be arranged to connect the patient with the railway station before departure and the destination hospital after arrival.
+                  Our train ambulance service in Chennai supports patient
+                  transfers from hospitals, residences, and care facilities
+                  across Chennai and nearby areas. Road ambulance coordination
+                  can be arranged to connect the patient with the railway
+                  station before departure and the destination hospital after
+                  arrival.
                 </p>
                 <p className="kl-mt-8">
                   <strong>Service areas include:</strong>
@@ -1180,7 +1261,10 @@ function Chennai() {
                 ))}
               </div>
               <p className="kl-mt-24">
-                Need a transfer from another location? Rail ambulance arrangements can also be coordinated from nearby towns and districts based on the patient's medical needs and railway connectivity.
+                Need a transfer from another location? Rail ambulance
+                arrangements can also be coordinated from nearby towns and
+                districts based on the patient's medical needs and railway
+                connectivity.
               </p>
             </div>
           </section>
@@ -1191,10 +1275,16 @@ function Chennai() {
               <div className="kl-section-head kl-center">
                 <span className="kl-eyebrow">COMMON QUESTIONS</span>
                 <h2>
-                  Train Ambulance Service in Chennai — Frequently Asked Questions
+                  Train Ambulance Service in Chennai — Frequently Asked
+                  Questions
                 </h2>
                 <p>
-                  Answers to common questions about train ambulance service in Chennai, including booking, medical support, train ambulance cost, railway arrangements, onboard equipment and long-distance patient transfers. Structured FAQ content can help search engines understand these common patient-transfer queries.
+                  Answers to common questions about train ambulance service in
+                  Chennai, including booking, medical support, train ambulance
+                  cost, railway arrangements, onboard equipment and
+                  long-distance patient transfers. Structured FAQ content can
+                  help search engines understand these common patient-transfer
+                  queries.
                 </p>
               </div>
               <div className="kl-faq-list" id="faqList">
@@ -1237,11 +1327,11 @@ function Chennai() {
                 className="kl-mt-16"
                 style={{ maxWidth: "64ch", marginInline: "auto" }}
               >
-                When a patient needs to travel to another city for treatment, you
-                should not have to manage the medical transfer alone. Humancare
-                helps arrange medically supported train ambulance service in
-                Chennai, with suitable medical staff, equipment, railway
-                coordination, and patient transfer support based on the
+                When a patient needs to travel to another city for treatment,
+                you should not have to manage the medical transfer alone.
+                Humancare helps arrange medically supported train ambulance
+                service in Chennai, with suitable medical staff, equipment,
+                railway coordination, and patient transfer support based on the
                 patient’s needs.
               </p>
               <p
