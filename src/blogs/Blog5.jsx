@@ -71,17 +71,31 @@ const faqs = [
 const FaqItem = ({ q, a }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`b5-faq-item ${open ? "b5-faq-open" : ""}`}>
+    <div className={`faq-dropdown-item ${open ? "faq-open" : ""}`}>
       <button
-        className="b5-faq-question"
+        type="button"
+        className="faq-dropdown-question"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
         <span>{q}</span>
-        <span className="b5-faq-chevron">▾</span>
+        <span className="faq-dropdown-icon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </span>
       </button>
       {open && (
-        <div className="b5-faq-answer">
+        <div className="faq-dropdown-answer">
           <p>{a}</p>
         </div>
       )}
@@ -680,8 +694,8 @@ const Blog5 = () => {
           </div>
 
           {/* ── FAQ ── */}
-          <h2 className="b5-faq-heading">Frequently Asked Questions</h2>
-          <div className="b5-faq-list">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-dropdown-list">
             {faqs.map((faq, i) => (
               <FaqItem key={i} q={faq.q} a={faq.a} />
             ))}

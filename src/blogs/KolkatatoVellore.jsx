@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import bannerImg from "../assets/Blogs/Humancare-Train-Ambulance-from-Kolkata-to-Vellore.webp";
 import "./Blog1.css";
@@ -51,17 +51,31 @@ const faqs = [
 const FaqItem = ({ q, a }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`b5-faq-item ${open ? "b5-faq-open" : ""}`}>
+    <div className={`faq-dropdown-item ${open ? "faq-open" : ""}`}>
       <button
-        className="b5-faq-question"
+        type="button"
+        className="faq-dropdown-question"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
         <span>{q}</span>
-        <span className="b5-faq-chevron">&#9662;</span>
+        <span className="faq-dropdown-icon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </span>
       </button>
       {open && (
-        <div className="b5-faq-answer">
+        <div className="faq-dropdown-answer">
           <p>{a}</p>
         </div>
       )}
@@ -359,35 +373,16 @@ const KolkatatoVellore = () => {
           </p>
           <p>A typical process involves the following steps:</p>
 
-          <div className="b5-timeline">
-            {bookingSteps.map((s, i) => {
-              const isLeft = i % 2 === 0;
-              return isLeft ? (
-                <div key={i} className="b5-tl-row b5-tl-row-left">
-                  <div className="b5-tl-card b5-tl-card-l">
-                    <span className="b5-tl-tag">Step {s.step}</span>
-                    <h3>{s.title}</h3>
-                    <p>{s.desc}</p>
-                  </div>
-                  <div className="b5-tl-center">
-                    <div className="b5-tl-dot">{s.step}</div>
-                  </div>
-                  <div className="b5-tl-empty"></div>
+          <div className="b5-cost-factors">
+            {bookingSteps.map((s, i) => (
+              <div key={i} className="b5-cost-card">
+                <div className="b5-cost-num">{s.step}</div>
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
                 </div>
-              ) : (
-                <div key={i} className="b5-tl-row b5-tl-row-right">
-                  <div className="b5-tl-empty"></div>
-                  <div className="b5-tl-center">
-                    <div className="b5-tl-dot">{s.step}</div>
-                  </div>
-                  <div className="b5-tl-card b5-tl-card-r">
-                    <span className="b5-tl-tag">Step {s.step}</span>
-                    <h3>{s.title}</h3>
-                    <p>{s.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
 
           {/* IRCTC */}
@@ -555,8 +550,8 @@ const KolkatatoVellore = () => {
           </p>
 
           {/* FAQ */}
-          <h2 className="b5-faq-heading">Frequently Asked Questions</h2>
-          <div className="b5-faq-list">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-dropdown-list">
             {faqs.map((faq, i) => (
               <FaqItem key={i} q={faq.q} a={faq.a} />
             ))}

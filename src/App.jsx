@@ -33,6 +33,7 @@ import TrainAmbulanceKolkata from "./pages/City-Pages/TrainAmbulanceKolkata";
 import Chennai from "./pages/City-Pages/Chennai";
 import Delhi from "./pages/City-Pages/Delhi";
 import Bengaluru from "./pages/City-Pages/Bengaluru";
+import Hyderabad from "./pages/City-Pages/Hyderabad";
 // ADS
 import LandingPage from "./ads/LandingPage";
 import Core from "./ads/Core";
@@ -47,6 +48,11 @@ import Blog3 from "./blogs/Blog3";
 import Blog4 from "./blogs/Blog4";
 import Blog5 from "./blogs/Blog5";
 import KolkataToVellore from "./blogs/KolkatatoVellore";
+import TrainAmbulanceServicesIndia from "./blogs/TrainAmbulanceServicesIndia";
+import WhatIsaTrainAmbulance from "./blogs/WhatIsaTrainAmbulance";
+import HowDoesTrainAmbulanceWork from "./blogs/HowDoesTrainAmbulanceWork";
+import TrainAmbulanceEligibility from "./blogs/TrainAmbulanceEligibility";
+import TrainAmbulanceSafety from "./blogs/TrainAmbulancesafety";
 // ✅ ScrollToTop Component
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -113,6 +119,10 @@ function App() {
           path="/train-ambulance-services-in-bengaluru"
           element={<Bengaluru />}
         />
+        <Route
+          path="/train-ambulance-services-in-hyderabad"
+          element={<Hyderabad />}
+        />
         {/* ----------------Ads--------------- */}
         <Route path="/train-ambulance-services" element={<LandingPage />} />
         <Route path="/rail-ambulance-services" element={<Core />} />
@@ -141,6 +151,26 @@ function App() {
         <Route
           path="/train-ambulance-from-kolkata-to-vellore"
           element={<KolkataToVellore />}
+        />
+        <Route
+          path="/train-ambulance-service-in-india"
+          element={<TrainAmbulanceServicesIndia />}
+        />
+        <Route
+          path="/what-is-train-ambulance"
+          element={<WhatIsaTrainAmbulance />}
+        />
+        <Route
+          path="/train-ambulance-process"
+          element={<HowDoesTrainAmbulanceWork />}
+        />
+        <Route
+          path="/train-ambulance-eligibility"
+          element={<TrainAmbulanceEligibility />}
+        />
+        <Route
+          path="/train-ambulance-safety"
+          element={<TrainAmbulanceSafety />}
         />
       </Routes>
       <Footer />

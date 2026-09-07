@@ -793,3 +793,115 @@
     justify-content: center;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   FAQ DROPDOWN ACCORDION STYLES
+   ═══════════════════════════════════════════════════════════ */
+.faq-dropdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 22px 0 32px;
+}
+
+.faq-dropdown-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.faq-dropdown-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.faq-dropdown-item.faq-open {
+  border-color: #93c5fd;
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.08);
+}
+
+.faq-dropdown-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #0f172a;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.faq-dropdown-question:hover {
+  color: #0d6efd;
+}
+
+.faq-dropdown-item.faq-open .faq-dropdown-question {
+  color: #0d6efd;
+  background-color: #f8fafc;
+}
+
+.faq-dropdown-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+}
+
+.faq-dropdown-question:hover .faq-dropdown-icon {
+  color: #0d6efd;
+}
+
+.faq-dropdown-item.faq-open .faq-dropdown-icon {
+  transform: rotate(180deg);
+  color: #0d6efd;
+}
+
+.faq-dropdown-answer {
+  padding: 0 22px 20px;
+  background-color: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  animation: faqFadeIn 0.25s ease-out;
+}
+
+.faq-dropdown-answer p {
+  margin: 12px 0 0 !important;
+  color: #475569 !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .faq-dropdown-question {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+  .faq-dropdown-answer {
+    padding: 0 18px 16px;
+  }
+  .faq-dropdown-answer p {
+    font-size: 14px !important;
+  }
+}
+
