@@ -116,16 +116,16 @@ function Blog() {
       link: "/train-ambulance-eligibility",
 
     },
-    // {
-    //   id: 11,
-    //   title:
-    //     "Is Train Ambulance Safe for Patients? What Families Should Know Before a Medical Rail Transfer",
-    //   excerpt:
-    //     "When a patient needs to travel from the city of their residence to that of the hospital for treatment, there is generally only one fear of the family members: are we sure the patient will be safe along the journey? To a family of such a patient, the safety of the patient is of utmost concern, and it is natural.",
-    //   image: blog11,
-    //   date: "2026-09-11",
-    //   link: "/train-ambulance-safety",
-    // },
+    {
+      id: 11,
+      title:
+        "Is Train Ambulance Safe for Patients? What Families Should Know Before a Medical Rail Transfer",
+      excerpt:
+        "When a patient needs to travel from the city of their residence to that of the hospital for treatment, there is generally only one fear of the family members: are we sure the patient will be safe along the journey? To a family of such a patient, the safety of the patient is of utmost concern, and it is natural.",
+      image: blog11,
+      date: "2026-09-11",
+      link: "/train-ambulance-safety",
+    },
   ];
 
   return (
