@@ -12,6 +12,9 @@ import blog8 from "../assets/Blogs/what-is-a-train-ambulance.webp";
 import blog9 from "../assets/Blogs/how-does-a-train-ambulance-work.webp";
 import blog10 from "../assets/Blogs/train-ambulance-eligibility.webp";
 import blog11 from "../assets/Blogs/rail-ambulance-service.webp";
+import blog12 from "../assets/Blogs/mumbai-train-ambulance.webp";
+import blog13 from "../assets/Blogs/vellore-train-ambulance.webp";
+
 import "./Blogs.css";
 
 function Blog() {
@@ -23,7 +26,7 @@ function Blog() {
         "Humancare World Wide offers safe, affordable, and ICU-equipped train ambulance services across India with expert care and seamless IRCTC coordination.",
       image: blog1,
       date: "2025-09-01",
-      link: "/what-makes-humancare-the-best-rail-ambulance-service-in-india",
+      link: "/blogs/what-makes-humancare-the-best-rail-ambulance-service-in-india",
     },
     {
       id: 2,
@@ -33,7 +36,7 @@ function Blog() {
         "Humancare offers India’s most affordable and reliable train ambulance service, providing ICU-level care at a fraction of air ambulance costs. With transparent pricing and nationwide IRCTC support, it ensures safe, comfortable, and budget-friendly patient transfers.",
       image: blog2,
       date: "2025-10-22",
-      link: "/train-ambulance-charges-vs-air-ambulance-cost",
+      link: "/blogs/train-ambulance-charges-vs-air-ambulance-cost",
     },
     {
       id: 3,
@@ -43,7 +46,7 @@ function Blog() {
         "Humancare simplifies IRCTC train ambulance booking with transparent costs, ICU-equipped coaches, and 24/7 medical care. It ensures safe, affordable, and seamless long-distance patient transfers across India.",
       image: blog3,
       date: "2025-11-06",
-      link: "/irctc-train-ambulance-booking-guide",
+      link: "/blogs/irctc-train-ambulance-booking-guide",
     },
     {
       id: 4,
@@ -53,7 +56,7 @@ function Blog() {
         "A train ambulance is not just a regular train journey. It’s a specially arranged medical setup inside a train coach where a patient travels under constant supervision.",
       image: blog4,
       date: "2026-01-12",
-      link: "/inside-a-train-ambulance",
+      link: "/blogs/inside-a-train-ambulance",
     },
     {
       id: 5,
@@ -63,7 +66,7 @@ function Blog() {
         "Medical emergencies rarely give families time to prepare. One unexpected diagnosis, a sudden accident, a major surgery, or a critical illness can quickly lead to another difficult decision. ",
       image: blog5,
       date: "2026-08-03",
-      link: "/train-ambulance-service-in-varanasi",
+      link: "/blogs/train-ambulance-service-in-varanasi",
     },
     {
       id: 6,
@@ -73,7 +76,7 @@ function Blog() {
         "Travelling by train from Kolkata to Vellore in a medical ambu-train is done for transporting critically/To be exact ill patients over this long distance with continuous medical assistance. ",
       image: blog6,
       date: "2026-08-25",
-      link: "/train-ambulance-from-kolkata-to-vellore",
+      link: "/blogs/train-ambulance-from-kolkata-to-vellore",
     },
     {
       id: 7,
@@ -83,7 +86,7 @@ function Blog() {
         "Train ambulance service is considered an excellent and cost-effective solution in India for such long-distance patient transfers.It's essentially the merger of a train with ambulance services.",
       image: blog7,
       date: "2026-08-31",
-      link: "/train-ambulance-service-in-india",
+      link: "/blogs/train-ambulance-service-in-india",
     },
     {
       id: 8,
@@ -93,7 +96,7 @@ function Blog() {
         "If a patient is physically unable to undertake their own travel, a long-distance medical conveyance may present challenges. Patients who are bed-locked, post-operative, need a supply of oxygen, or need a doctor's presence throughout their journey may not be well catered for on a regular train trip.",
       image: blog8,
       date: "2026-09-02",
-      link: "/what-is-train-ambulance",
+      link: "/blogs/what-is-train-ambulance",
     },
     {
       id: 9,
@@ -103,7 +106,7 @@ function Blog() {
         "The transfer of an ill patient over a long distance is more than just taking them from city A to city B. If a patient is completely bedridden, needs oxygen, is on regular medication or requires medical monitoring while traveling",
       image: blog9,
       date: "2026-09-04",
-      link: "/train-ambulance-process",
+      link: "/blogs/train-ambulance-process",
     },
     {
       id: 10,
@@ -113,7 +116,7 @@ function Blog() {
         "If a medical traveler has to go to another city for treatment, it is the question “can he/she make the trip safely without risking any complications?” that comes first more often than knowing about the destination city.",
       image: blog10,
       date: "2026-09-08",
-      link: "/train-ambulance-eligibility",
+      link: "/blogs/train-ambulance-eligibility",
 
     },
     {
@@ -124,7 +127,27 @@ function Blog() {
         "When a patient needs to travel from the city of their residence to that of the hospital for treatment, there is generally only one fear of the family members: are we sure the patient will be safe along the journey? To a family of such a patient, the safety of the patient is of utmost concern, and it is natural.",
       image: blog11,
       date: "2026-09-11",
-      link: "/train-ambulance-safety",
+      link: "/blogs/train-ambulance-safety",
+    },
+    {
+      id: 12,
+      title:
+        "Train Ambulance for Bedridden Patients: A Practical Guide to Long-Distance Medical Travel",
+      excerpt:
+        "If a patient is confined to a bed, taking train trips and changing stations becomes a difficult matter. Learn how train ambulance services coordinate bed-to-bed transfers across India.",
+      image: blog12,
+      date: "2026-09-14",
+      link: "/blogs/train-ambulance-for-bedridden-patients",
+    },
+    {
+      id: 13,
+      title:
+        "Train Ambulance with Ventilator Support: A Guide to Safe Medical Rail Transfers in India",
+      excerpt:
+        "If a patient needs ventilator assistance, learn how train ambulance services support ventilator-dependent patients with oxygen, monitoring, medical staff, power backup, and ground transfers.",
+      image: blog13,
+      date: "2026-09-17",
+      link: "/blogs/train-ambulance-ventilator-support",
     },
   ];
 

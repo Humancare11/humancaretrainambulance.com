@@ -16,6 +16,71 @@ export default [
     "changefreq": "weekly"
   },
   {
+    "path": "/blogs/inside-a-train-ambulance",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/irctc-train-ambulance-booking-guide",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-charges-vs-air-ambulance-cost",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-eligibility",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-for-bedridden-patients",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-from-kolkata-to-vellore",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-process",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-safety",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-service-in-india",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-service-in-varanasi",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/train-ambulance-ventilator-support",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/what-is-train-ambulance",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
+    "path": "/blogs/what-makes-humancare-the-best-rail-ambulance-service-in-india",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
     "path": "/contact",
     "priority": "0.8",
     "changefreq": "weekly"
