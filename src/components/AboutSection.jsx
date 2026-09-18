@@ -17,7 +17,7 @@ const AboutSection = () => {
 
           {/* Left Image */}
           <div className="about-image-wrapper">
-            <img src={aboutImage} alt="About MediTrain" className="about-image" />
+            <img src={aboutImage} alt="About MediTrain" className="about-image" loading="lazy" />
           </div>
 
           {/* Right Content */}

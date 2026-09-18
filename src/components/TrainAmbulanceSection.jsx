@@ -56,6 +56,7 @@ Whether transferring patients from rural regions to advanced metro hospitals or 
             src={trainimg}
             alt="Train Ambulance"
             className="trainimg"
+            loading="lazy"
           />
         </div>
       </div>

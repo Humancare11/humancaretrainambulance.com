@@ -28,7 +28,7 @@ const PaymentPage = lazy(() => import("./pages/PaymentPage"));
 const Success = lazy(() => import("./pages/Success"));
 const Failure = lazy(() => import("./pages/Failure"));
 
-// Lazy-loaded City Pages
+// City Pages
 const Train_ambulance_varanari = lazy(() => import("./pages/City-Pages/Train_ambulance_varanari"));
 const TrainAmbulanceServiceMumbai = lazy(() => import("./pages/City-Pages/TrainAmbulanceServiceMumbai"));
 const TrainAmbulanceKolkata = lazy(() => import("./pages/City-Pages/TrainAmbulanceKolkata"));
@@ -37,13 +37,13 @@ const Delhi = lazy(() => import("./pages/City-Pages/Delhi"));
 const Bengaluru = lazy(() => import("./pages/City-Pages/Bengaluru"));
 const Hyderabad = lazy(() => import("./pages/City-Pages/Hyderabad"));
 
-// Lazy-loaded ADS
+// Google ADS
 const LandingPage = lazy(() => import("./ads/LandingPage"));
 const Core = lazy(() => import("./ads/Core"));
 const Cost = lazy(() => import("./ads/Cost"));
 const Location = lazy(() => import("./ads/Location"));
 
-// Lazy-loaded Blogs
+// Blogs
 const BlogCard = lazy(() => import("./blogs/BlogCard"));
 const Blog1 = lazy(() => import("./blogs/Blog1"));
 const Blog2 = lazy(() => import("./blogs/Blog2"));

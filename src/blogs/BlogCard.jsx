@@ -146,7 +146,7 @@ function Blog() {
       excerpt:
         "If a patient needs ventilator assistance, learn how train ambulance services support ventilator-dependent patients with oxygen, monitoring, medical staff, power backup, and ground transfers.",
       image: blog13,
-      date: "2026-09-17",
+      date: "2026-09-18",
       link: "/blogs/train-ambulance-ventilator-support",
     },
   ];

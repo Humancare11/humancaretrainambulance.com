@@ -1,10 +1,4 @@
-import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import React, { useState, lazy, Suspense } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import {
   FaUserCheck,
@@ -13,15 +7,8 @@ import {
   FaBriefcaseMedical,
 } from "react-icons/fa";
 import "./home.css";
-import AboutSection from "../components/AboutSection";
-import TrainAmbulanceSection from "../components/TrainAmbulanceSection";
-import WhyChooseUs from "../components/WhyChooseUs";
-import TestimonialsSection from "../components/TestimonialsSection";
-import ContactSection from "../components/ContactSection";
 import heroImage from "../assets/10.webp";
 import trainAmbulances from "../assets/10.webp";
-import Rail from "../assets/contact.png";
-import Railcost from "../assets/Train Ambulance cost In India.png";
 
 import { Helmet } from "react-helmet";
 import {
@@ -32,6 +19,25 @@ import {
   CreditCard,
   CheckCircle2,
 } from "lucide-react";
+
+// Lazy-load sub-components for better initial page load
+const AboutSection = lazy(() => import("../components/AboutSection"));
+const TrainAmbulanceSection = lazy(() => import("../components/TrainAmbulanceSection"));
+const WhyChooseUs = lazy(() => import("../components/WhyChooseUs"));
+const TestimonialsSection = lazy(() => import("../components/TestimonialsSection"));
+const ContactSection = lazy(() => import("../components/ContactSection"));
+
+// Lazy-load heavy below-fold images
+const Rail = new URL("../assets/contact.png", import.meta.url).href;
+const Railcost = new URL("../assets/Train Ambulance cost In India.png", import.meta.url).href;
+
+// Section loading fallback
+const SectionLoader = () => (
+  <div style={{ minHeight: "200px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div style={{ width: "32px", height: "32px", border: "3px solid #e2e8f0", borderTop: "3px solid #2563eb", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+  </div>
+);
+
 
 const HeroSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -303,9 +309,15 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <AboutSection />
-      <TrainAmbulanceSection />
-      <WhyChooseUs />
+      <Suspense fallback={<SectionLoader />}>
+        <AboutSection />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <TrainAmbulanceSection />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <WhyChooseUs />
+      </Suspense>
 
       <section className="benefits-section" aria-label="Key Benefits">
         <div className="benefits-container">
@@ -415,6 +427,7 @@ const HeroSection = () => {
               src={Railcost}
               alt="Train ambulance illustration"
               className="train-image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -426,6 +439,7 @@ const HeroSection = () => {
               src={Rail}
               alt="Train ambulance working process"
               className="train-image"
+              loading="lazy"
             />
           </div>
           <div className="train-text-box">
@@ -584,7 +598,9 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <TestimonialsSection />
+      <Suspense fallback={<SectionLoader />}>
+        <TestimonialsSection />
+      </Suspense>
       <section className="faq-section">
         <div className="faq-container">
           <h2 className="faq-title">
@@ -610,7 +626,9 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <ContactSection />
+      <Suspense fallback={<SectionLoader />}>
+        <ContactSection />
+      </Suspense>
     </>
   );
 };

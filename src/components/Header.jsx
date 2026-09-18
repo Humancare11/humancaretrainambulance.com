@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './header.css';
 import logo from '../assets/logo.webp';
-import ContactSection from './ContactSection';
+
+const ContactSection = lazy(() => import('./ContactSection'));
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,7 +91,9 @@ const Header = () => {
         <div className="modal-overlay" onClick={closePopup}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={closePopup}>×</button>
-            <ContactSection />
+            <Suspense fallback={<div style={{padding: '2rem', textAlign: 'center'}}>Loading...</div>}>
+              <ContactSection />
+            </Suspense>
           </div>
         </div>
       )}
