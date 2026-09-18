@@ -220,16 +220,18 @@
 }
  /* ========================2nd========================== */
 .how-it-works {
-  background-color: #fff;
-  padding: 60px 20px;
+  background-color: #ffffff;
+  padding: 65px 20px;
   text-align: center;
 }
 
 .how-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.15rem;
+  font-weight: 700;
   color: #0b3c5d;
-  margin-bottom: 10px;
+  margin-bottom: 48px;
+  text-align: center;
+  letter-spacing: -0.01em;
 }
 
 .how-subtitle {
@@ -239,55 +241,82 @@
 }
 
 .how-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
 }
 
 .how-step {
-  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .how-icon {
-  background-color: #ff9292;
-  width: 60px;
-  height: 60px;
+  background-color: #feecef !important;
+  color: #e53935 !important;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 auto 20px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 auto 20px auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.25s ease;
 }
 
-.red {
-  background-color: #fdebec!important;
-  color: var(--red);
-}
-
-.green {
-  background-color: #fdebec!important;
-   color: var(--red)!important;
-}
-
-.blue {
-    background-color: #fdebec!important;
-   color: var(--red)!important;
+.how-step:hover .how-icon {
+  transform: scale(1.08);
 }
 
 .how-step h3 {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: #0b3c5d;
   margin-bottom: 10px;
+  line-height: 1.35;
 }
 
 .how-step p {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #4a7b9d;
-  line-height: 1.5;
+  line-height: 1.55;
+  max-width: 255px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .how-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+  }
+
+  .how-title {
+    font-size: 1.85rem;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .how-it-works {
+    padding: 45px 15px;
+  }
+
+  .how-title {
+    font-size: 1.55rem;
+    margin-bottom: 25px;
+  }
 }
 /* ================================3rd=========================?/ */
 

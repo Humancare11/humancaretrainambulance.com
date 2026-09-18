@@ -380,6 +380,158 @@
   color: #ffffff;
 }
 
+/* ==================== HOW OUR TRAIN AMBULANCE WORKS ==================== */
+.how-it-works {
+  background-color: #ffffff;
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.how-title {
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #0b3c5d;
+  margin-bottom: 48px;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.how-subtitle {
+  font-size: 1.05rem;
+  color: #4a7b9d;
+  margin-bottom: 40px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.how-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.how-icon {
+  background-color: #feecef !important;
+  color: #e53935 !important;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.how-step:hover .how-icon {
+  transform: scale(1.08);
+}
+
+.how-step h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.how-step p {
+  font-size: 0.92rem;
+  color: #4a7b9d;
+  line-height: 1.55;
+  max-width: 255px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .how-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+  }
+
+  .how-title {
+    font-size: 1.85rem;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .how-it-works {
+    padding: 45px 15px;
+  }
+
+  .how-title {
+    font-size: 1.55rem;
+    margin-bottom: 25px;
+  }
+}
+
+/* ==================== KEY BENEFITS / EQUIPMENT SECTION ==================== */
+.equipment-section {
+  background-color: #f3fdf6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.equipment-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0b3c5d;
+  margin-bottom: 30px;
+}
+
+.equipment-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.equipment-card:hover {
+  transform: translateY(-4px);
+}
+
+.equipment-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.equipment-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.equipment-card p {
+  font-size: 0.95rem;
+  color: #4a7b9d;
+  line-height: 1.5;
+}
 
 .equipment-grid-home {
   display: grid;

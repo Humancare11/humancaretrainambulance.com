@@ -357,13 +357,13 @@ const HeroSection = () => {
 
         <div className="how-grid">
           <div className="how-step">
-            <div className="how-icon blue">1</div>
+            <div className="how-icon">1</div>
             <h3>Patient Assessment</h3>
             <p>We review the condition and decide the suitable train route.</p>
           </div>
 
           <div className="how-step">
-            <div className="how-icon blue">2</div>
+            <div className="how-icon">2</div>
             <h3>Coach Booking & Preparation</h3>
             <p>
               Coordination with railway ambulance service and train scheduling.
@@ -371,13 +371,13 @@ const HeroSection = () => {
           </div>
 
           <div className="how-step">
-            <div className="how-icon blue">3</div>
+            <div className="how-icon">3</div>
             <h3>Setup Installation</h3>
-            <p>ICU setup with ventilator and monitors before boarding. </p>
+            <p>ICU setup with ventilator and monitors before boarding.</p>
           </div>
 
           <div className="how-step">
-            <div className="how-icon blue">4</div>
+            <div className="how-icon">4</div>
             <h3>Continuous Care</h3>
             <p>
               Onboard medical assistance in train until safe hospital handover.
