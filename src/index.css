@@ -69,7 +69,7 @@ img[loading="lazy"]:not([src=""]) {
 
 
 
-Base styles and CSS Variables
+/* Base styles and CSS Variables */
 * {
   margin: 0;
   padding: 0;
