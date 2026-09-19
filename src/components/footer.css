@@ -16,6 +16,7 @@
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
+  color: #dc2626;
 }
 
 .footer-logo {
@@ -101,6 +102,7 @@
   font-size: 16px;
   margin-top: 20px;
 }
+
 .footer-text-right {
   display: flex;
   justify-content: flex-end;

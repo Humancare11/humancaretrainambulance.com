@@ -36,6 +36,18 @@ const Chennai = lazy(() => import("./pages/City-Pages/Chennai"));
 const Delhi = lazy(() => import("./pages/City-Pages/Delhi"));
 const Bengaluru = lazy(() => import("./pages/City-Pages/Bengaluru"));
 const Hyderabad = lazy(() => import("./pages/City-Pages/Hyderabad"));
+const Guwahati = lazy(() => import("./pages/City-Pages/Guwahati"));
+const Pune = lazy(() => import("./pages/City-Pages/Pune"));
+const Jaipur = lazy(() => import("./pages/City-Pages/Jaipur"));
+const Ahmedabad = lazy(() => import("./pages/City-Pages/Ahmedabad"));
+const Lucknow = lazy(() => import("./pages/City-Pages/Lucknow"));
+const Patna = lazy(() => import("./pages/City-Pages/Patna"));
+const Bhopal = lazy(() => import("./pages/City-Pages/Bhopal"));
+const Indore = lazy(() => import("./pages/City-Pages/Indore"));
+const Nagpur = lazy(() => import("./pages/City-Pages/Nagpur"));
+const Ranchi = lazy(() => import("./pages/City-Pages/Ranchi"));
+const Jamshedpur = lazy(() => import("./pages/City-Pages/Jamshedpur"));
+const Siliguri = lazy(() => import("./pages/City-Pages/Siliguri"));
 
 // Google ADS
 const LandingPage = lazy(() => import("./ads/LandingPage"));
@@ -158,6 +170,54 @@ function App() {
           <Route
             path="/train-ambulance-services-in-hyderabad"
             element={<Hyderabad />}
+          />
+          <Route
+            path="/train-ambulance-services-in-guwahati"
+            element={<Guwahati />}
+          />
+          <Route
+            path="/train-ambulance-services-in-pune"
+            element={<Pune />}
+          />
+          <Route
+            path="/train-ambulance-services-in-jaipur"
+            element={<Jaipur />}
+          />
+          <Route
+            path="/train-ambulance-services-in-ahmedabad"
+            element={<Ahmedabad />}
+          />
+          <Route
+            path="/train-ambulance-services-in-lucknow"
+            element={<Lucknow />}
+          />
+          <Route
+            path="/train-ambulance-services-in-patna"
+            element={<Patna />}
+          />
+          <Route
+            path="/train-ambulance-services-in-bhopal"
+            element={<Bhopal />}
+          />
+          <Route
+            path="/train-ambulance-services-in-indore"
+            element={<Indore />}
+          />
+          <Route
+            path="/train-ambulance-services-in-nagpur"
+            element={<Nagpur />}
+          />
+          <Route
+            path="/train-ambulance-services-in-ranchi"
+            element={<Ranchi />}
+          />
+          <Route
+            path="/train-ambulance-services-in-jamshedpur"
+            element={<Jamshedpur />}
+          />
+          <Route
+            path="/train-ambulance-services-in-siliguri"
+            element={<Siliguri />}
           />
 
           {/* ----------------Ads--------------- */}
