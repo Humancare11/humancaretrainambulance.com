@@ -59,10 +59,13 @@ const TestimonialsSection = () => {
       <div className="container">
         <div className="header1">
           <span className="subtitle">What Families Say</span>
-          <h2 className="title">Stories of Compassionate Care and Safe Transfers
-</h2>
+          <h2 className="title">Trusted Care. Safe Transfers.</h2>
           <p className="description">
-Hear directly from families and patients who experienced the comfort, safety, and professionalism of our train ambulance service in India and rail ambulance service. From long-distance medical transfers to critical patient repatriation, families trust our indian train ambulance solutions for safe, well-coordinated journeys delivered with expert medical care and genuine compassion.          </p>
+            Hear from families who experienced our train ambulance service and
+            rail ambulance service. We focus on safe patient transportation,
+            professional medical support, and smooth coordination throughout
+            every journey.
+          </p>
         </div>
         <div className="testimonial-card">
           <div className="stars">

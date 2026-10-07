@@ -369,7 +369,7 @@ function Location() {
 
       {/* -----------------Process ----------------- */}
       <section className="core-process-section">
-        <div className="core-process-container">
+        <div className="core-process-horizontal-container">
           <span className="core-process-tag">How It Works</span>
 
           <h2 className="core-process-main-heading">
@@ -380,18 +380,20 @@ function Location() {
             From your first call to final delivery, every step is managed with precision and care.
           </p>
 
-          <div className="core-process-grid">
-            {steps.map((item, index) => (
-              <div className="core-process-card" key={index}>
-                <div className="core-circle">
-                  {item.icon}
-                  <span className="core-step">{item.step}</span>
+          <div className="core-process-horizontal-wrapper">
+            <div className="core-process-horizontal-row">
+              <div className="core-process-line"></div>
+              {steps.map((item, index) => (
+                <div className="core-process-horizontal-item" key={index}>
+                  <div className="core-circle">
+                    {item.icon}
+                    <span className="core-step">{item.step}</span>
+                  </div>
+                  <h3 className="core-process-step-title">{item.title}</h3>
+                  <p className="core-process-step-desc">{item.desc}</p>
                 </div>
-
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

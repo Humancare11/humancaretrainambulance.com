@@ -13,9 +13,13 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Trainambulance = lazy(() => import("./pages/Trainambulance"));
 const AboutSection = lazy(() => import("./components/AboutSection"));
-const TrainAmbulanceSection = lazy(() => import("./components/TrainAmbulanceSection"));
+const TrainAmbulanceSection = lazy(
+  () => import("./components/TrainAmbulanceSection"),
+);
 const WhyChooseUs = lazy(() => import("./components/WhyChooseUs"));
-const TestimonialsSection = lazy(() => import("./components/TestimonialsSection"));
+const TestimonialsSection = lazy(
+  () => import("./components/TestimonialsSection"),
+);
 const ContactSection = lazy(() => import("./components/ContactSection"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Testimonial = lazy(() => import("./pages/Testimonial"));
@@ -29,9 +33,15 @@ const Success = lazy(() => import("./pages/Success"));
 const Failure = lazy(() => import("./pages/Failure"));
 
 // City Pages
-const Train_ambulance_varanari = lazy(() => import("./pages/City-Pages/Train_ambulance_varanari"));
-const TrainAmbulanceServiceMumbai = lazy(() => import("./pages/City-Pages/TrainAmbulanceServiceMumbai"));
-const TrainAmbulanceKolkata = lazy(() => import("./pages/City-Pages/TrainAmbulanceKolkata"));
+const Train_ambulance_varanari = lazy(
+  () => import("./pages/City-Pages/Train_ambulance_varanari"),
+);
+const TrainAmbulanceServiceMumbai = lazy(
+  () => import("./pages/City-Pages/TrainAmbulanceServiceMumbai"),
+);
+const TrainAmbulanceKolkata = lazy(
+  () => import("./pages/City-Pages/TrainAmbulanceKolkata"),
+);
 const Chennai = lazy(() => import("./pages/City-Pages/Chennai"));
 const Delhi = lazy(() => import("./pages/City-Pages/Delhi"));
 const Bengaluru = lazy(() => import("./pages/City-Pages/Bengaluru"));
@@ -63,13 +73,25 @@ const Blog3 = lazy(() => import("./blogs/Blog3"));
 const Blog4 = lazy(() => import("./blogs/Blog4"));
 const Blog5 = lazy(() => import("./blogs/Blog5"));
 const KolkataToVellore = lazy(() => import("./blogs/KolkatatoVellore"));
-const TrainAmbulanceServicesIndia = lazy(() => import("./blogs/TrainAmbulanceServicesIndia"));
-const WhatIsaTrainAmbulance = lazy(() => import("./blogs/WhatIsaTrainAmbulance"));
-const HowDoesTrainAmbulanceWork = lazy(() => import("./blogs/HowDoesTrainAmbulanceWork"));
-const TrainAmbulanceEligibility = lazy(() => import("./blogs/TrainAmbulanceEligibility"));
+const TrainAmbulanceServicesIndia = lazy(
+  () => import("./blogs/TrainAmbulanceServicesIndia"),
+);
+const WhatIsaTrainAmbulance = lazy(
+  () => import("./blogs/WhatIsaTrainAmbulance"),
+);
+const HowDoesTrainAmbulanceWork = lazy(
+  () => import("./blogs/HowDoesTrainAmbulanceWork"),
+);
+const TrainAmbulanceEligibility = lazy(
+  () => import("./blogs/TrainAmbulanceEligibility"),
+);
 const TrainAmbulanceSafety = lazy(() => import("./blogs/TrainAmbulancesafety"));
-const TrainAmbulanceBedRiddenPatients = lazy(() => import("./blogs/TrainAmbulanceBedRiddenPatients"));
-const TrainAmbulanceVentilatorSupport = lazy(() => import("./blogs/TrainAmbulanceVentilatorSupport"));
+const TrainAmbulanceBedRiddenPatients = lazy(
+  () => import("./blogs/TrainAmbulanceBedRiddenPatients"),
+);
+const TrainAmbulanceVentilatorSupport = lazy(
+  () => import("./blogs/TrainAmbulanceVentilatorSupport"),
+);
 
 // Loading fallback component
 const PageLoader = () => (
@@ -131,7 +153,10 @@ function App() {
             element={<TrainAmbulanceSection />}
           />
           <Route path="/WhyChooseUs" element={<WhyChooseUs />} />
-          <Route path="/TestimonialsSection" element={<TestimonialsSection />} />
+          <Route
+            path="/TestimonialsSection"
+            element={<TestimonialsSection />}
+          />
           <Route path="/ContactSection" element={<ContactSection />} />
           <Route path="/Trainambulance" element={<Trainambulance />} />
           <Route path="/contact" element={<Contact />} />
@@ -162,7 +187,10 @@ function App() {
             path="/train-ambulance-services-in-chennai"
             element={<Chennai />}
           />
-          <Route path="/train-ambulance-services-in-delhi" element={<Delhi />} />
+          <Route
+            path="/train-ambulance-services-in-delhi"
+            element={<Delhi />}
+          />
           <Route
             path="/train-ambulance-services-in-bengaluru"
             element={<Bengaluru />}
@@ -175,10 +203,7 @@ function App() {
             path="/train-ambulance-services-in-guwahati"
             element={<Guwahati />}
           />
-          <Route
-            path="/train-ambulance-services-in-pune"
-            element={<Pune />}
-          />
+          <Route path="/train-ambulance-services-in-pune" element={<Pune />} />
           <Route
             path="/train-ambulance-services-in-jaipur"
             element={<Jaipur />}
@@ -223,7 +248,10 @@ function App() {
           {/* ----------------Ads--------------- */}
           <Route path="/train-ambulance-services" element={<LandingPage />} />
           <Route path="/rail-ambulance-services" element={<Core />} />
-          <Route path="/train-ambulance-cost" element={<Cost />} />
+          <Route
+            path="/train-ambulance-service-across-india"
+            element={<Cost />}
+          />
           <Route path="/pan-india" element={<Location />} />
 
           {/* -----------blogs------------------- */}
@@ -235,7 +263,7 @@ function App() {
             element={<Blog1 />}
           />
           <Route
-            path="/what-makes-humancare-the-best-rail-ambulance-service-in-india"
+            path="/blogs/what-makes-humancare-the-best-rail-ambulance-service-in-india"
             element={<Blog1 />}
           />
 
@@ -244,7 +272,7 @@ function App() {
             element={<Blog2 />}
           />
           <Route
-            path="/train-ambulance-charges-vs-air-ambulance-cost"
+            path="/blogs/train-ambulance-charges-vs-air-ambulance-cost"
             element={<Blog2 />}
           />
 
@@ -253,18 +281,12 @@ function App() {
             element={<Blog3 />}
           />
           <Route
-            path="/irctc-train-ambulance-booking-guide"
+            path="/blogs/irctc-train-ambulance-booking-guide"
             element={<Blog3 />}
           />
 
-          <Route
-            path="/blogs/inside-a-train-ambulance"
-            element={<Blog4 />}
-          />
-          <Route
-            path="/inside-a-train-ambulance"
-            element={<Blog4 />}
-          />
+          <Route path="/blogs/inside-a-train-ambulance" element={<Blog4 />} />
+          <Route path="/blogs/inside-a-train-ambulance" element={<Blog4 />} />
 
           <Route
             path="/blogs/train-ambulance-service-in-varanasi"
@@ -288,17 +310,9 @@ function App() {
             path="/blogs/train-ambulance-service-in-india"
             element={<TrainAmbulanceServicesIndia />}
           />
-          <Route
-            path="/train-ambulance-service-in-india"
-            element={<TrainAmbulanceServicesIndia />}
-          />
 
           <Route
             path="/blogs/what-is-train-ambulance"
-            element={<WhatIsaTrainAmbulance />}
-          />
-          <Route
-            path="/what-is-train-ambulance"
             element={<WhatIsaTrainAmbulance />}
           />
 
@@ -306,17 +320,9 @@ function App() {
             path="/blogs/train-ambulance-process"
             element={<HowDoesTrainAmbulanceWork />}
           />
-          <Route
-            path="/train-ambulance-process"
-            element={<HowDoesTrainAmbulanceWork />}
-          />
 
           <Route
             path="/blogs/train-ambulance-eligibility"
-            element={<TrainAmbulanceEligibility />}
-          />
-          <Route
-            path="/train-ambulance-eligibility"
             element={<TrainAmbulanceEligibility />}
           />
 
@@ -324,15 +330,7 @@ function App() {
             path="/blogs/train-ambulance-safety"
             element={<TrainAmbulanceSafety />}
           />
-          <Route
-            path="/train-ambulance-safety"
-            element={<TrainAmbulanceSafety />}
-          />
 
-          <Route
-            path="/blogs/train-ambulance-for-bedridden-patients"
-            element={<TrainAmbulanceBedRiddenPatients />}
-          />
           <Route
             path="/blogs/train-ambulance-for-bedridden-patients"
             element={<TrainAmbulanceBedRiddenPatients />}
@@ -342,7 +340,6 @@ function App() {
             path="/blogs/train-ambulance-ventilator-support"
             element={<TrainAmbulanceVentilatorSupport />}
           />
-
         </Routes>
       </Suspense>
       <Footer />
