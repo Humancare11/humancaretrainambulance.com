@@ -151,6 +151,11 @@ export default [
     "changefreq": "monthly"
   },
   {
+    "path": "/train-ambulance-service-across-india",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
     "path": "/train-ambulance-service-in-india",
     "priority": "0.7",
     "changefreq": "monthly"
