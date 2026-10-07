@@ -1,154 +1,128 @@
-import React, { useState, lazy, Suspense } from "react";
-import { FaPhoneAlt } from "react-icons/fa";
-import {
-  FaUserCheck,
-  FaRoute,
-  FaFileAlt,
-  FaBriefcaseMedical,
-} from "react-icons/fa";
-import "./home.css";
-import heroImage from "../assets/10.webp";
-import trainAmbulances from "../assets/10.webp";
-
+import React, { Suspense, lazy, useState } from "react";
 import { Helmet } from "react-helmet";
 import {
-  Train,
+  CheckCircle2,
   ChevronDown,
   Clock,
-  Globe,
   CreditCard,
-  CheckCircle2,
+  Globe,
 } from "lucide-react";
+import { FaPhoneAlt } from "react-icons/fa";
+import {
+  FaUserMd,
+  FaHeart,
+  FaShieldAlt,
+  FaTrain,
+  FaStethoscope,
+  FaClock,
+  FaCheckCircle,
+  FaHandHoldingMedical,
+  FaRupeeSign,
+  FaMapMarkerAlt,
+  FaHeartbeat,
+  FaAmbulance,
+  FaClipboardCheck,
+  FaRoute,
+  FaTools,
+  FaMedkit,
+} from "react-icons/fa";
+import "./home.css";
+import "./home-refresh.css";
+import heroImage from "../assets/10.webp";
 
-// Lazy-load sub-components for better initial page load
-const AboutSection = lazy(() => import("../components/AboutSection"));
-const TrainAmbulanceSection = lazy(() => import("../components/TrainAmbulanceSection"));
-const WhyChooseUs = lazy(() => import("../components/WhyChooseUs"));
-const TestimonialsSection = lazy(() => import("../components/TestimonialsSection"));
+const TestimonialsSection = lazy(() =>
+  import("../components/TestimonialsSection"),
+);
 const ContactSection = lazy(() => import("../components/ContactSection"));
 
-// Lazy-load heavy below-fold images
 const Rail = new URL("../assets/contact.png", import.meta.url).href;
-const Railcost = new URL("../assets/Train Ambulance cost In India.png", import.meta.url).href;
+const Railcost = new URL(
+  "../assets/Train Ambulance cost In India.png",
+  import.meta.url,
+).href;
 
-// Section loading fallback
 const SectionLoader = () => (
-  <div style={{ minHeight: "200px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-    <div style={{ width: "32px", height: "32px", border: "3px solid #e2e8f0", borderTop: "3px solid #2563eb", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+  <div
+    style={{
+      minHeight: "200px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
+    <div
+      style={{
+        width: "32px",
+        height: "32px",
+        border: "3px solid #e2e8f0",
+        borderTop: "3px solid #2563eb",
+        borderRadius: "50%",
+        animation: "spin 0.8s linear infinite",
+      }}
+    />
   </div>
 );
 
+const faqs = [
+  {
+    question: "What is a train ambulance service?",
+    answer:
+      "A train ambulance service is a medically supported patient transportation service that helps patients travel long distances by train with appropriate medical care, equipment, and professional supervision.",
+  },
+  {
+    question: "Who can use a train ambulance?",
+    answer:
+      "A train ambulance can be arranged for bedridden, elderly, post-operative, stable or critically ill patients who require medical assistance during long-distance transportation.",
+  },
+  {
+    question: "How much does a train ambulance cost?",
+    answer:
+      "The train ambulance cost depends on the route, patient’s medical condition, medical team, equipment, railway arrangements, and level of care required. A customized estimate is provided after assessing the patient's requirements.",
+  },
+  {
+    question: "Can a train ambulance provide oxygen and ventilator support?",
+    answer:
+      "Yes. Based on the patient’s medical requirements, an ICU train ambulance can be arranged with oxygen support, ventilator assistance, patient monitoring, and other essential medical equipment.",
+  },
+  {
+    question: "How can I book a train ambulance?",
+    answer:
+      "You can contact Humancare Train Ambulance with the patient's current location, destination, medical condition, and travel requirements. Our team will help coordinate the train ambulance booking and required medical arrangements.",
+  },
+  {
+    question: "Does Humancare provide train ambulance services across India?",
+    answer:
+      "Yes. Our train ambulance service in India supports long-distance patient transfers across major cities and railway routes, with medical teams and support arranged according to the patient's needs.",
+  },
+];
 
-const HeroSection = () => {
+const Home = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex((currentIndex) => (currentIndex === index ? null : index));
   };
-  const faqs = [
-    {
-      question:
-        "What is a Train Ambulance Service and how does it work in India?",
-      answer:
-        "A train ambulance service is a specialized medical transfer system that converts train coaches into fully equipped ICUs. Patients are accompanied by doctors, nurses, and paramedics throughout the journey. These rail ambulances in India ensure safe, affordable long-distance transfers for critical or bedridden patients.",
-    },
-    {
-      question:
-        "Which cities offer the best Train Ambulance Services in India?",
-      answer:
-        "We provide train ambulance services across major cities including Patna, Delhi, Mumbai, Kolkata, Chennai, Ranchi, Bangalore, Guwahati, and Lucknow. Each railway ambulance includes critical care equipment, oxygen support, ventilators, and a full medical team for uninterrupted monitoring.",
-    },
-    {
-      question: "How do I book a Train Ambulance from Patna to Delhi?",
-      answer:
-        "Booking a train ambulance from Patna to Delhi is simple. You can contact our 24/7 emergency helpline or fill out the train ambulance booking form online. Our team arranges the railway ambulance coach, medical staff, and bed-to-bed transfer in coordination with Indian Railways.",
-    },
-    {
-      question: "What medical facilities are available in a Rail Ambulance?",
-      answer:
-        "Each rail ambulance in India functions like a moving ICU. Facilities include oxygen cylinders, ventilators, cardiac monitors, suction machines, infusion pumps, emergency medicines, and advanced life support. These make railway ambulances ideal for transporting critically ill patients safely.",
-    },
-    {
-      question: "Is a Train Ambulance safe for critical patients?",
-      answer:
-        "Yes, train ambulance services are among the safest modes of patient transport in India. The movement is smooth, the environment is temperature-controlled, and medical professionals continuously monitor the patient’s vitals. It’s a preferred option for long-distance transfers compared to road ambulances.",
-    },
-    {
-      question:
-        "What is the difference between Train Ambulance and Air Ambulance Services?",
-      answer:
-        "A train ambulance offers cost-effective patient transfer across cities, while an air ambulance provides faster transfers for emergencies requiring immediate treatment. For instance, rail ambulance from Patna to Delhi is economical for stable patients, whereas air ambulance Bangalore to Delhi suits time-sensitive cases.",
-    },
-    {
-      question: "How can I find a Train Ambulance Service near me?",
-      answer:
-        "To find a train ambulance service near you, simply search for “rail ambulance service near me” or contact us directly. Our nationwide network covers Patna, Delhi, Mumbai, Ranchi, Chennai, Bangalore, and Guwahati, ensuring you get quick, expert medical transport support anywhere in India.",
-    },
-  ];
-
-  const equipmentData = [
-    {
-      icon: "❤️",
-      title: "Fully Equipped ICU on Rails",
-      desc: "Monitors, ventilators, suction machines, and oxygen supply for critical patient transport.",
-      color: "red",
-    },
-    {
-      icon: "🛡️",
-      title: "Certified Medical Team",
-      desc: "Doctors and nurses trained for train emergency medical services.",
-      color: "green",
-    },
-    {
-      icon: "🕒",
-      title: "Affordable & Transparent Costs",
-      desc: "Clear breakdown of train ambulance charges and rail ambulance cost in India.",
-      color: "blue",
-    },
-
-    {
-      icon: "🧑‍⚕️",
-      title: "Nationwide Reach ",
-      desc: "Services across Patna, Ranchi, Delhi, Kolkata, Chennai, Mumbai, Bangalore, Lucknow, Siliguri, and Guwahati.",
-      color: "green",
-    },
-  ];
 
   return (
-    <>
+    <main className="home-refresh">
       <Helmet>
-        {/* Canonical */}
         <link rel="canonical" href="https://humancaretrainambulance.com/" />
-
-        {/* Title */}
-        <title>
-          ICU Train Ambulance Across India | Affordable Rail Ambulance Services
-          24x7
-        </title>
-
-        {/* Meta Description */}
+        <title>Train Ambulance Service in India | Humancare Train Ambulance</title>
         <meta
           name="description"
-          content="Book ICU-equipped train ambulance across India with doctors onboard. Transparent rail ambulance cost, fast coordination, and 24x7 emergency support."
+          content="Book 24×7 train ambulance service in India with ICU support, trained medical teams, oxygen, ventilator assistance and safe long-distance patient transfers."
         />
-
-        {/* Keywords */}
         <meta
           name="keywords"
-          content="train ambulance service, rail ambulance service, railway ambulance service, Humancare Train Ambulance"
+          content="train ambulance service, rail ambulance service, train ambulance cost, Humancare Train Ambulance"
         />
-
-        {/* Preload Hero Image */}
-        <link rel="preload" as="image" href={heroImage} />
-
-        {/* Open Graph */}
         <meta
           property="og:title"
-          content="Train Ambulance Service in India | Rail Ambulance - Humancare Train Ambulance"
+          content="Train Ambulance Service in India | Humancare Train Ambulance"
         />
         <meta
           property="og:description"
-          content="Fast & affordable train ambulance service in India with ICU, doctor, and trained medical staff."
+          content="24×7 train ambulance service in India with ICU support and trained medical teams for safe long-distance patient transfers."
         />
         <meta
           property="og:image"
@@ -159,123 +133,58 @@ const HeroSection = () => {
           content="https://humancaretrainambulance.com/"
         />
         <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Train Ambulance Service in India | Rail Ambulance - Humancare Train Ambulance"
-        />
-        <meta
-          name="twitter:description"
-          content="24/7 train ambulance & rail ambulance service in India with ICU setup and medical professionals."
-        />
-        <meta
-          name="twitter:image"
-          content={`https://humancaretrainambulance.com${heroImage}`}
-        />
-
-        {/* Local Business Schema (Fully Corrected With Full Address) */}
         <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Humancare Train Ambulance",
-      "url": "https://humancaretrainambulance.com/",
-      "image": "https://humancaretrainambulance.com/logo.png",
-      "logo": "https://humancaretrainambulance.com/logo.png",
-      "description": "24/7 train ambulance service across India with ICU setup, medical staff, and affordable rail ambulance transport.",
-      "telephone": "+919833997373",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "G-30, Dheeraj Heritage, S. V. Road, Milan Subway Junction, Santacruz (West)",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400054",
-        "addressCountry": "IN"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      }
-    }
-    `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Humancare Train Ambulance",
+            url: "https://humancaretrainambulance.com/",
+            image: "https://humancaretrainambulance.com/logo.png",
+            logo: "https://humancaretrainambulance.com/logo.png",
+            description:
+              "24×7 train ambulance service across India with ICU support, trained medical teams, and long-distance patient transfers.",
+            telephone: "+919833997373",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress:
+                "G-30, Dheeraj Heritage, S. V. Road, Milan Subway Junction, Santacruz (West)",
+              addressLocality: "Mumbai",
+              addressRegion: "Maharashtra",
+              postalCode: "400054",
+              addressCountry: "IN",
+            },
+            areaServed: { "@type": "Country", name: "India" },
+          })}
         </script>
-
-        {/* Service Schema */}
         <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Train Ambulance Service",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Humancare Train Ambulance",
-        "url": "https://humancaretrainambulance.com/"
-      },
-      "areaServed": { "@type": "Country", "name": "India" },
-      "description": "Affordable and professional train ambulance service with ICU, medical escort, doctor support, and safe long-distance transport."
-    }
-    `}
-        </script>
-
-        {/* FAQ Schema */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a train ambulance service?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A train ambulance service provides medical transportation through railways with ICU setup, medical escorts, and trained doctors for safe long-distance patient transfer."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a train ambulance cost in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Train ambulance cost in India depends on distance, medical team, and coach type. Humancare Train Ambulance offers affordable pricing compared to air ambulance services."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is train ambulance available 24/7?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Humancare Train Ambulance provides 24/7 rail ambulance and emergency medical transport services across India."
-          }
-        }
-      ]
-    }
-    `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(({ question, answer }) => ({
+              "@type": "Question",
+              name: question,
+              acceptedAnswer: { "@type": "Answer", text: answer },
+            })),
+          })}
         </script>
       </Helmet>
 
-      {/* ✅ Your Existing Page Content */}
       <section id="home" className="hero-section">
         <div className="hero-container">
           <div className="hero-grid">
-            {/* Content */}
             <div className="hero-content">
               <h1 className="hero-title">
-                <span className="satish">
-                  Train Ambulance Service in India |{" "}
-                </span>
-                <span className="text-accent">24x7 Rail Ambulance</span>
-                <br />
-                <span className="satish">Across India</span>
+                <span className="satish">Train Ambulance Service in India</span>
               </h1>
+              <h2 className="hero-subtext">
+                24×7 ICU Rail Ambulance for Long-Distance Patient Transfer
+              </h2>
               <p className="hero-subtext">
-                Train Ambulance Service & Rail Ambulance in India – Safe,
-                Comfortable ICU Train Ambulance with Ventilator Support |
-                Emergency Train Ambulance Service Across India
+                Avail safe and trusted train ambulance in India. For smooth and
+                safe traveling, your patient can be shifted by train ambulance
+                with skilled MD doctors, nurses, and paramedical staff, along
+                with oxygen, ventilator, and monitoring machine services
+                according to their medical condition.
               </p>
               <div className="hero-buttons">
                 <a href="tel:+919833997373" className="btn-link-wrapper">
@@ -289,95 +198,245 @@ const HeroSection = () => {
                   <button className="btn-outline">Learn More</button>
                 </a>
               </div>
+              <div className="hero-trust-strip" aria-label="Service highlights">
+                <span>Nationwide transfers</span>
+                <span>Medical team onboard</span>
+                <span>24×7 coordination</span>
+              </div>
             </div>
 
-            {/* Train Image */}
             <div className="hero-image-wrapper">
               <div className="hero-card">
                 <img
                   src={heroImage}
-                  alt="Train Ambulance"
+                  alt="Train ambulance for long-distance patient transfer"
                   className="hero-train-image"
                   loading="eager"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   width="1200"
                   height="600"
                 />
+              </div>
+              <div className="hero-image-note">
+                <span className="hero-status-dot" />
+                <span>
+                  <strong>Care throughout the journey</strong>
+                  <small>Support planned around each patient</small>
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <Suspense fallback={<SectionLoader />}>
-        <AboutSection />
-      </Suspense>
-      <Suspense fallback={<SectionLoader />}>
-        <TrainAmbulanceSection />
-      </Suspense>
-      <Suspense fallback={<SectionLoader />}>
-        <WhyChooseUs />
-      </Suspense>
-
-      <section className="benefits-section" aria-label="Key Benefits">
+      <section className="benefits-section">
         <div className="benefits-container">
-          <h2 className="benefits-title">
-            Reliable Train & Rail Ambulance Services Across India
-          </h2>
-
+          <h2 className="benefits-title">Bringing Medical Care Along the Journey</h2>
           <p className="benefits-description">
-            Humancare World Wide delivers dependable train ambulance service in
-            India and rail ambulance service for patients requiring safe,
-            long-distance medical transportation. Our indian train ambulance
-            operations are supported by advanced medical equipment, trained
-            doctors and nurses, and smooth coordination to ensure stress-free
-            transfers with continuous care across India.
+            At Humancare Train Ambulance we provide easy long-distance patient
+            transfer through reliable train transportation combined with expert
+            medical services. Our train ambulance service is tailored to the
+            needs of each patient, helping families plan a secure transfer
+            between locations without compromising the quality or continuity of
+            medical care. Older or bed-ridden patients, post-operative patients,
+            or those in need of constant monitoring and care can be overseen by
+            the right medical team. We can provide oxygen, observation of vital
+            signs, ICU equipment, mechanical ventilators, medication, and trained
+            medical professionals during the journey. From medical team
+            arrangements to station handovers and onward destination ambulance
+            support, our team manages the important details of the journey.
+          </p>
+          <div className="equipment-grid-home" style={{ marginTop: "32px" }}>
+            {[
+              {
+                icon: <FaUserMd size={28} />,
+                title: "Experienced",
+                description:
+                  "Trained medical professionals provide attentive supervision throughout the journey, with care tailored to the patient's condition and transport needs.",
+              },
+              {
+                icon: <FaHeart size={28} />,
+                title: "Compassionate",
+                description:
+                  "We understand the emotional challenges of moving a loved one over a long distance and focus on respectful, patient-centered care.",
+              },
+              {
+                icon: <FaShieldAlt size={28} />,
+                title: "Reliable",
+                description:
+                  "From medical preparation and railway travel to station pickup and destination ambulance coordination, we help organize each transfer.",
+              },
+            ].map((item) => (
+              <article className="equipment-card" key={item.title}>
+                <div className="trust-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="benefits-section">
+        <div className="benefits-container">
+          <h2 className="benefits-title">India’s Trusted Train Ambulance Provider</h2>
+          <p className="benefits-description">
+            To transfer a patient from one city to another, move a loved one
+            from a local hospital to a super-specialty hospital, or travel a
+            long distance for medical purposes, Humancare Train Ambulance offers
+            coordinated train ambulance service in India. We integrate railway
+            transport with trained caretakers, patient-care equipment, and
+            medical supervision according to the patient's needs. From departure
+            and station transfer to arrival at the destination, we help
+            families arrange a reliable journey with medical support.
+          </p>
+        </div>
+      </section>
+
+      <section className="equipment-section">
+        <h2 className="equipment-title">Our Train Ambulance Services</h2>
+        <div className="equipment-grid-home">
+          {[
+            {
+              icon: <FaHeartbeat size={28} />,
+              title: "ICU Train Ambulance",
+              description:
+                "Advanced medical support with patient monitoring, oxygen, ventilator assistance, and essential critical-care equipment.",
+            },
+            {
+              icon: <FaStethoscope size={28} />,
+              title: "Medical Team Support",
+              description:
+                "Trained doctors, nurses, and paramedics can accompany patients based on their medical condition and care requirements.",
+            },
+            {
+              icon: <FaClock size={28} />,
+              title: "24×7 Train Ambulance Assistance",
+              description:
+                "Round-the-clock coordination for planned and urgent patient transportation across major railway routes in India.",
+            },
+            {
+              icon: <FaAmbulance size={28} />,
+              title: "Safe Patient Transfer",
+              description:
+                "Organized rail ambulance service with appropriate medical care, equipment, and ambulance coordination at departure and destination points.",
+            },
+          ].map((item) => (
+            <article className="equipment-card" key={item.title}>
+              <div className="trust-icon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="trust-section">
+        <h2>Why Choose Our Train Ambulance Services?</h2>
+        <p className="benefits-description">
+          Our train ambulance service makes long-distance patient transfers
+          across India possible with coordinated care centered on each patient's
+          needs. Qualified medical professionals, appropriate equipment,
+          transport planning, and communication help families manage the
+          journey.
+        </p>
+        <div className="trust-grid">
+          {[
+            {
+              icon: <FaMedkit size={28} />,
+              title: "On-Board ICU Setup",
+              description:
+                "Our ICU train ambulance can be equipped with ventilators, cardiac monitors, suction equipment, oxygen support, and other critical-care equipment based on the patient's condition.",
+            },
+            {
+              icon: <FaTrain size={28} />,
+              title: "Pan-India Rail Network",
+              description:
+                "We support long-distance transfers across major cities and railway routes, helping families coordinate medical transportation between states.",
+            },
+            {
+              icon: <FaHandHoldingMedical size={28} />,
+              title: "Comfortable Journey With 24×7 Care",
+              description:
+                "Every transfer is planned around the patient's medical needs, with appropriate supervision and support throughout the railway journey.",
+            },
+            {
+              icon: <FaCheckCircle size={28} />,
+              title: "24×7 Coordination & Support",
+              description:
+                "From booking and journey planning to station transfers and destination coordination, we help manage the arrangements for a smooth transfer.",
+            },
+          ].map((item) => (
+            <article className="trust-card" key={item.title}>
+              <div className="trust-icon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="benefits-section">
+        <div className="benefits-container">
+          <h2 className="benefits-title">Trusted Train Ambulance Care Across India</h2>
+          <p className="benefits-description">
+            Humancare Train Ambulance offers a professionally coordinated train
+            ambulance service to patients who require safe, supported
+            long-distance travel. Our rail ambulance service is tailored to the
+            individual patient and their requirements. We arrange medical
+            support, necessary equipment, and trained medical professionals
+            according to the required level of care.
             <br />
             <br />
-            If you are searching for a train ambulance service near me, our team
-            is available 24/7 to arrange fast assistance with complete medical
-            supervision. Through our integration with the Indian railway
-            ambulance service, we ensure timely arrangements, comfortable
-            travel, and dedicated monitoring throughout the journey.
+            Transferring patients over considerable distances may be difficult
+            for relatives when patients are not able to travel independently.
+            Our India-based train ambulance service helps coordinate the
+            transfer from starting point to destination, including patient
+            preparation, train transfer, medical escort, and ambulance support
+            at either end when required.
             <br />
             <br />
-            Families often ask about train ambulance cost in India and train
-            ambulance price. We maintain full transparency by clearly explaining
-            train ambulance charges, rail ambulance cost, and overall train
-            ambulance service cost, offering reliable medical transfers at
-            cost-effective rates. At Humancare World Wide, patient safety,
-            comfort, and timely care remain our top priority.
+            Patients may need varied levels of stabilization during
+            transportation. We can arrange oxygen, ventilator support, vital
+            monitoring, emergency medical equipment, and doctors, nurses, or
+            paramedics trained in ICU train ambulance care, based on the
+            patient's condition. Each transfer is planned with patient care in
+            mind.
+            <br />
+            <br />
+            If you are searching for a train ambulance service near me, contact
+            us to discuss the patient's needs and suitable rail transportation.
+            We support rail ambulance booking to and from locations across India
+            through major railway routes. We also provide transparent
+            information about train ambulance costs, prices, and charges based
+            on the route, medical team, facilities, equipment, patient's
+            condition, and other ambulance needs.
           </p>
         </div>
       </section>
 
       <section className="how-it-works">
         <h2 className="how-title">How Our Train Ambulance Works</h2>
-        {/* <p className="how-subtitle">Simple steps to secure emergency medical transport</p> */}
-
         <div className="how-grid">
           <div className="how-step">
-            <div className="how-icon">1</div>
+            <div className="how-icon"><FaClipboardCheck size={26} /></div>
             <h3>Patient Assessment</h3>
             <p>We review the condition and decide the suitable train route.</p>
           </div>
-
           <div className="how-step">
-            <div className="how-icon">2</div>
+            <div className="how-icon"><FaTrain size={26} /></div>
             <h3>Coach Booking & Preparation</h3>
             <p>
               Coordination with railway ambulance service and train scheduling.
             </p>
           </div>
-
           <div className="how-step">
-            <div className="how-icon">3</div>
+            <div className="how-icon"><FaTools size={26} /></div>
             <h3>Setup Installation</h3>
             <p>ICU setup with ventilator and monitors before boarding.</p>
           </div>
-
           <div className="how-step">
-            <div className="how-icon">4</div>
+            <div className="how-icon"><FaRoute size={26} /></div>
             <h3>Continuous Care</h3>
             <p>
               Onboard medical assistance in train until safe hospital handover.
@@ -387,57 +446,83 @@ const HeroSection = () => {
       </section>
 
       <section className="equipment-section">
-        <h2 className="equipment-title">Key Benefits of Our Service</h2>
-        {/* <p className="equipment-subtitle">
-          Our train ambulances are equipped with state-of-the-art medical facilities
-        </p> */}
-
+        <h2 className="equipment-title">Key Benefits of Our Train Ambulance Service</h2>
         <div className="equipment-grid-home">
-          {equipmentData.map((item, index) => (
-            <div className="equipment-card" key={index}>
-              <div className={`equipment-icon ${item.color}`}>{item.icon}</div>
+          {[
+            {
+              icon: <FaMedkit size={28} />,
+              title: "Fully Equipped ICU on Rails",
+              description:
+                "Our ICU train ambulance can be arranged with ventilators, oxygen support, patient monitors, suction systems, and other medical equipment based on the patient's condition.",
+            },
+            {
+              icon: <FaUserMd size={28} />,
+              title: "Trained Medical Professionals",
+              description:
+                "Patients can travel with qualified doctors, nurses, or paramedics based on their medical requirements, providing supervision throughout the journey.",
+            },
+            {
+              icon: <FaRupeeSign size={28} />,
+              title: "Transparent Train Ambulance Cost",
+              description:
+                "We provide clear information about train ambulance cost, charges, and rail ambulance cost based on the route, medical team, equipment, and level of care required.",
+            },
+            {
+              icon: <FaMapMarkerAlt size={28} />,
+              title: "Pan-India Patient Transfer",
+              description:
+                "Our service supports long-distance transfers across major cities and railway routes, including Patna, Ranchi, Delhi, Kolkata, Chennai, Mumbai, Bangalore, Lucknow, Siliguri, and Guwahati.",
+            },
+          ].map((item) => (
+            <article className="equipment-card" key={item.title}>
+              <div className="trust-icon">{item.icon}</div>
               <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-            </div>
+              <p>{item.description}</p>
+            </article>
           ))}
         </div>
       </section>
+
       <section className="train-ambulance-section">
         <div className="train-container">
           <div className="train-text-box">
             <h2 className="train-title">Train Ambulance Cost in India</h2>
             <p className="train-text">
-              If you are looking for the train ambulance cost in India or rail
-              ambulance cost, our pricing is customized based on distance,
-              patient condition, and required medical setup. We ensure complete
-              transparency while explaining the cost of train ambulance in
-              India, train ambulance charges, and overall train ambulance
-              service cost before confirmation.
+              Train ambulance and rail ambulance charges vary according to the
+              patient's needs, journey, and medical assistance required.
+              Humancare Train Ambulance provides an estimate for each transfer
+              based on those requirements before the journey is confirmed.
             </p>
             <p className="train-text">
-              For example, the train ambulance cost for routes such as train
-              ambulance from Patna to Delhi or train ambulance from Patna to
-              Mumbai depends on the ICU configuration and coach type, with
-              approximate train ambulance price ranging between ₹75,000 and
-              ₹95,000.
+              The train ambulance price may depend on the distance, railway
+              route, patient's condition, medical arrangements, equipment,
+              medical team, oxygen or ventilator support, and ambulance services
+              at the departure or destination station. We explain the main cost
+              factors clearly so families understand what is included.
+            </p>
+            <p className="train-text">
+              Where a transfer requires a special ICU setup, doctor supervision,
+              or coordination with road ambulances, those arrangements are
+              included in the final estimate.
             </p>
           </div>
           <div className="train-image-box">
             <img
               src={Railcost}
-              alt="Train ambulance illustration"
+              alt="Train ambulance cost information"
               className="train-image"
               loading="lazy"
             />
           </div>
         </div>
       </section>
+
       <section className="train-ambulance-section">
         <div className="train-container">
           <div className="train-image-box">
             <img
               src={Rail}
-              alt="Train ambulance working process"
+              alt="Bed-to-bed train ambulance transfer coordination"
               className="train-image"
               loading="lazy"
             />
@@ -447,25 +532,31 @@ const HeroSection = () => {
               Trusted Bed-to-Bed Medical Transfers Across India
             </h2>
             <p className="train-text">
-              Our rail ambulance in India delivers safe, fully supervised
-              medical transfers for critically ill patients over long distances.
-              We manage every step of the train ambulance service—from ambulance
-              train scheduling and onboard ICU setup to final hospital
-              handover—ensuring continuous expert care throughout the journey.
-              Whether you require a train ambulance from Bangalore to Chennai,
-              Patna to Delhi, Patna to Mumbai, or need services in Ranchi,
-              Siliguri, Lucknow, Jamshedpur, Kolkata, Guwahati, and other
-              cities, our train ambulance service across India ensures quick
-              availability and seamless coordination. Recognized as one of the
-              best train ambulance services in India, we operate through
-              Rajdhani and other approved medical routes, offering ICU train
-              ambulance coaches equipped with ventilators, oxygen support, and
-              constant doctor supervision. With transparent train ambulance cost
-              in India and competitive rail ambulance cost, our train ambulance
-              services are significantly more economical than air transport
-              while delivering the same hospital-grade critical care—making
-              life-saving medical travel accessible for patients and families
-              nationwide.
+              At Humancare Train Ambulance, we offer supported critical-care
+              transfers for patients who need specialized treatment and care
+              while traveling long distances by rail. Our service is planned
+              according to the patient's health condition, with medical
+              supervision and professional care arranged for the journey.
+            </p>
+            <p className="train-text">
+              Our experts oversee the major phases of the transfer, from
+              preliminary medical evaluation and travel coordination to onboard
+              care and post-train hospital transfer. An ICU train ambulance can
+              be arranged with oxygen, ventilator support, monitoring, an
+              emergency kit, and a trained doctor, nurse, or paramedic as
+              required.
+            </p>
+            <p className="train-text">
+              We coordinate patient movements across Indian cities and railway
+              routes including Patna, Delhi, Mumbai, Ranchi, Kolkata, Guwahati,
+              Bangalore, Chennai, Lucknow, Siliguri, Jamshedpur, Bhopal, Raipur,
+              and Varanasi. Whether moving between hospitals or arranging a
+              long-distance transfer, we work to make the journey organized.
+            </p>
+            <p className="train-text">
+              When your family needs a reliable train ambulance, we focus on
+              medical preparation, monitoring, patient comfort, and coordination
+              with family members throughout the journey.
             </p>
           </div>
         </div>
@@ -473,146 +564,131 @@ const HeroSection = () => {
 
       <section className="trust-section">
         <h2>Why Families Trust Humancare Train Ambulance</h2>
-
         <div className="trust-grid">
-          <div className="trust-card">
-            <div className="trust-icon">
-              <Clock size={28} />
-            </div>
-            <h3 className="trust-title">24/7 nationwide coordination</h3>
-            <p className="trust-desc">
-              Round-the-clock support and coordination across India for fast,
-              reliable transfers.
-            </p>
-          </div>
-
-          <div className="trust-card">
-            <div className="trust-icon">
-              <CreditCard size={28} />
-            </div>
-            <h3 className="trust-title">Affordable train ambulance charges</h3>
-            <p className="trust-desc">
-              Transparent pricing and cost-effective solutions for long-distance
-              medical transport.
-            </p>
-          </div>
-
-          <div className="trust-card">
-            <div className="trust-icon">
-              <Globe size={28} />
-            </div>
-            <h3 className="trust-title">Seamless booking and IRCTC support</h3>
-            <p className="trust-desc">
-              Hassle-free booking with IRCTC coordination and end-to-end
-              bed-to-bed transfer assistance.
-            </p>
-          </div>
-
-          <div className="trust-card">
-            <div className="trust-icon">
-              <CheckCircle2 size={28} />
-            </div>
-            <h3 className="trust-title">
-              Best train ambulance service in India
-            </h3>
-            <p className="trust-desc">
-              Proven success rate and experienced medical teams ensure safe
-              patient transfers.
-            </p>
-          </div>
+          {[
+            {
+              icon: <Clock size={28} />,
+              title: "24×7 Nationwide Coordination",
+              description:
+                "Round-the-clock coordination helps families arrange medically supported transfers across major cities and railway routes in India.",
+            },
+            {
+              icon: <CreditCard size={28} />,
+              title: "Transparent Train Ambulance Charges",
+              description:
+                "We explain the train ambulance cost based on the route, patient condition, medical team, equipment, and level of care required.",
+            },
+            {
+              icon: <Globe size={28} />,
+              title: "Easy Booking & Railway Coordination",
+              description:
+                "Our team assists with train ambulance booking and railway coordination, helping organize the journey and related transportation.",
+            },
+            {
+              icon: <CheckCircle2 size={28} />,
+              title: "Experienced Medical Care",
+              description:
+                "Trained doctors, nurses, or paramedics and appropriate medical equipment can be arranged according to the patient's condition.",
+            },
+          ].map((item) => (
+            <article className="trust-card" key={item.title}>
+              <div className="trust-icon">{item.icon}</div>
+              <h3 className="trust-title">{item.title}</h3>
+              <p className="trust-desc">{item.description}</p>
+            </article>
+          ))}
         </div>
       </section>
+
       <section className="booking-section">
         <div className="booking-container">
-          {/* MAIN CONTENT */}
           <h2 className="booking-title">Train Ambulance Booking</h2>
-
           <p className="booking-description">
-            Booking a train ambulance in India with Humancare World Wide is
-            simple, fast, and fully supported. Our dedicated team assists
-            families at every step of the train ambulance booking process,
-            ensuring timely arrangements and complete medical coordination. If
-            you are searching for how to book train ambulance or a train
-            ambulance service near me, our experts are available 24/7 to guide
-            you.
+            Booking a train ambulance in India should be easy and well organized,
+            especially when a patient is taking a long journey and medical
+            requirements need to be arranged. Humancare Train Ambulance helps
+            families coordinate the required medical support and rail travel
+            according to the patient's condition and preferred route.
           </p>
-
           <p className="booking-description">
-            From medical assessment and documentation to coordination with the
-            Indian Railway ambulance service and onboard ICU setup, we manage
-            the entire rail ambulance service process with precision. Whether
-            you need an emergency train ambulance or a planned medical transfer,
-            our train ambulance service in India ensures safe, supervised, and
-            stress-free patient transport across the country.
+            Our team organizes the suitable medical team, equipment, train
+            arrangements, and ambulance support at the departure or destination
+            station. If you are looking for a train ambulance service near you,
+            contact us to discuss the patient's requirements and suitable
+            transfer options.
           </p>
-
-          {/* CALL BOX */}
           <div className="call-box">
-            <FaPhoneAlt className="call-icon" />
             <div>
               <h3>Call Our Medical Team (24/7)</h3>
               <p>
-                Contact us for immediate assistance with train ambulance booking
-                anywhere in India.
+                Contact us for assistance with train ambulance booking anywhere
+                in India.
               </p>
             </div>
+            <a className="booking-call-link" href="tel:+919833997373">
+              <FaPhoneAlt aria-hidden="true" />
+              <span>Call Now</span>
+            </a>
           </div>
-
-          {/* 4 STEP PROCESS */}
           <div className="steps-grid">
-            <div className="step-card">
-              <FaUserCheck className="step-icon" />
-              <h4>Patient Assessment</h4>
-              <p>
-                Our doctors review the patient’s condition to determine ICU
-                needs and medical support for the train ambulance service.
-              </p>
-            </div>
-
-            <div className="step-card">
-              <FaRoute className="step-icon" />
-              <h4>Cost & Route Confirmation</h4>
-              <p>
-                We share clear details on train ambulance cost in India and
-                finalize the best route and coach type.
-              </p>
-            </div>
-
-            <div className="step-card">
-              <FaFileAlt className="step-icon" />
-              <h4>Railway Coordination & Documentation</h4>
-              <p>
-                We handle approvals and coordination with the Indian Railway
-                ambulance service for smooth scheduling.
-              </p>
-            </div>
-
-            <div className="step-card">
-              <FaBriefcaseMedical className="step-icon" />
-              <h4>Onboard ICU Setup & Transfer</h4>
-              <p>
-                The ICU train ambulance is prepared, and the patient is
-                transferred safely with continuous medical supervision.
-              </p>
-            </div>
+            {[
+              {
+                title: "Patient Assessment",
+                description:
+                  "Our team reviews the patient's condition, mobility, treatment requirements, and level of care needed to determine appropriate medical support.",
+              },
+              {
+                title: "Route & Cost Planning",
+                description:
+                  "We evaluate the journey and explain the train ambulance cost, route, travel arrangements, medical team, and equipment required.",
+              },
+              {
+                title: "Railway Coordination & Documentation",
+                description:
+                  "Our team coordinates railway arrangements and documentation to help ensure the patient's journey is properly planned before departure.",
+              },
+              {
+                title: "Onboard ICU Setup & Patient Transfer",
+                description:
+                  "The required ICU train ambulance setup is prepared according to the patient's needs, with medical supervision throughout the journey.",
+              },
+            ].map((step) => (
+              <article className="step-card" key={step.title}>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
+
       <Suspense fallback={<SectionLoader />}>
         <TestimonialsSection />
       </Suspense>
+
       <section className="faq-section">
         <div className="faq-container">
           <h2 className="faq-title">
-            FAQs for Train & Rail Ambulance Services in India
+            Frequently Asked Questions About Train Ambulance Service
           </h2>
           {faqs.map((faq, index) => (
             <div
-              key={index}
+              key={faq.question}
               className={`faq-item ${openIndex === index ? "active" : ""}`}
-              onClick={() => toggleFAQ(index)}
             >
-              <div className="faq-question">
+              <div
+                className="faq-question"
+                role="button"
+                tabIndex={0}
+                aria-expanded={openIndex === index}
+                onClick={() => toggleFAQ(index)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    toggleFAQ(index);
+                  }
+                }}
+              >
                 <h3>{faq.question}</h3>
                 <ChevronDown
                   className={`faq-icon ${openIndex === index ? "rotate" : ""}`}
@@ -629,8 +705,8 @@ const HeroSection = () => {
       <Suspense fallback={<SectionLoader />}>
         <ContactSection />
       </Suspense>
-    </>
+    </main>
   );
 };
 
-export default HeroSection;
+export default Home;

@@ -151,6 +151,11 @@ export default [
     "changefreq": "monthly"
   },
   {
+    "path": "/train-ambulance-service-across-india",
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  {
     "path": "/train-ambulance-service-in-india",
     "priority": "0.7",
     "changefreq": "monthly"
@@ -166,7 +171,17 @@ export default [
     "changefreq": "weekly"
   },
   {
+    "path": "/train-ambulance-services-in-ahmedabad",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
     "path": "/train-ambulance-services-in-bengaluru",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-bhopal",
     "priority": "0.8",
     "changefreq": "weekly"
   },
@@ -181,7 +196,27 @@ export default [
     "changefreq": "weekly"
   },
   {
+    "path": "/train-ambulance-services-in-guwahati",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
     "path": "/train-ambulance-services-in-hyderabad",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-indore",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-jaipur",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-jamshedpur",
     "priority": "0.8",
     "changefreq": "weekly"
   },
@@ -191,7 +226,37 @@ export default [
     "changefreq": "weekly"
   },
   {
+    "path": "/train-ambulance-services-in-lucknow",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
     "path": "/train-ambulance-services-in-mumbai",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-nagpur",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-patna",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-pune",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-ranchi",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-siliguri",
     "priority": "0.8",
     "changefreq": "weekly"
   },

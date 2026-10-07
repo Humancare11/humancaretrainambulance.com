@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { Calendar, ArrowRight } from "lucide-react";
 import blog1 from "../assets/Blogs/what-makes-humancare-the-best-rail-ambulance-service-in-india.webp";
 import blog2 from "../assets/Blogs/train-ambulance-charges-vs-air-ambulance-cost.webp";
@@ -63,7 +64,7 @@ function Blog() {
       title:
         "Train Ambulance Service in Varanasi: Complete Guide for Long-Distance Patient Transfer",
       excerpt:
-        "Medical emergencies rarely give families time to prepare. One unexpected diagnosis, a sudden accident, a major surgery, or a critical illness can quickly lead to another difficult decision. ",
+        "Medical emergencies rarely give families time to prepare. One unexpected diagnosis, a sudden accident, a major surgery, or a critical illness can quickly lead to another difficult decision.",
       image: blog5,
       date: "2026-08-03",
       link: "/blogs/train-ambulance-service-in-varanasi",
@@ -73,7 +74,7 @@ function Blog() {
       title:
         "Train Ambulance from Kolkata to Vellore: Cost, Booking Process & ICU Patient Transfer",
       excerpt:
-        "Travelling by train from Kolkata to Vellore in a medical ambu-train is done for transporting critically/To be exact ill patients over this long distance with continuous medical assistance. ",
+        "Travelling by train from Kolkata to Vellore in a medical ambu-train is done for transporting critically ill patients over this long distance with continuous medical assistance.",
       image: blog6,
       date: "2026-08-25",
       link: "/blogs/train-ambulance-from-kolkata-to-vellore",
@@ -83,7 +84,7 @@ function Blog() {
       title:
         "Train Ambulance Services in India: Complete Guide to Long-Distance Patient Transfers",
       excerpt:
-        "Train ambulance service is considered an excellent and cost-effective solution in India for such long-distance patient transfers.It's essentially the merger of a train with ambulance services.",
+        "Train ambulance service is considered an excellent and cost-effective solution in India for such long-distance patient transfers. It's essentially the merger of a train with ambulance services.",
       image: blog7,
       date: "2026-08-31",
       link: "/blogs/train-ambulance-service-in-india",
@@ -93,7 +94,7 @@ function Blog() {
       title:
         "What Is a Train Ambulance? How Medical Train Transfers Work in India",
       excerpt:
-        "If a patient is physically unable to undertake their own travel, a long-distance medical conveyance may present challenges. Patients who are bed-locked, post-operative, need a supply of oxygen, or need a doctor's presence throughout their journey may not be well catered for on a regular train trip.",
+        "If a patient is physically unable to undertake their own travel, a long-distance medical conveyance may present challenges. Patients who are bed-locked, post-operative, need oxygen, or require doctor presence.",
       image: blog8,
       date: "2026-09-02",
       link: "/blogs/what-is-train-ambulance",
@@ -103,7 +104,7 @@ function Blog() {
       title:
         "How Does a Train Ambulance Work? From Hospital Pickup to Final Handover",
       excerpt:
-        "The transfer of an ill patient over a long distance is more than just taking them from city A to city B. If a patient is completely bedridden, needs oxygen, is on regular medication or requires medical monitoring while traveling",
+        "The transfer of an ill patient over a long distance is more than just taking them from city A to city B. Learn how bedridden, oxygen-dependent, or critical patients are moved seamlessly.",
       image: blog9,
       date: "2026-09-04",
       link: "/blogs/train-ambulance-process",
@@ -113,18 +114,17 @@ function Blog() {
       title:
         "Who Can Travel by Train Ambulance? A Guide for Patients and Families in India",
       excerpt:
-        "If a medical traveler has to go to another city for treatment, it is the question “can he/she make the trip safely without risking any complications?” that comes first more often than knowing about the destination city.",
+        "If a medical traveler has to go to another city for treatment, explore who is clinically eligible for train transfers and how safety is ensured throughout the journey.",
       image: blog10,
       date: "2026-09-08",
       link: "/blogs/train-ambulance-eligibility",
-
     },
     {
       id: 11,
       title:
         "Is Train Ambulance Safe for Patients? What Families Should Know Before a Medical Rail Transfer",
       excerpt:
-        "When a patient needs to travel from the city of their residence to that of the hospital for treatment, there is generally only one fear of the family members: are we sure the patient will be safe along the journey? To a family of such a patient, the safety of the patient is of utmost concern, and it is natural.",
+        "When a patient needs to travel for treatment, family concern for safety is primary. Learn how ICU equipment, trained doctors, and railway coordination maintain stability.",
       image: blog11,
       date: "2026-09-11",
       link: "/blogs/train-ambulance-safety",
@@ -134,7 +134,7 @@ function Blog() {
       title:
         "Train Ambulance for Bedridden Patients: A Practical Guide to Long-Distance Medical Travel",
       excerpt:
-        "If a patient is confined to a bed, taking train trips and changing stations becomes a difficult matter. Learn how train ambulance services coordinate bed-to-bed transfers across India.",
+        "If a patient is confined to a bed, taking train trips and changing stations becomes difficult. Learn how train ambulance services coordinate bed-to-bed transfers across India.",
       image: blog12,
       date: "2026-09-14",
       link: "/blogs/train-ambulance-for-bedridden-patients",
@@ -153,12 +153,26 @@ function Blog() {
 
   return (
     <>
+      <Helmet>
+        <title>Train Ambulance Blog | Medical Transport Insights | Humancare</title>
+        <meta
+          name="description"
+          content="Explore expert insights, healthcare guidance, and useful information about train ambulance services, patient transportation, and long-distance medical transfers."
+        />
+        <link rel="canonical" href="https://humancaretrainambulance.com/blogs" />
+      </Helmet>
+
       {/* ✅ Blog Banner */}
       <div className="blog-banner">
+        <span className="blog-banner-tag">Knowledge &amp; Resources</span>
         <h1 className="blog-banner-title">Our Blog</h1>
-        <p className="blog-banner-subtitle">
-          Explore expert insights, healthcare updates, and medical transport
-          knowledge.
+        <h2 className="blog-banner-subtitle">
+          Insights for Better Medical Transportation
+        </h2>
+        <p className="blog-banner-desc">
+          Explore expert guidance, patient transportation information,
+          healthcare insights, and the latest knowledge about train ambulance
+          services and medically supported long-distance transfers.
         </p>
       </div>
 
@@ -173,6 +187,7 @@ function Blog() {
                     src={post.image}
                     alt={post.title}
                     className="blog-image"
+                    loading="lazy"
                   />
                   <div className="blog-title-overlay">
                     <h3>{post.title}</h3>
