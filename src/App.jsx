@@ -62,6 +62,8 @@ const Raipur = lazy(() => import("./pages/City-Pages/Raipur"));
 const Surat = lazy(() => import("./pages/City-Pages/Surat"));
 const Bhubaneswar = lazy(() => import("./pages/City-Pages/Bhubaneswar"));
 const Chandigarh = lazy(() => import("./pages/City-Pages/Chandigarh"));
+const Coimbatore = lazy(() => import("./pages/City-Pages/Coimbatore"));
+const Vellore = lazy(() => import("./pages/City-Pages/Vellore"));
 
 // Google ADS
 const LandingPage = lazy(() => import("./ads/LandingPage"));
@@ -263,6 +265,14 @@ function App() {
           <Route
             path="/train-ambulance-services-in-chandigarh"
             element={<Chandigarh />}
+          />
+          <Route
+            path="/train-ambulance-services-in-coimbatore"
+            element={<Coimbatore />}
+          />
+          <Route
+            path="/train-ambulance-services-in-vellore"
+            element={<Vellore />}
           />
 
           {/* ----------------Ads--------------- */}
