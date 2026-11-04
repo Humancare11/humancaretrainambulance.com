@@ -18,7 +18,10 @@ export default function PaymentPage() {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post("http://localhost:5000/api/payment", form);
+      const { data } = await axios.post(
+        "http://localhost:5000/api/payment",
+        form,
+      );
 
       // Create form and submit
       const paymentForm = document.createElement("form");
@@ -46,10 +49,30 @@ export default function PaymentPage() {
     <div style={{ maxWidth: "400px", margin: "auto", padding: "1rem" }}>
       <h2>PayU Payment</h2>
       <form onSubmit={handlePayment}>
-        <input name="firstname" placeholder="Name" onChange={handleChange} required />
-        <input name="email" placeholder="Email" onChange={handleChange} required />
-        <input name="phone" placeholder="Phone" onChange={handleChange} required />
-        <input name="amount" placeholder="Amount" onChange={handleChange} required />
+        <input
+          name="firstname"
+          placeholder="Name"
+          onChange={handleChange}
+          required
+        />
+        <input
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+          required
+        />
+        <input
+          name="phone"
+          placeholder="Phone"
+          onChange={handleChange}
+          required
+        />
+        <input
+          name="amount"
+          placeholder="Amount"
+          onChange={handleChange}
+          required
+        />
         <button type="submit">Pay Now</button>
       </form>
     </div>

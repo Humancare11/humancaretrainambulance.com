@@ -2,7 +2,7 @@
 import React from 'react';
 import { Heart, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import "./footer.css";
-import logo from '../assets/logo.webp' ;
+import logo from '../assets/New-LOGO.webp' ;
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -113,4 +113,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

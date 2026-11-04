@@ -616,7 +616,7 @@ const SCHEMA_MEDPAGE = {
   about: { "@id": `${CONTACT.domain}/#business` },
 };
 
-const FAVICON = "/logo.webp";
+const FAVICON = "/favicon.svg?v=2";
 
 /* =========================================================================
    SEO HEAD
@@ -647,8 +647,8 @@ function SeoHead() {
       <meta name="geo.position" content="26.7271;88.3953" />
       <meta name="ICBM" content="26.7271, 88.3953" />
       <meta name="theme-color" content="#163B6D" />
-      <link rel="icon" type="image/webp" href={FAVICON} />
-      <link rel="apple-touch-icon" href={FAVICON} />
+      <link rel="icon" type="image/svg+xml" href={FAVICON} />
+      <link rel="apple-touch-icon" href="/New-LOGO.webp" />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />

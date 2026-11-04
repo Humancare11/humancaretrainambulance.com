@@ -62,6 +62,15 @@ const Raipur = lazy(() => import("./pages/City-Pages/Raipur"));
 const Surat = lazy(() => import("./pages/City-Pages/Surat"));
 const Bhubaneswar = lazy(() => import("./pages/City-Pages/Bhubaneswar"));
 const Chandigarh = lazy(() => import("./pages/City-Pages/Chandigarh"));
+const Hubballi = lazy(() => import("./pages/City-Pages/Hubballi"));
+const Coimbatore = lazy(() => import("./pages/City-Pages/Coimbatore"));
+const Vellore = lazy(() => import("./pages/City-Pages/Vellore"));
+const Kanpur = lazy(() => import("./pages/City-Pages/Kanpur"));
+const Prayagraj = lazy(() => import("./pages/City-Pages/Prayagraj"));
+
+// State Pages
+const StateTrainAmbulancePage = lazy(() => import("./pages/State-Pages/StateTrainAmbulancePage"));
+
 
 // Google ADS
 const LandingPage = lazy(() => import("./ads/LandingPage"));
@@ -264,7 +273,28 @@ function App() {
             path="/train-ambulance-services-in-chandigarh"
             element={<Chandigarh />}
           />
-
+          <Route
+            path="/train-ambulance-services-in-hubballi"
+            element={<Hubballi />}
+          />
+          <Route
+            path="/train-ambulance-services-in-coimbatore"
+            element={<Coimbatore />}
+          />
+          <Route
+            path="/train-ambulance-services-in-vellore"
+            element={<Vellore />}
+          />
+          <Route
+            path="/train-ambulance-services-in-kanpur"
+            element={<Kanpur />}
+          />
+          <Route
+            path="/train-ambulance-services-in-prayagraj"
+            element={<Prayagraj />}
+          />
+          {/* State Pages */}
+          <Route path="/train-ambulance-services" element={<StateTrainAmbulancePage />} />
           {/* ----------------Ads--------------- */}
           <Route path="/train-ambulance-services" element={<LandingPage />} />
           <Route path="/rail-ambulance-services" element={<Core />} />

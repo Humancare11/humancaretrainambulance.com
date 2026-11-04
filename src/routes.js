@@ -186,7 +186,22 @@ export default [
     "changefreq": "weekly"
   },
   {
+    "path": "/train-ambulance-services-in-bhubaneswar",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-chandigarh",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
     "path": "/train-ambulance-services-in-chennai",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-coimbatore",
     "priority": "0.8",
     "changefreq": "weekly"
   },
@@ -197,6 +212,11 @@ export default [
   },
   {
     "path": "/train-ambulance-services-in-guwahati",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-hubballi",
     "priority": "0.8",
     "changefreq": "weekly"
   },
@@ -217,6 +237,11 @@ export default [
   },
   {
     "path": "/train-ambulance-services-in-jamshedpur",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-kanpur",
     "priority": "0.8",
     "changefreq": "weekly"
   },
@@ -246,7 +271,17 @@ export default [
     "changefreq": "weekly"
   },
   {
+    "path": "/train-ambulance-services-in-prayagraj",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
     "path": "/train-ambulance-services-in-pune",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-raipur",
     "priority": "0.8",
     "changefreq": "weekly"
   },
@@ -261,7 +296,17 @@ export default [
     "changefreq": "weekly"
   },
   {
+    "path": "/train-ambulance-services-in-surat",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
     "path": "/train-ambulance-services-in-varanasi",
+    "priority": "0.8",
+    "changefreq": "weekly"
+  },
+  {
+    "path": "/train-ambulance-services-in-vellore",
     "priority": "0.8",
     "changefreq": "weekly"
   },

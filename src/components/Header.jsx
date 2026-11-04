@@ -1,7 +1,7 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './header.css';
-import logo from '../assets/logo.webp';
+import logo from '../assets/New-LOGO.webp';
 
 const ContactSection = lazy(() => import('./ContactSection'));
 
