@@ -216,11 +216,6 @@ export default [
     "changefreq": "weekly"
   },
   {
-    "path": "/train-ambulance-services-in-hubballi",
-    "priority": "0.8",
-    "changefreq": "weekly"
-  },
-  {
     "path": "/train-ambulance-services-in-hyderabad",
     "priority": "0.8",
     "changefreq": "weekly"
@@ -237,11 +232,6 @@ export default [
   },
   {
     "path": "/train-ambulance-services-in-jamshedpur",
-    "priority": "0.8",
-    "changefreq": "weekly"
-  },
-  {
-    "path": "/train-ambulance-services-in-kanpur",
     "priority": "0.8",
     "changefreq": "weekly"
   },
@@ -267,11 +257,6 @@ export default [
   },
   {
     "path": "/train-ambulance-services-in-patna",
-    "priority": "0.8",
-    "changefreq": "weekly"
-  },
-  {
-    "path": "/train-ambulance-services-in-prayagraj",
     "priority": "0.8",
     "changefreq": "weekly"
   },
