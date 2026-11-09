@@ -1,0 +1,81 @@
+/* Styles for admin-managed blog posts. Everything is scoped under .dyn-blog-*
+   so existing blog/page styles are unaffected. Banner and .content-wrapper
+   layout come from Blog1.css. */
+.dyn-blog-status {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #475569;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.dyn-blog-section {
+  background-color: #f8fafc;
+  padding: 60px 16px;
+}
+
+.dyn-blog-body .dyn-blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+/* Banner: grow with long titles instead of clipping them under the header */
+.blog-banner-d.dyn-blog-banner {
+  height: auto;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dyn-blog-banner .banner-img {
+  position: absolute;
+  inset: 0;
+}
+.dyn-blog-banner .banner-text {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: 100%;
+  padding: 90px 20px 50px;
+  overflow-wrap: anywhere;
+}
+
+.dyn-blog-body { overflow-wrap: anywhere; }
+/* keep words whole inside tables; the table scrolls horizontally instead */
+.dyn-blog-body th, .dyn-blog-body td { overflow-wrap: normal; word-break: normal; white-space: nowrap; }
+
+.dyn-blog-body h3 { font-size: 19px; font-weight: 600; color: #0f172a; margin: 22px 0 10px; }
+.dyn-blog-body h4 { font-size: 17px; font-weight: 600; color: #0f172a; margin: 18px 0 8px; }
+.dyn-blog-body ol { margin: 0 0 18px 22px; color: #475569; }
+.dyn-blog-body a { color: #1d4ed8; text-decoration: underline; }
+.dyn-blog-body img { max-width: 100%; height: auto; border-radius: 10px; margin: 12px 0; }
+.dyn-blog-body blockquote {
+  margin: 18px 0;
+  padding: 12px 18px;
+  border-left: 4px solid #ef4444;
+  background: #f8fafc;
+  color: #334155;
+}
+.dyn-blog-body table { width: 100%; border-collapse: collapse; margin: 18px 0; display: block; overflow-x: auto; }
+.dyn-blog-body th, .dyn-blog-body td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; }
+.dyn-blog-body th { background: #f1f5f9; }
+
+.dyn-blog-related { max-width: 1250px; margin: 28px auto 0; padding: 0 4px; }
+.dyn-blog-related h2 { font-size: 20px; color: #0f172a; margin-bottom: 10px; }
+.dyn-blog-related ul { list-style: disc; margin-left: 22px; }
+.dyn-blog-related a, .dyn-blog-back a { color: #1d3557; font-weight: 600; }
+.dyn-blog-back { max-width: 1250px; margin: 24px auto 0; }
+
+@media (max-width: 768px) {
+  .dyn-blog-section { padding: 36px 0; }
+  .dyn-blog-related, .dyn-blog-back { padding-left: 16px; padding-right: 16px; }
+  .dyn-blog-banner .banner-text h1 { font-size: 1.6rem; }
+}

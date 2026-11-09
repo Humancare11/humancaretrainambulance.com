@@ -1,0 +1,2 @@
+# Internal code - never served over HTTP (PHP includes it from the filesystem)
+Require all denied

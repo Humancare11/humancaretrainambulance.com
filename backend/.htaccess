@@ -1,0 +1,32 @@
+Options -Indexes
+RewriteEngine On
+
+# ── Block direct access to internal backend folders/files ─────
+RewriteCond %{THE_REQUEST} \s/backend/(config|controllers|models|helpers|middleware|database|routes|admin)/ [NC,OR]
+RewriteCond %{THE_REQUEST} \s/backend/(index\.php|blog\.php|test-db\.php|README\.md)[\s?] [NC]
+RewriteRule ^ - [F,L]
+
+# Block direct access to backend root
+RewriteRule ^$ - [F,L]
+
+# ── Protect sensitive files ──────────────────────────────────
+<FilesMatch "(^\.env|^\.git|\.(sql|md|log|bak|orig|ini|sh|yml|yaml|lock)$)">
+    Require all denied
+</FilesMatch>
+
+# ── Admin API routes ──────────────────────────────────────────
+RewriteRule ^api/admin/login/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/logout/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/me/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/stats/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/upload/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/categories/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/blogs/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/blogs/([0-9]+)/publish/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/blogs/([0-9]+)/unpublish/?$ /backend/routes/admin-api.php [L,QSA]
+RewriteRule ^api/admin/blogs/([0-9]+)/?$ /backend/routes/admin-api.php [L,QSA]
+
+# ── Public blog API routes ───────────────────────────────────
+RewriteRule ^api/blogs/?$ /backend/routes/api.php [L,QSA]
+RewriteRule ^api/blogs/([^/]+)/?$ /backend/routes/api.php [L,QSA]
+RewriteRule ^api/categories/?$ /backend/routes/api.php [L,QSA]

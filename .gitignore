@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backend secrets & uploads
+.env
+.env.*
+!.env.example
+backend/uploads/blog-images/*
+!backend/uploads/blog-images/.gitkeep

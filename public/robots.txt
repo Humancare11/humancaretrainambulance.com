@@ -1,6 +1,6 @@
 # Allow all search engines to crawl the site
 User-agent: *
-Disallow:
+Disallow: /admin/
 
 # Sitemap location
 Sitemap: https://www.humancaretrainambulance.com/sitemap.xml

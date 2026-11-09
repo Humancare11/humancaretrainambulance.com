@@ -1,7 +1,41 @@
-    Options -MultiViews
-    RewriteEngine On
-    RewriteBase /
-    
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^ index.html [L]
+Options -MultiViews -Indexes
+RewriteEngine On
+RewriteBase /
+
+# ── Never serve secrets, VCS data or development files ───────
+# (Requires Apache 2.4+ / LiteSpeed. For nginx see the deployment guide.)
+<FilesMatch "^\.(env|git|ht|svn|DS_Store).*$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "\.(sql|log|md|bak|orig|old|swp|ini|sh|yml|yaml|lock|dist|example|template)$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "^(package(-lock)?\.json|composer\.(json|lock)|vite\.config\.[cm]?js|eslint\.config\.js|generate-sitemap\.js|dev-router\.php|Dockerfile|docker-compose\.ya?ml)$">
+    Require all denied
+</FilesMatch>
+
+# Hidden / dev directories (matched on the decoded path, so %-encoding can't bypass it)
+RewriteRule ^(\.git|\.svn|\.github|node_modules|src|scripts|vendor|tests?)(/|$) - [F,NC,L]
+RewriteRule (^|/)\.(env|git|svn) - [F,NC,L]
+
+# ── Block direct access to backend internals & setup scripts ─
+# Each internal folder also carries its own "Require all denied" .htaccess.
+RewriteCond %{THE_REQUEST} \s/backend/(config|controllers|models|helpers|middleware|database|routes)(/|\s|\?) [NC]
+RewriteRule ^ - [F,L]
+RewriteRule ^backend/?$ - [F,L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^backend/(config|controllers|models|helpers|middleware|database)(/|$) - [F,NC,L]
+
+# ── Admin API ────────────────────────────────────────────────
+RewriteRule ^backend/api/admin/(login|logout|me|stats|upload|categories|blogs)/?$ backend/routes/admin-api.php [L,QSA]
+RewriteRule ^backend/api/admin/blogs/[0-9]+(/(publish|unpublish))?/?$ backend/routes/admin-api.php [L,QSA]
+
+# ── Public blog API ──────────────────────────────────────────
+RewriteRule ^backend/api/(blogs|categories)/?$ backend/routes/api.php [L,QSA]
+RewriteRule ^backend/api/blogs/[^/]+/?$ backend/routes/api.php [L,QSA]
+
+# ── React SPA fallback (leave /backend/ to Apache/PHP) ───────
+RewriteCond %{REQUEST_URI} !^/backend/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

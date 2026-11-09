@@ -1,0 +1,5 @@
+*.log
+.env
+uploads/blog-images/*
+!uploads/blog-images/.gitkeep
+

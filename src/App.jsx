@@ -73,6 +73,7 @@ const Location = lazy(() => import("./ads/Location"));
 
 // Blogs
 const BlogCard = lazy(() => import("./blogs/BlogCard"));
+const DynamicBlog = lazy(() => import("./blogs/DynamicBlog"));
 const Blog1 = lazy(() => import("./blogs/Blog1"));
 const Blog2 = lazy(() => import("./blogs/Blog2"));
 const Blog3 = lazy(() => import("./blogs/Blog3"));
@@ -98,6 +99,9 @@ const TrainAmbulanceBedRiddenPatients = lazy(
 const TrainAmbulanceVentilatorSupport = lazy(
   () => import("./blogs/TrainAmbulanceVentilatorSupport"),
 );
+
+// Admin panel (lazy – never loaded for public visitors)
+const AdminRoutes = lazy(() => import("./admin/AdminRoutes"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -143,11 +147,19 @@ function ScrollToTop() {
   return null;
 }
 
+// Header/Footer are hidden inside the admin panel only
+function HideOnAdmin({ children }) {
+  const { pathname } = useLocation();
+  return pathname.startsWith("/admin") ? null : children;
+}
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Header />
+      <HideOnAdmin>
+        <Header />
+      </HideOnAdmin>
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -370,9 +382,18 @@ function App() {
             path="/blogs/train-ambulance-ventilator-support"
             element={<TrainAmbulanceVentilatorSupport />}
           />
+
+          {/* Dynamic (admin-managed) blog posts. Static blog routes above
+              are more specific and always win over this param route. */}
+          <Route path="/blogs/:slug" element={<DynamicBlog />} />
+
+          {/* Admin panel */}
+          <Route path="/admin/*" element={<AdminRoutes />} />
         </Routes>
       </Suspense>
-      <Footer />
+      <HideOnAdmin>
+        <Footer />
+      </HideOnAdmin>
     </Router>
   );
 }

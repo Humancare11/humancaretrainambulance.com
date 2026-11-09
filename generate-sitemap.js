@@ -77,6 +77,11 @@ function extractRoutesFromApp() {
       continue;
     }
 
+    // Never list the admin panel or dynamic patterns (e.g. /blogs/:slug)
+    if (lowerPath.startsWith('/admin') || rawPath.includes(':') || rawPath.includes('*')) {
+      continue;
+    }
+
     // Normalize canonical path: lowercase, ensure leading slash
     const canonicalPath = lowerPath.startsWith('/') ? lowerPath : `/${lowerPath}`;
 

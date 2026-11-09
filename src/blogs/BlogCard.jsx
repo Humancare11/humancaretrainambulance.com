@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Calendar, ArrowRight } from "lucide-react";
@@ -19,6 +19,23 @@ import blog13 from "../assets/Blogs/vellore-train-ambulance.webp";
 import "./Blogs.css";
 
 function Blog() {
+  const [dynamicPosts, setDynamicPosts] = useState([]);
+
+  // Admin-managed posts from the PHP/MySQL backend. On any failure the page
+  // simply shows the static posts below (no visible error, no layout change).
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("/backend/api/blogs?per_page=50", { signal: controller.signal })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((result) => {
+        if (result && result.success && Array.isArray(result.data)) {
+          setDynamicPosts(result.data);
+        }
+      })
+      .catch(() => {});
+    return () => controller.abort();
+  }, []);
+
   const blogPosts = [
     {
       id: 1,
@@ -151,6 +168,26 @@ function Blog() {
     },
   ];
 
+  // Merge dynamic posts with the static ones (skipping any whose slug already
+  // exists as a static post) and show everything newest → oldest.
+  const staticLinks = new Set(blogPosts.map((p) => p.link));
+  const allPosts = [
+    ...blogPosts,
+    ...dynamicPosts
+      .filter((p) => !staticLinks.has(`/blogs/${p.slug}`))
+      .map((p) => ({
+        id: `dyn-${p.id}`,
+        title: p.title,
+        excerpt: p.excerpt || "",
+        image:
+          p.featured_image && !p.featured_image.endsWith("/default.webp")
+            ? p.featured_image
+            : blog7,
+        date: String(p.published_at || "").replace(" ", "T"),
+        link: `/blogs/${encodeURIComponent(p.slug)}`,
+      })),
+  ].sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <>
       <Helmet>
@@ -180,7 +217,7 @@ function Blog() {
       <section className="blog-section">
         <div className="container">
           <div className="blog-grid">
-            {blogPosts.map((post) => (
+            {allPosts.map((post) => (
               <Link to={post.link} key={post.id} className="blog-card">
                 <div className="blog-img-container">
                   <img
